@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Group 107 Home"
+version = "1.0.0"
+id = "artifacts/group107-home"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 21280
+
+[services.development]
+run = "pnpm --filter @workspace/group107-home run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/group107-home", "run", "build" ]
+publicDir = "artifacts/group107-home/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21280"
+BASE_PATH = "/"

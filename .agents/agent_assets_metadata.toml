@@ -1,0 +1,26 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "RXO-qlIHgA-04ce6QZUGZ"
+uri = "file://artifacts/group107-home/public/hero.png"
+type = "image"
+title = "minimalist abstract geometric hero"
+
+[[generated]]
+id = "p_IxPZ8haK6rWa-sC4z2w"
+uri = "file://artifacts/group107-home/public/project-1.png"
+type = "image"
+title = "typography poster design"
+
+[[generated]]
+id = "E13p0bvKUiHPLxJKt_HEx"
+uri = "file://artifacts/group107-home/public/project-2.png"
+type = "image"
+title = "sleek interface design"
+
+[[generated]]
+id = "F2zjOFm1v6ngjvrR2LI-C"
+uri = "file://artifacts/group107-home/public/project-3.png"
+type = "image"
+title = "brutalist architecture"
