@@ -1,0 +1,54 @@
+#	Block Name	Purpose	Content	Suggested Layout	UX Notes
+1	Hero Section	Immediately explain what Group 107 does and drive action	"Headline: Build, Scale, and Grow Your Tech — With One Partner
+Subheadline: From custom development and AI integration to dedicated teams and digital growth — Group 107 helps companies move faster, smarter, and at scale.
+CTAs: Get a Consultation / View Our Work
+Trust: 700+ clients, global hubs"	"Split layout: 
+Left = text, 
+Right = visual (network/system concept)"	Keep it clean and direct. Avoid clutter. CTA must be visible without scroll
+2	Positioning Section	Clarify differentiation (not just dev / not outsourcing)	"Headline: Not Just Development. Not Just Talent. A Complete Tech Partner. 
+Columns: 
+Build — Custom solutions 
+Scale — Teams & DevOps 
+Grow — AI & marketing 
+Note: One partner instead of multiple vendors"""	3-column grid	This is a key “clarity block” — reduces bounce
+3	Services Overview	Show full capabilities clearly	"Headline: Our Services 
+
+Cards: 
+- Custom Software Development 
+- WordPress & Web Dev 
+- Mobile Apps 
+- AI Integration 
+- DevOps & Cloud 
+- Accessibility 
+- Digital Marketing 
+- Dedicated Teams"	Grid with service cards	Add “Popular” tags to guide users
+4	Social Proof	Build trust quickly	"Headline: Trusted by Global Companies Logos (IMTC, FIBI, etc.) 
+Stats: 700+ clients / 88,000+ talent pool 
+Optional: testimonial quote"	Logo grid + stats row	Logos should be visible above the fold or right after
+5	Key Advantages	Explain why Group 107 is better	"Headline: Why Companies Choose Group 107 
+- Transparent processes 
+- Fast delivery cycles 
+- High retention 
+- End-to-end ownership 
+- Flexible scaling 
+- Dedicated account management"	Icons with short bullets	Keep concise — no long paragraphs
+6	Process Section	Show how it works (reduce friction)	"Headline: How It Works 
+Steps: 
+1. Define needs 
+2. Design solution 
+3. Approve 
+4. Build / onboard 
+5. Scale"	Horizontal steps	Should feel simple and predictable
+7	Case Studies	Show real results and capabilities	"Headline: Real Projects. Real Results. 
+
+Example: 
+IMTC — Cloud investment platform 
+Result: improved performance & scalability"	Cards with image + text	Add filters (Fintech / SaaS / Enterprise)
+8	AI & Innovation Section	Position as modern and forward-thinking	"Headline: AI-Driven Solutions That Move Your Business Forward 
+Content: automation, smarter decisions, efficiency"	Split layout (text + visual)	Important for positioning vs traditional agencies
+9	Final CTA	Drive conversion	"Headline: Let’s Build Something That Works - and Scales 
+Text: Tell us what you need. We’ll help define and build it. 
+CTA: Book a Call"	Centered section	Strong contrast color, no distractions
+10	Footer	Navigation and credibility	"Links: Services, Industries, Contact 
+Locations: Israel, Ukraine, Poland, Argentina 
+Social links"	Multi-column footer	Add trust elements (company info, certifications later)
