@@ -286,9 +286,8 @@ function NavBar() {
     >
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 h-[72px] flex items-center justify-between relative">
         {/* Logo */}
-        <a href="/" className="flex items-center gap-3 shrink-0 z-10">
+        <a href="/" className="flex items-center shrink-0 z-10">
           <img src={logoSrc} alt="Group 107 logo" className="h-10 w-10 object-contain" />
-          <span className="text-base font-bold tracking-tight">Group 107</span>
         </a>
 
         {/* Desktop nav */}
@@ -324,10 +323,10 @@ function NavBar() {
         </button>
       </div>
 
-      {/* Mega menu panel */}
+      {/* Mega menu panel — stays mounted while any item is open; content swaps instantly */}
       <AnimatePresence>
         {openMenu && (
-          <MegaMenu item={MEGA_MENU.find((m) => m.id === openMenu)!} />
+          <MegaMenu key="mega" item={MEGA_MENU.find((m) => m.id === openMenu)!} />
         )}
       </AnimatePresence>
 
