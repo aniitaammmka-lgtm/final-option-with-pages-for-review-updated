@@ -211,60 +211,98 @@ const MEGA_MENU = [
 ];
 
 function MegaMenu({ item }: { item: typeof MEGA_MENU[0] }) {
+  const [activePanel, setActivePanel] = useState<number | null>(null);
+  const current = activePanel !== null ? item.panels[activePanel] : null;
+
   return (
     <motion.div
-      initial={{ opacity: 0, y: -8 }}
+      initial={{ opacity: 0, y: -6 }}
       animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -8 }}
-      transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
+      exit={{ opacity: 0, y: -6 }}
+      transition={{ duration: 0.22, ease: [0.16, 1, 0.3, 1] }}
       className="absolute left-0 right-0 top-full bg-background border-b border-border shadow-xl z-40"
       style={{ width: "100vw", marginLeft: "calc(-50vw + 50%)" }}
     >
-      <div className="max-w-[1440px] mx-auto px-12 py-10 grid grid-cols-12 gap-0">
-        {/* Link columns */}
-        <div className="col-span-8 grid grid-cols-4 gap-x-8 gap-y-0 border-r border-border pr-10">
+      <div className="max-w-[1440px] mx-auto px-12 py-0 grid grid-cols-12">
+
+        {/* Col 1 — category names (always visible) */}
+        <div className="col-span-3 border-r border-border py-8 pr-8 flex flex-col gap-0">
           {item.panels.map((panel, pi) => (
-            <div key={pi} className="flex flex-col gap-3">
-              <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground border-b border-border pb-2 mb-1">
-                {panel.heading}
-              </div>
-              {panel.links.map((link, li) => (
-                <a
-                  key={li}
-                  href="#"
-                  className="text-sm font-medium text-foreground/70 hover:text-foreground transition-colors group flex items-center gap-1.5"
-                  data-testid={`megamenu-link-${pi}-${li}`}
-                >
-                  <span className="w-0 group-hover:w-3 overflow-hidden transition-all duration-300">
-                    <ArrowRight className="w-3 h-3 shrink-0" />
-                  </span>
-                  {link}
-                </a>
-              ))}
-            </div>
+            <button
+              key={pi}
+              className={`group w-full text-left flex items-center justify-between px-4 py-3 font-mono text-xs uppercase tracking-widest transition-colors rounded-sm ${activePanel === pi ? "bg-muted text-foreground" : "text-foreground/50 hover:text-foreground hover:bg-muted/40"}`}
+              onMouseEnter={() => setActivePanel(pi)}
+              data-testid={`megamenu-cat-${pi}`}
+            >
+              {panel.heading}
+              <ChevronDown className={`w-3 h-3 -rotate-90 transition-transform ${activePanel === pi ? "text-foreground" : "text-foreground/30"}`} />
+            </button>
           ))}
         </div>
 
-        {/* Image panel */}
-        <div className="col-span-4 pl-10 flex flex-col gap-4">
+        {/* Col 2 — sub-links of active category */}
+        <div className="col-span-5 border-r border-border py-8 px-8">
+          <AnimatePresence mode="wait">
+            {current ? (
+              <motion.div
+                key={current.heading}
+                initial={{ opacity: 0, x: 10 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -6 }}
+                transition={{ duration: 0.18, ease: [0.16, 1, 0.3, 1] }}
+                className="flex flex-col gap-2"
+              >
+                <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground pb-3 border-b border-border mb-2">
+                  {current.heading}
+                </div>
+                {current.links.length > 0 ? current.links.map((link, li) => (
+                  <a
+                    key={li}
+                    href="#"
+                    className="group flex items-center gap-3 py-2 text-sm font-medium text-foreground/70 hover:text-foreground transition-colors"
+                    data-testid={`megamenu-link-${li}`}
+                  >
+                    <motion.span
+                      className="w-4 h-px bg-foreground origin-left"
+                      initial={{ scaleX: 0 }}
+                      whileHover={{ scaleX: 1 }}
+                      transition={{ duration: 0.25 }}
+                    />
+                    {link}
+                  </a>
+                )) : (
+                  <p className="text-sm text-muted-foreground italic">Coming soon</p>
+                )}
+              </motion.div>
+            ) : (
+              <motion.div
+                key="empty"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                className="h-full flex items-center"
+              >
+                <p className="font-mono text-xs text-muted-foreground uppercase tracking-widest">
+                  Hover a category →
+                </p>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
+
+        {/* Col 3 — image */}
+        <div className="col-span-4 py-8 pl-8 flex flex-col gap-4">
           <div className="relative overflow-hidden aspect-[16/9] bg-muted">
-            <img
-              src={item.image}
-              alt={item.imageLabel}
-              className="w-full h-full object-cover"
-            />
+            <img src={item.image} alt={item.imageLabel} className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-            <div className="absolute bottom-4 left-4 text-white font-bold tracking-tight text-base">
+            <div className="absolute bottom-4 left-4 text-white font-bold tracking-tight text-sm">
               {item.imageLabel}
             </div>
           </div>
-          <a
-            href="#cta"
-            className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-muted-foreground hover:text-foreground transition-colors"
-          >
+          <a href="#cta" className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-muted-foreground hover:text-foreground transition-colors">
             Get a Consultation <ArrowRight className="w-3.5 h-3.5" />
           </a>
         </div>
+
       </div>
     </motion.div>
   );
