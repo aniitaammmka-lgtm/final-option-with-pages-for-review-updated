@@ -1,0 +1,77 @@
+#	Block Name	Purpose	Content	Suggested Layout	UX Notes
+1	Hero Section	Immediately explain what Group 107 does and drive action	"Headline: Build, Scale, and Grow Your Tech - With One Partner
+Subheadline: Group 107 is a full-service tech partner delivering development, AI, Digital Marketing, DevOps, accessibility, and dedicated teams - helping companies move faster and scale smarter.
+CTAs: Get a Consultation / View Our Work
+Trust: 700+ clients, global hubs"		Keep it clean and direct. Avoid clutter. CTA must be visible without scroll
+2	Positioning Section	Clarify differentiation (not just dev / not outsourcing)	"Headline: Not Just Talent. Not Just Development. A Complete Tech Partner. 
+Columns: 
+Build - Custom solutions 
+Scale - Teams & DevOps 
+Grow - AI & marketing 
+Note: One partner instead of multiple vendors"""	3-column grid	This is a key “clarity block” - reduces bounce
+3	How It Works (Talents)	Explain hiring / dedicated team model	"Headline: Scale Your Team with Top Tech Talent - Without the Hiring Complexity
+Subheadline:
+We build and manage dedicated teams tailored to your needs - giving you access to top-tier talent, faster delivery, and full operational support.
+How It Works:
+1. Define your team and requirements
+2. We source and screen candidates
+3. You interview and select
+4. We handle onboarding and operations
+5. Scale your team as needed
+CTA: Build Your Team
+Support line: Transparent process • Fast hiring • Fully managed"	Horizontal steps or vertical cards	
+4	Services Overview	Show full capabilities clearly	"Headline: Our Services 
+
+Categories:
+Development Services: Web, Software, Mobile, Product Discovery
+Infrastructure & DevOps: DevOps, Cloud, IT Infrastructure
+Accessibility: Full accessibility solutions (WCAG compliance)
+Fintech: Banking integrations, financial systems
+Group 107 Digital: Marketing, SDR, growth systems
+Next AI: AI-driven solutions and automation
+CTA: Explore Services"	Grid with service cards	Add “Popular” tags to guide users
+5	Products	Position the company as a product builder and technology innovator (not just a service provider).	"Headline: Building Products, Platforms, and Scalable Solutions
+
+Subheadline: Beyond client services, Group 107 develops and supports proprietary platforms and technology solutions designed for scalability, automation, and real business impact.
+
+Products:
+AccessibleDocs – AI-powered platform for making documents accessible and compliant
+
+Summa – AI-driven document processing and automation platform
+
+GlobalDocs – Document translation platform for multi-language content workflows
+
+Levent – R&D-driven fintech product development for banks and trading platforms
+
+CTA: Explore Our Products"	Cards or slider	
+6	AI & Innovation Section	Position as modern and forward-thinking	"Headline: AI-Driven Solutions for Smarter Business
+
+Body: We integrate AI into your systems to automate processes, improve decision-making, and increase efficiency across your organization."	Split layout (text + visual)	Important for positioning vs traditional agencies
+7	Social Proof	Build trust quickly	"Headline: Trusted by Global Companies Logos (IMTC, FIBI, etc.) 
+Stats: 700+ clients / 88,000+ talent pool 
+Optional: testimonial quote"	Logo grid + stats row	Logos should be visible above the fold or right after
+8	Key Advantages	Explain why Group 107 is better	"Headline: Why Companies Choose Group 107 
+- Transparent processes 
+- Fast delivery cycles 
+- High retention 
+- End-to-end ownership 
+- Flexible scaling 
+- Dedicated account management"	Icons with short bullets	Keep concise - no long paragraphs
+9	Case Studies	Show real results and capabilities	"Headline: Real Projects. Real Results. 
+
+Example: 
+IMTC - Cloud investment platform 
+Result: improved performance & scalability"	Cards with image + text	Add filters (Fintech / SaaS / Enterprise)
+10	Insights & Resources (Blog)		"Headline: Insights, Ideas, and Industry Expertise
+
+Subheadline: Explore our blog, articles, and media content to stay updated on technology, AI, and digital growth.
+
+Content Types: Blog posts, articles, media room
+
+CTA: Read Our Blog"	3–4 article cards (image + title + short excerpt + date). Optional tabs: Blog / Articles	Keep it dynamic (auto-pull latest posts). Avoid long text. This block should feel fresh and updated. Use real content later (not placeholders).
+11					
+12	Final CTA	Drive conversion	"Headline: Let’s Build Something That Works - and Scales 
+Text: Tell us what you need. We’ll help define and build it. 
+CTA: Book a Call"	Centered section	Strong contrast color, no distractions
+13	Footer	Navigation and credibility	"Links: Services, Industries, Contact 
+Social links"	Multi-column footer	Add trust elements (company info, certifications later)

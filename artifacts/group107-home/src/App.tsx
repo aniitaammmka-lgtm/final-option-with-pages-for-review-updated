@@ -33,6 +33,12 @@ import {
   Scaling,
   Headphones,
   ChevronDown,
+  Search,
+  FileText,
+  Cpu,
+  BookOpen,
+  Newspaper,
+  PlayCircle,
 } from "lucide-react";
 import logoSrc from "@assets/NEW_1774966879525.png";
 
@@ -109,41 +115,20 @@ function Label({ children, light = false }: { children: React.ReactNode; light?:
 }
 
 /* ══════════════════════════════════════════════
-   MEGA MENU
+   MEGA MENU DATA
 ══════════════════════════════════════════════ */
 const MEGA_MENU = [
   {
     label: "Services / Solutions",
     id: "services",
     panels: [
-      {
-        heading: "Talents",
-        links: ["Team Expertise", "Recruitment as a Service"],
-      },
-      {
-        heading: "Development Services",
-        links: ["Web Development", "Software Development", "Mobile Development", "Product Discovery"],
-      },
-      {
-        heading: "Group 107 Digital",
-        links: ["Service 1", "Service 2", "Service 3"],
-      },
-      {
-        heading: "Infrastructure & DevOps",
-        links: ["DevOps", "Cloud Solutions", "IT and Infrastructure"],
-      },
-      {
-        heading: "Accessibility",
-        links: ["Service 1", "Service 2", "Service 3"],
-      },
-      {
-        heading: "Fintech",
-        links: ["Bank Integrations"],
-      },
-      {
-        heading: "Next AI",
-        links: [],
-      },
+      { heading: "Talents", links: ["Team Expertise", "Recruitment as a Service"] },
+      { heading: "Development Services", links: ["Web Development", "Software Development", "Mobile Development", "Product Discovery"] },
+      { heading: "Group 107 Digital", links: ["Marketing", "SDR", "Growth Systems"] },
+      { heading: "Infrastructure & DevOps", links: ["DevOps", "Cloud Solutions", "IT and Infrastructure"] },
+      { heading: "Accessibility", links: ["WCAG Compliance", "Accessible Design", "Audit & Remediation"] },
+      { heading: "Fintech", links: ["Bank Integrations", "Financial Systems"] },
+      { heading: "Next AI", links: ["AI-Driven Solutions", "Automation"] },
     ],
     image: "/hero.png",
     imageLabel: "Build. Scale. Grow.",
@@ -152,10 +137,7 @@ const MEGA_MENU = [
     label: "Product Lobby",
     id: "products",
     panels: [
-      {
-        heading: "Products",
-        links: ["Accessible Docs", "Summa", "Global Docs", "Ipublic", "Levent"],
-      },
+      { heading: "Our Products", links: ["AccessibleDocs", "Summa", "GlobalDocs", "Levent"] },
     ],
     image: "/project-1.png",
     imageLabel: "Our Product Suite",
@@ -164,10 +146,7 @@ const MEGA_MENU = [
     label: "Case Studies",
     id: "casestudies",
     panels: [
-      {
-        heading: "Work",
-        links: ["View Case Studies"],
-      },
+      { heading: "Work", links: ["View Case Studies", "Fintech Projects", "SaaS Projects", "Enterprise Projects"] },
     ],
     image: "/project-2.png",
     imageLabel: "Real Projects. Real Results.",
@@ -176,10 +155,7 @@ const MEGA_MENU = [
     label: "Company",
     id: "company",
     panels: [
-      {
-        heading: "About",
-        links: ["About Us", "Leadership", "Careers", "Partnership", "Contact Us"],
-      },
+      { heading: "About", links: ["About Us", "Leadership", "Careers", "Partnership", "Contact Us"] },
     ],
     image: "/project-3.png",
     imageLabel: "Group 107",
@@ -188,10 +164,7 @@ const MEGA_MENU = [
     label: "Resources",
     id: "resources",
     panels: [
-      {
-        heading: "Content",
-        links: ["Blogs", "Articles", "Media Room", "Glossary"],
-      },
+      { heading: "Content", links: ["Blogs", "Articles", "Media Room", "Glossary"] },
     ],
     image: "/project-1.png",
     imageLabel: "Knowledge Hub",
@@ -200,16 +173,14 @@ const MEGA_MENU = [
     label: "Investors Relations",
     id: "investors",
     panels: [
-      {
-        heading: "Investors",
-        links: ["Overview"],
-      },
+      { heading: "Investors", links: ["Overview"] },
     ],
     image: "/project-2.png",
     imageLabel: "Investor Relations",
   },
 ];
 
+/* ─── MEGA MENU COMPONENT ─── */
 function MegaMenu({ item }: { item: typeof MEGA_MENU[0] }) {
   const [activePanel, setActivePanel] = useState<number | null>(null);
   const current = activePanel !== null ? item.panels[activePanel] : null;
@@ -224,8 +195,7 @@ function MegaMenu({ item }: { item: typeof MEGA_MENU[0] }) {
       style={{ width: "100vw", marginLeft: "calc(-50vw + 50%)" }}
     >
       <div className="max-w-[1440px] mx-auto px-12 py-0 grid grid-cols-12">
-
-        {/* Col 1 — category names (always visible) */}
+        {/* Col 1 — category names */}
         <div className="col-span-3 border-r border-border py-8 pr-8 flex flex-col gap-0">
           {item.panels.map((panel, pi) => (
             <button
@@ -240,7 +210,7 @@ function MegaMenu({ item }: { item: typeof MEGA_MENU[0] }) {
           ))}
         </div>
 
-        {/* Col 2 — sub-links of active category */}
+        {/* Col 2 — sub-links */}
         <div className="col-span-5 border-r border-border py-8 px-8">
           <AnimatePresence mode="wait">
             {current ? (
@@ -256,18 +226,8 @@ function MegaMenu({ item }: { item: typeof MEGA_MENU[0] }) {
                   {current.heading}
                 </div>
                 {current.links.length > 0 ? current.links.map((link, li) => (
-                  <a
-                    key={li}
-                    href="#"
-                    className="group flex items-center gap-3 py-2 text-sm font-medium text-foreground/70 hover:text-foreground transition-colors"
-                    data-testid={`megamenu-link-${li}`}
-                  >
-                    <motion.span
-                      className="w-4 h-px bg-foreground origin-left"
-                      initial={{ scaleX: 0 }}
-                      whileHover={{ scaleX: 1 }}
-                      transition={{ duration: 0.25 }}
-                    />
+                  <a key={li} href="#" className="group flex items-center gap-3 py-2 text-sm font-medium text-foreground/70 hover:text-foreground transition-colors" data-testid={`megamenu-link-${li}`}>
+                    <motion.span className="w-4 h-px bg-foreground origin-left" initial={{ scaleX: 0 }} whileHover={{ scaleX: 1 }} transition={{ duration: 0.25 }} />
                     {link}
                   </a>
                 )) : (
@@ -275,15 +235,8 @@ function MegaMenu({ item }: { item: typeof MEGA_MENU[0] }) {
                 )}
               </motion.div>
             ) : (
-              <motion.div
-                key="empty"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                className="h-full flex items-center"
-              >
-                <p className="font-mono text-xs text-muted-foreground uppercase tracking-widest">
-                  Hover a category →
-                </p>
+              <motion.div key="empty" initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="h-full flex items-start pt-2">
+                <p className="font-mono text-xs text-muted-foreground uppercase tracking-widest">Hover a category →</p>
               </motion.div>
             )}
           </AnimatePresence>
@@ -294,15 +247,12 @@ function MegaMenu({ item }: { item: typeof MEGA_MENU[0] }) {
           <div className="relative overflow-hidden aspect-[16/9] bg-muted">
             <img src={item.image} alt={item.imageLabel} className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-            <div className="absolute bottom-4 left-4 text-white font-bold tracking-tight text-sm">
-              {item.imageLabel}
-            </div>
+            <div className="absolute bottom-4 left-4 text-white font-bold tracking-tight text-sm">{item.imageLabel}</div>
           </div>
           <a href="#cta" className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-muted-foreground hover:text-foreground transition-colors">
             Get a Consultation <ArrowRight className="w-3.5 h-3.5" />
           </a>
         </div>
-
       </div>
     </motion.div>
   );
@@ -323,12 +273,10 @@ function NavBar() {
       onMouseLeave={() => setOpenMenu(null)}
     >
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 h-[72px] flex items-center justify-between relative">
-        {/* Logo */}
         <a href="/" className="flex items-center shrink-0 z-10">
           <img src={logoSrc} alt="Group 107 logo" className="h-10 w-10 object-contain" />
         </a>
 
-        {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-1 font-mono text-xs uppercase tracking-widest">
           {MEGA_MENU.map((item) => (
             <button
@@ -343,49 +291,30 @@ function NavBar() {
           ))}
         </div>
 
-        <a
-          href="#cta"
-          data-testid="btn-nav-contact"
-          className="hidden md:inline-flex bg-foreground text-background px-5 py-2.5 text-xs font-mono uppercase tracking-widest hover:bg-foreground/85 transition-colors shrink-0"
-        >
+        <a href="#cta" data-testid="btn-nav-contact" className="hidden md:inline-flex bg-foreground text-background px-5 py-2.5 text-xs font-mono uppercase tracking-widest hover:bg-foreground/85 transition-colors shrink-0">
           Get a Consultation
         </a>
 
-        <button
-          className="md:hidden p-2"
-          aria-label="Menu"
-          data-testid="btn-mobile-menu"
-          onClick={() => setMobileOpen(!mobileOpen)}
-        >
+        <button className="md:hidden p-2" aria-label="Menu" data-testid="btn-mobile-menu" onClick={() => setMobileOpen(!mobileOpen)}>
           {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
         </button>
       </div>
 
-      {/* Mega menu panel — stays mounted while any item is open; content swaps instantly */}
       <AnimatePresence>
-        {openMenu && (
-          <MegaMenu key="mega" item={MEGA_MENU.find((m) => m.id === openMenu)!} />
-        )}
+        {openMenu && <MegaMenu key="mega" item={MEGA_MENU.find((m) => m.id === openMenu)!} />}
       </AnimatePresence>
 
-      {/* Mobile menu */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
+            initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} exit={{ opacity: 0, height: 0 }}
             className="md:hidden bg-background border-t border-border overflow-hidden"
           >
             <div className="px-6 py-6 flex flex-col gap-4 font-mono text-xs uppercase tracking-widest">
               {MEGA_MENU.map((item) => (
-                <a key={item.id} href={`#${item.id}`} className="text-foreground/70 hover:text-foreground transition-colors py-2">
-                  {item.label}
-                </a>
+                <a key={item.id} href={`#${item.id}`} className="text-foreground/70 hover:text-foreground transition-colors py-2">{item.label}</a>
               ))}
-              <a href="#cta" className="mt-4 bg-foreground text-background px-5 py-3 text-center tracking-widest">
-                Get a Consultation
-              </a>
+              <a href="#cta" className="mt-4 bg-foreground text-background px-5 py-3 text-center tracking-widest">Get a Consultation</a>
             </div>
           </motion.div>
         )}
@@ -394,7 +323,9 @@ function NavBar() {
   );
 }
 
-/* ─── 1. HERO ─── */
+/* ══════════════════════════════════════════════
+   1. HERO
+══════════════════════════════════════════════ */
 function Hero() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
@@ -405,15 +336,8 @@ function Hero() {
     <section ref={ref} className="relative pt-36 pb-24 md:pt-48 md:pb-32 px-6 md:px-12 max-w-[1440px] mx-auto overflow-hidden">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
         <motion.div className="lg:col-span-7 flex flex-col items-start" style={{ y: textY }} variants={stagger} initial="initial" animate="whileInView">
-          <motion.div
-            variants={fadeUp}
-            className="mb-6 inline-flex items-center gap-3 border border-foreground/25 px-4 py-1.5 font-mono text-xs uppercase tracking-widest text-muted-foreground"
-          >
-            <motion.span
-              className="w-1.5 h-1.5 rounded-full bg-green-500"
-              animate={{ scale: [1, 1.5, 1], opacity: [1, 0.5, 1] }}
-              transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
-            />
+          <motion.div variants={fadeUp} className="mb-6 inline-flex items-center gap-3 border border-foreground/25 px-4 py-1.5 font-mono text-xs uppercase tracking-widest text-muted-foreground">
+            <motion.span className="w-1.5 h-1.5 rounded-full bg-green-500" animate={{ scale: [1, 1.5, 1], opacity: [1, 0.5, 1] }} transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }} />
             Complete Tech Partner &mdash; 700+ Clients Globally
           </motion.div>
 
@@ -421,46 +345,25 @@ function Hero() {
             Build, Scale,<br />and Grow<br />Your Tech.
           </motion.h1>
 
-          <motion.p variants={fadeUp} className="text-lg md:text-xl text-muted-foreground max-w-lg leading-relaxed mb-10">
-            From custom development and AI integration to dedicated teams and digital
-            growth &mdash; Group 107 helps companies move faster, smarter, and at scale.
+          <motion.p variants={fadeUp} className="text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed mb-10">
+            Group 107 is a full-service tech partner delivering development, AI, Digital Marketing, DevOps, accessibility, and dedicated teams — helping companies move faster and scale smarter.
           </motion.p>
 
           <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4">
-            <motion.a
-              href="#cta"
-              data-testid="btn-hero-consultation"
-              className="group inline-flex items-center gap-3 bg-foreground text-background px-8 py-4 text-sm font-mono uppercase tracking-widest hover:bg-foreground/85 transition-all"
-              whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}
-            >
+            <motion.a href="#cta" data-testid="btn-hero-consultation" className="group inline-flex items-center gap-3 bg-foreground text-background px-8 py-4 text-sm font-mono uppercase tracking-widest hover:bg-foreground/85 transition-all" whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
               Get a Consultation
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </motion.a>
-            <motion.a
-              href="#work"
-              data-testid="btn-hero-work"
-              className="group inline-flex items-center gap-3 border border-border px-8 py-4 text-sm font-mono uppercase tracking-widest hover:bg-muted/40 transition-all"
-              whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}
-            >
+            <motion.a href="#work" data-testid="btn-hero-work" className="group inline-flex items-center gap-3 border border-border px-8 py-4 text-sm font-mono uppercase tracking-widest hover:bg-muted/40 transition-all" whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
               View Our Work
               <ArrowUpRight className="w-4 h-4 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform" />
             </motion.a>
           </motion.div>
         </motion.div>
 
-        <motion.div
-          className="lg:col-span-5 relative aspect-[4/5] lg:aspect-[3/4]"
-          style={{ y: imgY }}
-          initial={{ opacity: 0, scale: 0.94 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.1, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-        >
+        <motion.div className="lg:col-span-5 relative aspect-[4/5] lg:aspect-[3/4]" style={{ y: imgY }} initial={{ opacity: 0, scale: 0.94 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1.1, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}>
           <img src="/hero.png" alt="Group 107" className="w-full h-full object-cover" />
-          <motion.div
-            className="absolute bottom-6 left-6 right-6 bg-background/92 backdrop-blur-sm border border-border px-6 py-4 flex justify-between items-center"
-            initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.7, duration: 0.7 }}
-          >
+          <motion.div className="absolute bottom-6 left-6 right-6 bg-background/92 backdrop-blur-sm border border-border px-6 py-4 flex justify-between items-center" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7, duration: 0.7 }}>
             <div>
               <div className="font-mono text-xs text-muted-foreground uppercase tracking-widest mb-1">Talent Pool</div>
               <div className="text-2xl font-black tracking-tighter">88,000+</div>
@@ -479,28 +382,23 @@ function Hero() {
 
 /* ─── MARQUEE ─── */
 function Marquee() {
-  const items = ["Custom Development","AI Integration","Dedicated Teams","DevOps & Cloud","Digital Growth","Mobile Apps","Accessibility","WordPress"];
+  const items = ["Custom Development","AI Integration","Dedicated Teams","DevOps & Cloud","Digital Growth","Mobile Apps","Accessibility","Fintech"];
   const repeated = [...items, ...items, ...items];
   return (
     <div className="relative border-y border-border py-5 overflow-hidden bg-foreground text-background">
       <Grain opacity={0.04} />
-      <motion.div
-        className="flex gap-12 items-center px-8 font-mono text-xs uppercase tracking-widest shrink-0 whitespace-nowrap"
-        animate={{ x: [0, "-33.33%"] }}
-        transition={{ duration: 28, repeat: Infinity, ease: "linear" }}
-      >
+      <motion.div className="flex gap-12 items-center px-8 font-mono text-xs uppercase tracking-widest shrink-0 whitespace-nowrap" animate={{ x: [0, "-33.33%"] }} transition={{ duration: 28, repeat: Infinity, ease: "linear" }}>
         {repeated.map((item, i) => (
-          <span key={i} className="flex items-center gap-12">
-            {item}
-            <span className="text-background/30">—</span>
-          </span>
+          <span key={i} className="flex items-center gap-12">{item}<span className="text-background/30">—</span></span>
         ))}
       </motion.div>
     </div>
   );
 }
 
-/* ─── 2. POSITIONING ─── */
+/* ══════════════════════════════════════════════
+   2. POSITIONING
+══════════════════════════════════════════════ */
 function Positioning() {
   const cols = [
     { tag: "01 / Build", title: "Custom Solutions", desc: "We design and build high-performance software tailored to your exact requirements — web, mobile, and enterprise-grade platforms." },
@@ -512,17 +410,12 @@ function Positioning() {
       <motion.div variants={stagger} initial="initial" whileInView="whileInView" className="mb-16">
         <motion.div variants={fadeUp}><Label>Our Positioning</Label></motion.div>
         <motion.h2 variants={fadeUp} className="text-4xl md:text-6xl font-black tracking-tighter leading-[1] uppercase text-balance max-w-3xl">
-          Not Just Development.<br />Not Just Talent.<br />A Complete Tech Partner.
+          Not Just Talent.<br />Not Just Development.<br />A Complete Tech Partner.
         </motion.h2>
       </motion.div>
       <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-border" variants={stagger} initial="initial" whileInView="whileInView">
         {cols.map((c, i) => (
-          <motion.div
-            key={i} variants={fadeUp}
-            className="p-8 md:p-10 border-b md:border-b-0 md:border-r border-border last:border-0 flex flex-col gap-6 group hover:bg-muted/25 transition-colors duration-500"
-            data-testid={`positioning-col-${i}`}
-            whileHover={{ y: -4 }} transition={{ duration: 0.4 }}
-          >
+          <motion.div key={i} variants={fadeUp} className="p-8 md:p-10 border-b md:border-b-0 md:border-r border-border last:border-0 flex flex-col gap-6 group hover:bg-muted/25 transition-colors duration-500" data-testid={`positioning-col-${i}`} whileHover={{ y: -4 }} transition={{ duration: 0.4 }}>
             <span className="font-mono text-xs text-muted-foreground uppercase tracking-widest">{c.tag}</span>
             <h3 className="text-2xl font-bold tracking-tight">{c.title}</h3>
             <p className="text-muted-foreground leading-relaxed text-sm">{c.desc}</p>
@@ -536,16 +429,132 @@ function Positioning() {
   );
 }
 
-/* ─── 3. SERVICES ─── */
-const SERVICES = [
-  { icon: Code2, title: "Custom Software Development", popular: true },
-  { icon: Globe, title: "WordPress & Web Development", popular: false },
-  { icon: Smartphone, title: "Mobile Apps", popular: true },
-  { icon: Bot, title: "AI Integration", popular: true },
-  { icon: Cloud, title: "DevOps & Cloud", popular: false },
-  { icon: Accessibility, title: "Accessibility", popular: false },
-  { icon: TrendingUp, title: "Digital Marketing", popular: false },
-  { icon: Users, title: "Dedicated Teams", popular: true },
+/* ══════════════════════════════════════════════
+   3. HOW IT WORKS — TALENTS
+══════════════════════════════════════════════ */
+const TALENT_STEPS = [
+  { num: "01", title: "Define Your Team", desc: "Tell us your requirements — stack, team size, seniority, and timeline." },
+  { num: "02", title: "We Source & Screen", desc: "We search our 88,000+ talent pool and rigorously screen candidates for you." },
+  { num: "03", title: "You Interview & Select", desc: "Review shortlisted candidates and choose the right fit for your team." },
+  { num: "04", title: "We Handle Onboarding & Ops", desc: "Full operational support — contracts, onboarding, tooling, and management." },
+  { num: "05", title: "Scale as Needed", desc: "Grow or adjust your team at any time as your project evolves." },
+];
+
+function TalentRow({ step, i }: { step: typeof TALENT_STEPS[0]; i: number }) {
+  const [hovered, setHovered] = useState(false);
+  return (
+    <motion.div
+      variants={{ initial: { opacity: 0, y: 24 }, whileInView: { opacity: 1, y: 0, transition: { duration: 0.9, delay: i * 0.12, ease: [0.16, 1, 0.3, 1] } } }}
+      className="relative border-b border-border py-10 grid grid-cols-12 gap-6 md:gap-12 items-center cursor-default overflow-hidden"
+      data-testid={`talent-step-${i}`}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+    >
+      <motion.div className="absolute inset-0 bg-muted/30 origin-left pointer-events-none" initial={{ scaleX: 0 }} animate={{ scaleX: hovered ? 1 : 0 }} transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }} />
+      <span className="relative col-span-2 md:col-span-1 font-mono text-xs text-muted-foreground uppercase tracking-widest">{step.num}</span>
+      <motion.h3 className="relative col-span-10 md:col-span-3 text-2xl font-bold tracking-tight" animate={{ x: hovered ? 6 : 0 }} transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}>{step.title}</motion.h3>
+      <motion.p className="relative col-span-12 md:col-span-7 text-muted-foreground text-sm leading-relaxed md:pl-4" animate={{ opacity: hovered ? 1 : 0.65 }} transition={{ duration: 0.55 }}>{step.desc}</motion.p>
+      <motion.div className="hidden md:flex col-span-1 justify-self-end relative" animate={{ opacity: hovered ? 1 : 0, x: hovered ? 0 : 10 }} transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}>
+        <ArrowUpRight className="w-5 h-5 text-muted-foreground" />
+      </motion.div>
+    </motion.div>
+  );
+}
+
+function TalentsSection() {
+  return (
+    <section id="talents" className="relative py-28 overflow-hidden border-b border-border bg-foreground text-background">
+      <Grain opacity={0.045} />
+      <div className="pointer-events-none absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "repeating-linear-gradient(45deg, #fff 0, #fff 1px, transparent 0, transparent 50%)", backgroundSize: "16px 16px" }} />
+      <div className="max-w-[1440px] mx-auto px-6 md:px-12 relative z-10">
+        <motion.div variants={stagger} initial="initial" whileInView="whileInView" className="mb-16">
+          <motion.div variants={fadeUp}><Label light>Talents</Label></motion.div>
+          <motion.h2 variants={fadeUp} className="text-4xl md:text-6xl font-black tracking-tighter uppercase leading-[1] max-w-3xl text-background mb-6">
+            Scale Your Team with Top Tech Talent — Without the Hiring Complexity
+          </motion.h2>
+          <motion.p variants={fadeUp} className="text-background/60 text-lg max-w-2xl leading-relaxed">
+            We build and manage dedicated teams tailored to your needs — giving you access to top-tier talent, faster delivery, and full operational support.
+          </motion.p>
+        </motion.div>
+
+        <motion.div
+          className="flex flex-col border-t border-background/20"
+          variants={{ initial: {}, whileInView: {} }}
+          initial="initial"
+          whileInView="whileInView"
+          viewport={{ once: true, margin: "-60px" }}
+        >
+          {TALENT_STEPS.map((step, i) => (
+            <motion.div
+              key={i}
+              variants={{ initial: { opacity: 0, y: 24 }, whileInView: { opacity: 1, y: 0, transition: { duration: 0.9, delay: i * 0.12, ease: [0.16, 1, 0.3, 1] } } }}
+              className="group relative border-b border-background/20 py-8 grid grid-cols-12 gap-6 md:gap-12 items-center cursor-default overflow-hidden"
+              data-testid={`talent-step-${i}`}
+            >
+              <span className="relative col-span-2 md:col-span-1 font-mono text-xs text-background/40 uppercase tracking-widest">{step.num}</span>
+              <h3 className="relative col-span-10 md:col-span-3 text-xl font-bold tracking-tight text-background">{step.title}</h3>
+              <p className="relative col-span-12 md:col-span-6 text-background/60 text-sm leading-relaxed md:pl-4">{step.desc}</p>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        <motion.div variants={fadeUp} initial="initial" whileInView="whileInView" viewport={{ once: true }} className="mt-12 flex flex-col sm:flex-row items-start gap-6">
+          <motion.a href="#cta" className="inline-flex items-center gap-3 bg-background text-foreground px-8 py-4 text-sm font-mono uppercase tracking-widest hover:bg-background/90 transition-colors" whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+            Build Your Team <ArrowRight className="w-4 h-4" />
+          </motion.a>
+          <div className="flex items-center gap-6 text-background/50 font-mono text-xs uppercase tracking-widest mt-2 sm:mt-3">
+            <span>Transparent Process</span>
+            <span className="text-background/20">•</span>
+            <span>Fast Hiring</span>
+            <span className="text-background/20">•</span>
+            <span>Fully Managed</span>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+
+/* ══════════════════════════════════════════════
+   4. SERVICES OVERVIEW
+══════════════════════════════════════════════ */
+const SERVICE_CATEGORIES = [
+  {
+    icon: Code2,
+    category: "Development Services",
+    items: ["Web Development", "Software Development", "Mobile Development", "Product Discovery"],
+    popular: true,
+  },
+  {
+    icon: Cloud,
+    category: "Infrastructure & DevOps",
+    items: ["DevOps", "Cloud Solutions", "IT Infrastructure"],
+    popular: false,
+  },
+  {
+    icon: Accessibility,
+    category: "Accessibility",
+    items: ["WCAG Compliance", "Accessible Design", "Audit & Remediation"],
+    popular: false,
+  },
+  {
+    icon: TrendingUp,
+    category: "Fintech",
+    items: ["Bank Integrations", "Financial Systems"],
+    popular: false,
+  },
+  {
+    icon: Bot,
+    category: "Group 107 Digital",
+    items: ["Marketing", "SDR", "Growth Systems"],
+    popular: true,
+  },
+  {
+    icon: Cpu,
+    category: "Next AI",
+    items: ["AI-Driven Solutions", "Automation", "Intelligent Workflows"],
+    popular: true,
+  },
 ];
 
 function Services() {
@@ -560,25 +569,28 @@ function Services() {
               <motion.h2 variants={fadeUp} className="text-4xl md:text-6xl font-black tracking-tighter uppercase leading-[1]">Our Services</motion.h2>
             </div>
             <motion.a variants={fadeUp} href="#cta" className="hidden md:inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-muted-foreground hover:text-foreground transition-colors">
-              Start a project <ArrowRight className="w-4 h-4" />
+              Explore Services <ArrowRight className="w-4 h-4" />
             </motion.a>
           </div>
-          <motion.div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-border" variants={stagger} initial="initial" whileInView="whileInView">
-            {SERVICES.map((svc, i) => {
+
+          <motion.div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border" variants={stagger} initial="initial" whileInView="whileInView">
+            {SERVICE_CATEGORIES.map((svc, i) => {
               const Icon = svc.icon;
               return (
-                <motion.div
-                  key={i} variants={fadeUp}
-                  className="group bg-background p-8 flex flex-col gap-6 cursor-pointer relative overflow-hidden"
-                  data-testid={`service-card-${i}`}
-                  whileHover={{ backgroundColor: "hsl(var(--muted) / 0.4)" }}
-                  transition={{ duration: 0.3 }}
-                >
+                <motion.div key={i} variants={fadeUp} className="group bg-background p-8 flex flex-col gap-5 cursor-pointer relative overflow-hidden" data-testid={`service-card-${i}`} whileHover={{ backgroundColor: "hsl(var(--muted) / 0.4)" }} transition={{ duration: 0.3 }}>
                   {svc.popular && <span className="absolute top-4 right-4 font-mono text-[10px] uppercase tracking-widest bg-foreground text-background px-2.5 py-1">Popular</span>}
                   <motion.div whileHover={{ rotate: 8, scale: 1.1 }} transition={{ duration: 0.35 }}>
                     <Icon className="w-7 h-7 text-muted-foreground group-hover:text-foreground transition-colors" strokeWidth={1.5} />
                   </motion.div>
-                  <h3 className="text-lg font-bold tracking-tight leading-snug">{svc.title}</h3>
+                  <h3 className="text-lg font-bold tracking-tight leading-snug">{svc.category}</h3>
+                  <ul className="flex flex-col gap-1.5">
+                    {svc.items.map((item, j) => (
+                      <li key={j} className="flex items-center gap-2 text-sm text-muted-foreground group-hover:text-foreground/70 transition-colors">
+                        <span className="w-1 h-1 rounded-full bg-muted-foreground/50 shrink-0" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
                   <div className="flex items-center gap-1.5 mt-auto font-mono text-xs uppercase tracking-widest text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     Learn more <ArrowRight className="w-3 h-3" />
                   </div>
@@ -592,7 +604,140 @@ function Services() {
   );
 }
 
-/* ─── 4. SOCIAL PROOF ─── */
+/* ══════════════════════════════════════════════
+   5. PRODUCTS
+══════════════════════════════════════════════ */
+const PRODUCTS = [
+  {
+    name: "AccessibleDocs",
+    tag: "AI Platform",
+    desc: "AI-powered platform for making documents accessible and compliant with global accessibility standards.",
+    img: "/project-1.png",
+  },
+  {
+    name: "Summa",
+    tag: "Automation",
+    desc: "AI-driven document processing and automation platform that accelerates workflows and reduces manual effort.",
+    img: "/project-2.png",
+  },
+  {
+    name: "GlobalDocs",
+    tag: "Translation",
+    desc: "Document translation platform for multi-language content workflows, built for global teams.",
+    img: "/project-3.png",
+  },
+  {
+    name: "Levent",
+    tag: "Fintech R&D",
+    desc: "R&D-driven fintech product development for banks and trading platforms, built for scale and compliance.",
+    img: "/hero.png",
+  },
+];
+
+function Products() {
+  return (
+    <section id="products" className="py-28 px-6 md:px-12 border-b border-border">
+      <div className="max-w-[1440px] mx-auto">
+        <motion.div variants={stagger} initial="initial" whileInView="whileInView">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+            <div>
+              <motion.div variants={fadeUp}><Label>Product Lobby</Label></motion.div>
+              <motion.h2 variants={fadeUp} className="text-4xl md:text-6xl font-black tracking-tighter uppercase leading-[1] max-w-2xl">
+                Building Products, Platforms, and Scalable Solutions
+              </motion.h2>
+            </div>
+            <motion.a variants={fadeUp} href="#cta" className="hidden md:inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-muted-foreground hover:text-foreground transition-colors">
+              Explore Our Products <ArrowRight className="w-4 h-4" />
+            </motion.a>
+          </div>
+
+          <motion.p variants={fadeUp} className="text-muted-foreground text-lg max-w-2xl leading-relaxed mb-16">
+            Beyond client services, Group 107 develops and supports proprietary platforms and technology solutions designed for scalability, automation, and real business impact.
+          </motion.p>
+
+          <motion.div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-border" variants={stagger} initial="initial" whileInView="whileInView">
+            {PRODUCTS.map((p, i) => (
+              <motion.div key={i} variants={fadeUp} className="group bg-background flex flex-col cursor-pointer overflow-hidden" data-testid={`product-${i}`} whileHover={{ y: -4 }} transition={{ duration: 0.35 }}>
+                <div className="aspect-[4/3] overflow-hidden relative bg-muted">
+                  <img src={p.img} alt={p.name} className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-700 scale-110 group-hover:scale-100 transition-transform duration-700" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                  <span className="absolute top-3 left-3 font-mono text-[10px] uppercase tracking-widest bg-foreground/80 backdrop-blur-sm text-background px-2.5 py-1">{p.tag}</span>
+                </div>
+                <div className="p-6 flex flex-col gap-3 flex-1">
+                  <h3 className="text-lg font-bold tracking-tight">{p.name}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{p.desc}</p>
+                  <div className="flex items-center gap-1.5 mt-auto font-mono text-xs uppercase tracking-widest text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    Learn more <ArrowRight className="w-3 h-3" />
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+
+/* ══════════════════════════════════════════════
+   6. AI & INNOVATION
+══════════════════════════════════════════════ */
+function AiSection() {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
+  const imgY = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"]);
+  const springY = useSpring(imgY, { stiffness: 80, damping: 20 });
+
+  return (
+    <section ref={ref} id="ai" className="relative py-28 overflow-hidden border-b border-border">
+      <div className="pointer-events-none absolute inset-0 opacity-[0.04]" style={{ backgroundImage: "repeating-linear-gradient(0deg, #000 0, #000 1px, transparent 0, transparent 28px), repeating-linear-gradient(90deg, #000 0, #000 1px, transparent 0, transparent 28px)" }} />
+      <div className="max-w-[1440px] mx-auto px-6 md:px-12 relative z-10">
+        <motion.div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center" variants={stagger} initial="initial" whileInView="whileInView">
+          <div className="lg:col-span-6">
+            <motion.div variants={fadeLeft}><Label>AI &amp; Innovation</Label></motion.div>
+            <motion.h2 variants={fadeLeft} className="text-4xl md:text-5xl font-black tracking-tighter leading-[1.05] uppercase mb-8 text-balance">
+              AI-Driven Solutions for Smarter Business
+            </motion.h2>
+            <motion.p variants={fadeLeft} className="text-muted-foreground leading-relaxed mb-10 max-w-md">
+              We integrate AI into your systems to automate processes, improve decision-making, and increase efficiency across your organization.
+            </motion.p>
+            <motion.div variants={stagger} className="flex flex-col gap-0 border border-border">
+              {[
+                { label: "Intelligent Automation", desc: "Eliminate repetitive tasks and accelerate throughput with AI-orchestrated pipelines." },
+                { label: "Smarter Decisions", desc: "Real-time data models that surface insights and trigger actions without human latency." },
+                { label: "Operational Efficiency", desc: "AI-first architecture designed to compound gains as your business scales." },
+              ].map((item, i) => (
+                <motion.div key={i} variants={fadeLeft} className="border-b border-border last:border-b-0 px-6 py-5 flex gap-6 items-start group hover:bg-muted/20 transition-colors duration-300" whileHover={{ x: 6 }} transition={{ duration: 0.4 }}>
+                  <span className="font-mono text-xs text-muted-foreground mt-1 shrink-0">0{i + 1}</span>
+                  <div>
+                    <div className="font-bold mb-1">{item.label}</div>
+                    <div className="text-muted-foreground text-sm leading-relaxed">{item.desc}</div>
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
+
+          <motion.div variants={fadeRight} className="lg:col-span-6 relative overflow-hidden bg-muted/20 border border-border" style={{ height: "520px" }}>
+            <motion.img src="/project-2.png" alt="AI innovation" className="w-full h-full object-cover opacity-90" style={{ y: springY, scale: 1.2 }} />
+            <div className="absolute inset-0 bg-gradient-to-tr from-background/50 to-transparent" />
+            <motion.div className="absolute bottom-6 left-6 right-6 bg-background/92 backdrop-blur-sm border border-border px-6 py-4" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.4, duration: 0.8 }}>
+              <div className="flex items-center gap-3 mb-2">
+                <BarChart3 className="w-4 h-4 text-muted-foreground" />
+                <span className="font-mono text-xs uppercase tracking-widest text-muted-foreground">AI Efficiency Gain</span>
+              </div>
+              <div className="text-3xl font-black tracking-tighter">+<AnimatedNumber value={340} />% <span className="text-muted-foreground text-base font-normal">avg. throughput</span></div>
+            </motion.div>
+          </motion.div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+
+/* ══════════════════════════════════════════════
+   7. SOCIAL PROOF
+══════════════════════════════════════════════ */
 const CLIENTS = ["IMTC", "FIBI", "TechNova", "Strategen", "PlatformX", "CloudFirst", "DataBridge", "NextScale"];
 const STATS = [
   { raw: 700, suffix: "+", label: "Global Clients" },
@@ -631,7 +776,9 @@ function SocialProof() {
   );
 }
 
-/* ─── 5. KEY ADVANTAGES ─── */
+/* ══════════════════════════════════════════════
+   8. KEY ADVANTAGES
+══════════════════════════════════════════════ */
 const ADVANTAGES = [
   { icon: CheckCircle2, title: "Transparent Processes", desc: "Full visibility into timelines, budgets, and delivery milestones at every stage." },
   { icon: Clock, title: "Fast Delivery Cycles", desc: "Sprint-based delivery with weekly demos — no black boxes, no surprises." },
@@ -643,27 +790,24 @@ const ADVANTAGES = [
 
 function Advantages() {
   return (
-    <section className="relative py-28 overflow-hidden border-b border-border bg-foreground text-background">
-      <Grain opacity={0.045} />
-      <div className="pointer-events-none absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "repeating-linear-gradient(45deg, #fff 0, #fff 1px, transparent 0, transparent 50%)", backgroundSize: "16px 16px" }} />
+    <section className="relative py-28 overflow-hidden border-b border-border">
+      <div className="pointer-events-none absolute inset-0" style={{ backgroundImage: "radial-gradient(circle, rgba(0,0,0,0.05) 1px, transparent 1px)", backgroundSize: "32px 32px" }} />
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 relative z-10">
         <motion.div variants={stagger} initial="initial" whileInView="whileInView">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
-            <div>
-              <motion.div variants={fadeUp}><Label light>Why Group 107</Label></motion.div>
-              <motion.h2 variants={fadeUp} className="text-4xl md:text-6xl font-black tracking-tighter uppercase leading-[1] max-w-xl text-background">Why Companies<br />Choose Us</motion.h2>
-            </div>
-          </div>
-          <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-background/20" variants={stagger} initial="initial" whileInView="whileInView">
+          <motion.div variants={fadeUp}><Label>Why Us</Label></motion.div>
+          <motion.h2 variants={fadeUp} className="text-4xl md:text-6xl font-black tracking-tighter uppercase leading-[1] max-w-xl mb-16">
+            Why Companies<br />Choose Group 107
+          </motion.h2>
+          <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-border" variants={stagger} initial="initial" whileInView="whileInView">
             {ADVANTAGES.map((adv, i) => {
               const Icon = adv.icon;
               return (
-                <motion.div key={i} variants={fadeUp} className="bg-foreground p-8 flex flex-col gap-4 group hover:bg-background/5 transition-colors duration-500" data-testid={`advantage-${i}`} whileHover={{ y: -3 }} transition={{ duration: 0.4 }}>
+                <motion.div key={i} variants={fadeUp} className="bg-background p-8 flex flex-col gap-4 group hover:bg-muted/25 transition-colors duration-500" data-testid={`advantage-${i}`} whileHover={{ y: -3 }} transition={{ duration: 0.4 }}>
                   <motion.div whileHover={{ scale: 1.15, rotate: -6 }} transition={{ duration: 0.35 }}>
-                    <Icon className="w-6 h-6 text-background/50 group-hover:text-background transition-colors" strokeWidth={1.5} />
+                    <Icon className="w-6 h-6 text-muted-foreground group-hover:text-foreground transition-colors" strokeWidth={1.5} />
                   </motion.div>
-                  <h3 className="text-lg font-bold tracking-tight text-background">{adv.title}</h3>
-                  <p className="text-background/60 text-sm leading-relaxed">{adv.desc}</p>
+                  <h3 className="text-lg font-bold tracking-tight">{adv.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{adv.desc}</p>
                 </motion.div>
               );
             })}
@@ -674,96 +818,9 @@ function Advantages() {
   );
 }
 
-/* ─── 6. PROCESS — slow, rich row animations ─── */
-const STEPS = [
-  { num: "01", title: "Define Needs", desc: "Discovery call to understand your goals, constraints, and success criteria." },
-  { num: "02", title: "Design Solution", desc: "Architecture, team structure, and delivery plan scoped and documented." },
-  { num: "03", title: "Approve & Align", desc: "You review and sign off before any work begins. No hidden scope." },
-  { num: "04", title: "Build & Onboard", desc: "Development kicks off with your dedicated team, integrated into your workflow." },
-  { num: "05", title: "Scale", desc: "Iterate, grow, and expand based on results and evolving business needs." },
-];
-
-function ProcessRow({ step, i }: { step: typeof STEPS[0]; i: number }) {
-  const [hovered, setHovered] = useState(false);
-  return (
-    <motion.div
-      variants={{
-        initial: { opacity: 0, y: 24 },
-        whileInView: { opacity: 1, y: 0, transition: { duration: 0.9, delay: i * 0.14, ease: [0.16, 1, 0.3, 1] } },
-      }}
-      className="relative border-b border-border py-10 grid grid-cols-12 gap-6 md:gap-12 items-center cursor-default overflow-hidden"
-      data-testid={`process-step-${i}`}
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-    >
-      {/* background sweep — slow fill from left */}
-      <motion.div
-        className="absolute inset-0 bg-muted/30 origin-left pointer-events-none"
-        initial={{ scaleX: 0 }}
-        animate={{ scaleX: hovered ? 1 : 0 }}
-        transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
-      />
-
-      <span className="relative col-span-2 md:col-span-1 font-mono text-xs text-muted-foreground uppercase tracking-widest">
-        {step.num}
-      </span>
-
-      <motion.h3
-        className="relative col-span-10 md:col-span-3 text-2xl font-bold tracking-tight"
-        animate={{ x: hovered ? 6 : 0 }}
-        transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
-      >
-        {step.title}
-      </motion.h3>
-
-      <motion.p
-        className="relative col-span-12 md:col-span-7 text-muted-foreground text-sm leading-relaxed md:pl-4"
-        animate={{ opacity: hovered ? 1 : 0.65 }}
-        transition={{ duration: 0.55 }}
-      >
-        {step.desc}
-      </motion.p>
-
-      <motion.div
-        className="hidden md:flex col-span-1 justify-self-end relative"
-        animate={{ opacity: hovered ? 1 : 0, x: hovered ? 0 : 10 }}
-        transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
-      >
-        <ArrowUpRight className="w-5 h-5 text-muted-foreground" />
-      </motion.div>
-    </motion.div>
-  );
-}
-
-function Process() {
-  return (
-    <section id="process" className="py-28 px-6 md:px-12 max-w-[1440px] mx-auto border-b border-border">
-      <motion.div
-        variants={{ initial: {}, whileInView: {} }}
-        initial="initial"
-        whileInView="whileInView"
-        viewport={{ once: true, margin: "-60px" }}
-      >
-        <motion.div variants={fadeUp}><Label>How It Works</Label></motion.div>
-        <motion.h2 variants={fadeUp} className="text-4xl md:text-6xl font-black tracking-tighter uppercase leading-[1] mb-20">
-          Simple.<br />Predictable.<br />Proven.
-        </motion.h2>
-
-        <motion.div
-          className="flex flex-col"
-          variants={{ initial: {}, whileInView: {} }}
-          initial="initial"
-          whileInView="whileInView"
-          viewport={{ once: true, margin: "-60px" }}
-        >
-          {STEPS.map((step, i) => <ProcessRow key={i} step={step} i={i} />)}
-        </motion.div>
-      </motion.div>
-    </section>
-  );
-}
-
-/* ─── 7. CASE STUDIES ─── */
+/* ══════════════════════════════════════════════
+   9. CASE STUDIES
+══════════════════════════════════════════════ */
 const CASES = [
   { client: "IMTC", category: "Fintech", title: "Cloud Investment Platform", result: "Improved performance & scalability; cut infra costs 40%.", img: "/project-1.png" },
   { client: "TechNova", category: "SaaS", title: "Enterprise SaaS Dashboard", result: "3× faster onboarding, 98% uptime SLA post-launch.", img: "/project-2.png" },
@@ -818,52 +875,71 @@ function CaseStudies() {
   );
 }
 
-/* ─── 8. AI & INNOVATION ─── */
-function AiSection() {
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
-  const imgY = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"]);
-  const springY = useSpring(imgY, { stiffness: 80, damping: 20 });
+/* ══════════════════════════════════════════════
+   10. INSIGHTS & RESOURCES
+══════════════════════════════════════════════ */
+const INSIGHTS = [
+  { type: "Blog", title: "How AI is Transforming Enterprise Software Development", date: "Mar 2025", img: "/project-1.png" },
+  { type: "Article", title: "Scaling Dedicated Teams: What Every CTO Should Know", date: "Feb 2025", img: "/project-2.png" },
+  { type: "Media", title: "Group 107 at FinTech Europe 2025: Key Takeaways", date: "Jan 2025", img: "/project-3.png" },
+];
 
+function Insights() {
   return (
-    <section ref={ref} className="relative py-28 overflow-hidden border-b border-border">
-      <div className="pointer-events-none absolute inset-0 opacity-[0.04]" style={{ backgroundImage: "repeating-linear-gradient(0deg, #000 0, #000 1px, transparent 0, transparent 28px), repeating-linear-gradient(90deg, #000 0, #000 1px, transparent 0, transparent 28px)" }} />
-      <div className="max-w-[1440px] mx-auto px-6 md:px-12 relative z-10">
-        <motion.div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center" variants={stagger} initial="initial" whileInView="whileInView">
-          <div className="lg:col-span-6">
-            <motion.div variants={fadeLeft}><Label>AI &amp; Innovation</Label></motion.div>
-            <motion.h2 variants={fadeLeft} className="text-4xl md:text-5xl font-black tracking-tighter leading-[1.05] uppercase mb-8 text-balance">
-              AI-Driven Solutions That Move Your Business Forward
-            </motion.h2>
-            <motion.p variants={fadeLeft} className="text-muted-foreground leading-relaxed mb-10 max-w-md">
-              Intelligent automation, smarter decision-making, and AI-powered workflows that reduce manual effort and unlock new efficiency at every layer of your operation.
-            </motion.p>
-            <motion.div variants={stagger} className="flex flex-col gap-0 border border-border">
-              {[
-                { label: "Intelligent Automation", desc: "Eliminate repetitive tasks and accelerate throughput with AI-orchestrated pipelines." },
-                { label: "Smarter Decisions", desc: "Real-time data models that surface insights and trigger actions without human latency." },
-                { label: "Operational Efficiency", desc: "AI-first architecture designed to compound gains as your business scales." },
-              ].map((item, i) => (
-                <motion.div key={i} variants={fadeLeft} className="border-b border-border last:border-b-0 px-6 py-5 flex gap-6 items-start group hover:bg-muted/20 transition-colors duration-300" whileHover={{ x: 6 }} transition={{ duration: 0.4 }}>
-                  <span className="font-mono text-xs text-muted-foreground mt-1 shrink-0">0{i + 1}</span>
-                  <div>
-                    <div className="font-bold mb-1">{item.label}</div>
-                    <div className="text-muted-foreground text-sm leading-relaxed">{item.desc}</div>
-                  </div>
-                </motion.div>
-              ))}
-            </motion.div>
+    <section id="resources" className="py-28 px-6 md:px-12 border-b border-border">
+      <div className="max-w-[1440px] mx-auto">
+        <motion.div variants={stagger} initial="initial" whileInView="whileInView">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+            <div>
+              <motion.div variants={fadeUp}><Label>Resources</Label></motion.div>
+              <motion.h2 variants={fadeUp} className="text-4xl md:text-6xl font-black tracking-tighter uppercase leading-[1]">
+                Insights, Ideas,<br />and Industry Expertise
+              </motion.h2>
+            </div>
+            <motion.a variants={fadeUp} href="#" className="hidden md:inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-muted-foreground hover:text-foreground transition-colors">
+              Read Our Blog <ArrowRight className="w-4 h-4" />
+            </motion.a>
           </div>
-          <motion.div variants={fadeRight} className="lg:col-span-6 relative overflow-hidden bg-muted/20 border border-border" style={{ height: "520px" }}>
-            <motion.img src="/project-2.png" alt="AI innovation" className="w-full h-full object-cover opacity-90" style={{ y: springY, scale: 1.2 }} />
-            <div className="absolute inset-0 bg-gradient-to-tr from-background/50 to-transparent" />
-            <motion.div className="absolute bottom-6 left-6 right-6 bg-background/92 backdrop-blur-sm border border-border px-6 py-4" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.4, duration: 0.8 }}>
-              <div className="flex items-center gap-3 mb-2">
-                <BarChart3 className="w-4 h-4 text-muted-foreground" />
-                <span className="font-mono text-xs uppercase tracking-widest text-muted-foreground">AI Efficiency Gain</span>
-              </div>
-              <div className="text-3xl font-black tracking-tighter">+<AnimatedNumber value={340} />% <span className="text-muted-foreground text-base font-normal">avg. throughput</span></div>
-            </motion.div>
+
+          <motion.p variants={fadeUp} className="text-muted-foreground text-lg max-w-2xl leading-relaxed mb-16">
+            Explore our blog, articles, and media content to stay updated on technology, AI, and digital growth.
+          </motion.p>
+
+          <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-border" variants={stagger} initial="initial" whileInView="whileInView">
+            {INSIGHTS.map((post, i) => (
+              <motion.div key={i} variants={fadeUp} className="group bg-background flex flex-col cursor-pointer overflow-hidden" data-testid={`insight-${i}`} whileHover={{ y: -4 }} transition={{ duration: 0.35 }}>
+                <div className="aspect-[16/9] overflow-hidden relative bg-muted">
+                  <img src={post.img} alt={post.title} className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all duration-700 scale-105 group-hover:scale-100" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+                  <span className="absolute top-3 left-3 font-mono text-[10px] uppercase tracking-widest bg-foreground/80 backdrop-blur-sm text-background px-2.5 py-1">
+                    {post.type}
+                  </span>
+                </div>
+                <div className="p-6 flex flex-col gap-3 flex-1">
+                  <div className="font-mono text-xs text-muted-foreground uppercase tracking-widest">{post.date}</div>
+                  <h3 className="text-base font-bold tracking-tight leading-snug group-hover:text-foreground/80 transition-colors">{post.title}</h3>
+                  <div className="flex items-center gap-1.5 mt-auto font-mono text-xs uppercase tracking-widest text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    Read more <ArrowRight className="w-3 h-3" />
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+
+          <motion.div variants={fadeUp} className="flex items-center gap-6 mt-10 border-t border-border pt-8">
+            {[
+              { icon: BookOpen, label: "Blog" },
+              { icon: Newspaper, label: "Articles" },
+              { icon: PlayCircle, label: "Media Room" },
+            ].map((tab, i) => {
+              const Icon = tab.icon;
+              return (
+                <motion.a key={i} href="#" className="flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-muted-foreground hover:text-foreground transition-colors" whileHover={{ x: 3 }} transition={{ duration: 0.25 }}>
+                  <Icon className="w-4 h-4" strokeWidth={1.5} />
+                  {tab.label}
+                </motion.a>
+              );
+            })}
           </motion.div>
         </motion.div>
       </div>
@@ -871,7 +947,9 @@ function AiSection() {
   );
 }
 
-/* ─── 9. CTA ─── */
+/* ══════════════════════════════════════════════
+   12. FINAL CTA
+══════════════════════════════════════════════ */
 function CTA() {
   return (
     <section id="cta" className="relative bg-foreground text-background py-36 px-6 md:px-12 overflow-hidden">
@@ -902,7 +980,9 @@ function CTA() {
   );
 }
 
-/* ─── 10. FOOTER ─── */
+/* ══════════════════════════════════════════════
+   13. FOOTER
+══════════════════════════════════════════════ */
 function Footer() {
   return (
     <footer className="bg-foreground text-background pt-20 pb-8 px-6 md:px-12">
@@ -915,7 +995,13 @@ function Footer() {
           <p className="text-background/50 text-sm leading-relaxed max-w-xs">
             A complete tech partner for ambitious companies — from custom software and dedicated teams to AI integration and digital growth.
           </p>
+          <div className="flex gap-4 mt-2">
+            {["LinkedIn", "Twitter / X", "GitHub"].map((s, i) => (
+              <a key={i} href="#" className="font-mono text-xs text-background/40 hover:text-background/70 transition-colors uppercase tracking-widest">{s}</a>
+            ))}
+          </div>
         </div>
+
         <div className="md:col-span-2 md:col-start-6">
           <div className="font-mono text-xs text-background/40 uppercase tracking-widest mb-6">Services</div>
           <ul className="space-y-3 font-mono text-xs text-background/70">
@@ -924,6 +1010,7 @@ function Footer() {
             ))}
           </ul>
         </div>
+
         <div className="md:col-span-2">
           <div className="font-mono text-xs text-background/40 uppercase tracking-widest mb-6">Company</div>
           <ul className="space-y-3 font-mono text-xs text-background/70">
@@ -932,16 +1019,11 @@ function Footer() {
             ))}
           </ul>
         </div>
+
         <div className="md:col-span-2">
           <div className="font-mono text-xs text-background/40 uppercase tracking-widest mb-6">Global Hubs</div>
           <ul className="space-y-3 font-mono text-xs text-background/70">
             {["Israel","Ukraine","Poland","Argentina"].map((loc, i) => <li key={i}>{loc}</li>)}
-          </ul>
-          <div className="font-mono text-xs text-background/40 uppercase tracking-widest mb-4 mt-8">Social</div>
-          <ul className="space-y-3 font-mono text-xs text-background/70">
-            {["LinkedIn","Twitter / X","GitHub"].map((s, i) => (
-              <li key={i}><a href="#" className="hover:text-background transition-colors">{s}</a></li>
-            ))}
           </ul>
         </div>
       </div>
@@ -952,24 +1034,28 @@ function Footer() {
   );
 }
 
-/* ─── PAGE ─── */
+/* ══════════════════════════════════════════════
+   PAGE — ordered per sitemap
+══════════════════════════════════════════════ */
 function Home() {
   return (
     <div className="min-h-screen w-full bg-background text-foreground selection:bg-foreground selection:text-background">
       <NavBar />
       <main>
-        <Hero />
+        <Hero />           {/* 1 */}
         <Marquee />
-        <Positioning />
-        <Services />
-        <SocialProof />
-        <Advantages />
-        <Process />
-        <CaseStudies />
-        <AiSection />
-        <CTA />
+        <Positioning />    {/* 2 */}
+        <TalentsSection /> {/* 3 — How It Works (Talents) */}
+        <Services />       {/* 4 — Services Overview */}
+        <Products />       {/* 5 — Products */}
+        <AiSection />      {/* 6 — AI & Innovation */}
+        <SocialProof />    {/* 7 */}
+        <Advantages />     {/* 8 */}
+        <CaseStudies />    {/* 9 */}
+        <Insights />       {/* 10 — Insights & Resources */}
+        <CTA />            {/* 12 */}
       </main>
-      <Footer />
+      <Footer />           {/* 13 */}
     </div>
   );
 }
