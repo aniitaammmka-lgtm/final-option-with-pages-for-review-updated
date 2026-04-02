@@ -1,0 +1,152 @@
+You are building a React + Vite + Tailwind project that will be deterministically
+transformed into server-rendered PHP templates. Every rule is a conversion contract.
+Output must be mechanically portable — no interpretation, no guesswork.
+
+────────────────────────────────
+STRUCTURE
+────────────────────────────────
+
+Each block: exactly one <section> root. No outer wrappers.
+DOM depth: max 3 levels inside block root.
+Single markup for all viewports — responsive via CSS only.
+Optional elements stay in DOM — visibility via CSS modifier class, not conditional render.
+Empty repeater renders empty wrapper — block root always present.
+
+BEM — mandatory:
+  Root class = block name: .services, .hero, .pricing
+  Children: .services__item, .services__item-title
+  Modifiers: .services__item--featured
+  FORBIDDEN as root: .card, .wrapper, .container, .item, .block
+
+Data attributes — mandatory on every element:
+  data-block="services"    → <section> root (must match BEM root class exactly)
+  data-element="item"      → every repeatable item wrapper
+  data-field="title"       → every content node (must match TS interface property)
+  data-form="contact"      → form root element
+  data-open / data-active  → interactive state (not className branching)
+
+JSX attribute order: className → data-* → functional (href, src, alt) → handlers
+
+────────────────────────────────
+DATA
+────────────────────────────────
+
+All content → src/data/*.ts. Nothing hardcoded in JSX components.
+All data: JSON-serializable only. string | number | boolean | string[] | flat object.
+FORBIDDEN: functions, React nodes, JSX, objects nested > 2 levels, computed values.
+
+Controlled field name vocabulary (no synonyms):
+  title | subtitle | description | label | value | meta | src | alt
+
+Plain vs rich text — annotate every string field:
+  title: string        // plain — no HTML
+  /** @richtext */
+  body: string         // HTML allowed
+
+Image — always object, never plain string:
+  image: { src: string; alt: string }
+  image?: { src: string; alt: string }
+
+Link/CTA — always object, never hardcoded href:
+  cta: { url: string; label: string; target?: '_blank' | '_self' }
+
+Modifiers: from data fields only — never inferred from array index or position.
+Stagger delays: precomputed in data as animDelay: 0.1 — never delay={index * 0.1}.
+
+────────────────────────────────
+CSS
+────────────────────────────────
+
+All visual styles → index.css @layer components as BEM classes.
+Tailwind in JSX: structural layout only (flex, grid, container, md:, lg:).
+Zero raw pixel values — all spacing via CSS custom properties (--sp-4, --sp-8...).
+No @import for fonts — font families via CSS vars (--font-display, --font-body) only.
+Images: no fixed height utilities (h-48, h-64) — use aspect-ratio in CSS.
+No layout logic based on runtime context (order-first/last, conditional hidden).
+No className branching on runtime state — use data-* attributes.
+
+────────────────────────────────
+STATE AND INTERACTION
+────────────────────────────────
+
+State-driven visuals → data attributes only:
+  CORRECT: <div data-open="false">
+  CSS:     .nav__menu[data-open="true"] { display: block; }
+  WRONG:   className={isOpen ? 'nav--open' : 'nav--closed'}
+
+AnimateIn — single isolation wrapper in src/components/AnimateIn.tsx:
+  All animated elements must use <AnimateIn delay={n} direction="up|fade|left|right">
+  framer-motion: AnimateIn.tsx ONLY. Forbidden elsewhere.
+  Delays: explicit values from data only — not computed inline.
+
+────────────────────────────────
+COMPONENTS
+────────────────────────────────
+
+Render contract JSDoc — mandatory on every block component:
+  /**
+   * @block services
+   * @root <section class="services">
+   * @repeatable services__item — 1 to N
+   * @optional services__item-price
+   * @cta per-item | block | none
+   * @static-compatible yes
+   */
+
+SectionHeader — standard shared component for subtitle + h2 title pattern.
+
+Icons — all through src/lib/icons.tsx only:
+  Icons.name (React component) + iconSVG.name (raw SVG string export).
+  FORBIDDEN: lucide-react imports in components, emoji as icons.
+
+Forms — static markup only:
+  FORBIDDEN: useState for fields, onSubmit handlers, fetch, validation logic.
+  Mark form root: <form data-form="contact-form">
+
+────────────────────────────────
+FORBIDDEN
+────────────────────────────────
+
+JSX logic:
+  Conditional rendering: {x && <El />}, {x ? <A /> : <B />}
+  Inline math: delay={index * 0.1}, i === 1 ? '--featured' : ''
+  Hardcoded href: href="#contact", href="/services"
+  Responsive branching: {isMobile ? <A /> : <B />}
+  use-mobile hook in block components
+
+CSS:
+  Inline Tailwind for visuals (bg-*, text-*, p-*, rounded-*, shadow-*)
+  Raw pixel values in any CSS rule
+  @import for fonts
+  Fixed image heights (h-48, h-64, h-full on <img>)
+  Generic root class names (.card, .wrapper, .item)
+
+Data:
+  Content hardcoded in JSX
+  image: string or cta: string (must be objects)
+  Functions or React nodes in data files
+  i18n / data-i18n / translation objects / language switcher
+
+Dependencies:
+  framer-motion outside AnimateIn.tsx
+  lucide-react outside src/lib/icons.tsx
+  react-router-dom for single-page sites
+  @tanstack/react-query without actual async fetching
+  Full shadcn/ui scaffold (unused components)
+
+────────────────────────────────
+PRE-DELIVERY CHECKLIST
+────────────────────────────────
+
+[ ] Every <section> has data-block matching BEM root class exactly
+[ ] Every repeatable item has data-element="item"
+[ ] Every content node has data-field matching TS interface property
+[ ] All content in src/data/*.ts — zero hardcoded values in JSX
+[ ] Images { src, alt } | Links { url, label, target? } — no plain strings
+[ ] No conditional rendering, no inline computed values, no index-based modifiers
+[ ] State uses data-* attributes — no className branching on runtime state
+[ ] Forms: static markup only, data-form attribute present
+[ ] All visual CSS in index.css BEM classes — no raw pixels, no inline Tailwind
+[ ] framer-motion only in AnimateIn.tsx | Icons only through src/lib/icons.tsx
+[ ] No emoji | No @import fonts | No fixed image heights
+[ ] Render contract JSDoc present on every block component
