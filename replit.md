@@ -91,6 +91,26 @@ Generated Zod schemas from the OpenAPI spec (e.g. `HealthCheckResponse`). Used b
 
 Generated React Query hooks and fetch client from the OpenAPI spec (e.g. `useHealthCheck`, `healthCheck`).
 
+### `artifacts/group107-home` (`@workspace/group107-home`)
+
+React + Vite + Tailwind landing page for Group 107. Follows a strict PHP-portable architecture contract:
+
+- **`src/data/*.ts`** — all content in typed data files; nothing hardcoded in JSX
+- **`src/lib/icons.tsx`** — single source for all icons (`Icons.Name` components + `iconSVG.Name` raw SVG strings); no lucide-react imports elsewhere
+- **`src/components/AnimateIn.tsx`** — only file allowed to use framer-motion; wraps elements with scroll-triggered entrance animations (`direction: up|fade|left|right`, explicit `delay` from data)
+- **`src/components/SectionHeader.tsx`** — shared subtitle + h2 heading pattern
+- **`src/components/blocks/`** — one file per page section (Nav, MegaMenu, Hero, Marquee, Positioning, Talents, Services, Products, AiSection, SocialProof, Advantages, CaseStudies, Insights, CTA, Footer)
+- **`src/index.css`** — all visual styles as `@layer components` BEM classes; spacing via `--sp-*` custom properties; fonts via `--font-display/body/mono` vars; no `@import` for fonts (loaded via `<link>` in `index.html`)
+- **`src/App.tsx`** — slim orchestrator only (no framer-motion, no lucide, no inline data)
+
+Architecture rules enforced:
+- BEM class names with `data-block`, `data-element`, `data-field` on every element
+- No conditional rendering (`&&`, ternary); visibility via `data-*` attributes + CSS
+- No className branching on runtime state
+- No raw pixel values in CSS; no fixed image heights; no Tailwind visual utilities in JSX
+- Images: `{ src, alt }` objects; links: `{ url, label }` objects
+- Stagger delays precomputed in data as `animDelay: number`
+
 ### `scripts` (`@workspace/scripts`)
 
 Utility scripts package. Each script is a `.ts` file in `src/` with a corresponding npm script in `package.json`. Run scripts via `pnpm --filter @workspace/scripts run <script>`. Scripts can import any workspace package (e.g., `@workspace/db`) by adding it as a dependency in `scripts/package.json`.
