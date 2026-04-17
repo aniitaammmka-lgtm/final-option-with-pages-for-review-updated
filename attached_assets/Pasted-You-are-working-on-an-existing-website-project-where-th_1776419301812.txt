@@ -1,0 +1,193 @@
+You are working on an existing website project where the homepage is already built.
+
+Your task is to EXTEND the project by adding NEW PAGES and making the navigation fully clickable and functional.
+
+IMPORTANT REQUIREMENTS:
+- Reuse existing components/blocks from the homepage wherever possible (DO NOT recreate from scratch).
+- Keep design consistency (spacing, typography, colors, animations).
+- Ensure all menu items link to real pages.
+- Use component-based structure.
+- Maintain responsive design.
+
+--------------------------------------------------
+1. CREATE NEW PAGES
+--------------------------------------------------
+
+Create the following pages:
+- /services (or /solutions)
+- /product-lobby
+
+Each page must be fully structured and navigable.
+
+--------------------------------------------------
+2. SERVICES / SOLUTIONS PAGE
+--------------------------------------------------
+
+Hero Section:
+Headline: "All Your Technology Needs - One Partner"
+Subheadline: "From top-tier talent to development, AI, DevOps, and accessibility - Group 107 delivers complete, scalable solutions tailored to your business."
+CTA: "Explore Services" / "Talk to an Expert"
+
+Services Navigation Section:
+Headline: "Explore Our Solutions"
+
+Categories:
+- Talents → Team Expertise, Recruitment as a Service
+- Development Services → Web Development, Software Development, Mobile Development, Product Discovery
+- Group 107 Digital → Service 1, Service 2, Service 3
+- Infrastructure & DevOps Solutions → DevOps, Cloud Solutions, IT and Infrastructure
+- Accessibility → Service 1, Service 2, Service 3
+- Fintech → Bank integrations, etc.
+- Next AI
+
+Detailed Sections (reuse homepage blocks if similar):
+
+Talents:
+Headline: "Talents"
+Text: "Access top-tier global talent and scale your team quickly with full operational support."
+Includes: Team Expertise, Recruitment as a service
+
+Development Services:
+Headline: "Development Services"
+Text: "We build scalable, high-performance digital products - from websites to enterprise systems."
+Includes: Web Development, Software Development, Mobile Development, Product Discovery
+
+Infrastructure & DevOps:
+Headline: "Infrastructure & DevOps Solutions"
+Text: "We design and manage infrastructure that ensures performance, scalability, and reliability."
+Includes: DevOps, Cloud Solutions, IT and Infrastructure
+
+Group 107 Digital:
+Headline: "Group 107 Digital"
+Text: "We combine marketing, data, and technology to help businesses acquire, convert, and retain customers."
+Includes: Service 1, Service 2, Service 3
+
+Accessibility:
+Headline: "Accessibility"
+Text: "We ensure digital products are accessible, compliant, and usable for all users."
+
+Fintech:
+Headline: "Fintech"
+Text: "Specialized solutions for financial institutions, including integrations and advanced systems."
+
+Next AI:
+Headline: "Next AI"
+Text: "AI-focused solutions designed to support automation, decision-making, and next-generation workflows."
+
+Cross-Solution Section:
+Headline: "More Than Services - A Unified Technology Ecosystem"
+Text: "Combine multiple services into one seamless delivery model."
+Examples:
+- Development + DevOps
+- Accessibility + Web Development
+- Fintech + Data
+
+Industries Section:
+Headline: "Built for Complex Industries"
+Items: Finance, Government, SaaS, Healthcare, Media
+
+Final CTA:
+Headline: "Not Sure Where to Start?"
+Subheadline: "We’ll help define the right solution for your business."
+CTA: "Book a Consultation" / "Contact Us"
+
+--------------------------------------------------
+3. PRODUCT LOBBY PAGE
+--------------------------------------------------
+
+Hero Section:
+Headline: "Products Built to Solve Real Business Challenges"
+Subheadline: "Explore Group 107’s portfolio..."
+CTA: "Explore Products" / "Talk to Our Team"
+
+Intro Section:
+Headline: "More Than Services - Purpose-Built Products"
+Body: (use provided text)
+
+Products Grid:
+Cards:
+- Accessible Docs
+- Global Docs
+- Summa
+- Levent
+
+Each card:
+- Short description
+- CTA: "View Product"
+- Click opens dedicated section or page anchor
+
+Product Sections:
+
+Accessible Docs:
+Headline: "Accessible Docs"
+Subheadline: "AI-powered document accessibility at scale"
+Include key points
+
+Global Docs:
+Headline: "Global Docs"
+Subheadline: "AI-powered document translation"
+
+Summa:
+Headline: "Summa"
+Subheadline: "Smarter document and workflow intelligence"
+
+Levent:
+Headline: "Levent"
+Subheadline: "Fintech systems built for scale"
+
+Why Section:
+Headline: "Built to Solve Real Operational Challenges"
+
+Products + Services:
+Headline: "Products That Don’t Stand Alone"
+CTA: "See Our Solutions"
+
+Use Cases:
+Headline: "Built for Organizations That Need More Than Generic Tools"
+
+Credibility Block:
+Headline: "Built by a Team Trusted Across Industries"
+
+Final CTA:
+Headline: "Need Help Choosing the Right Product?"
+CTA: "Contact Us"
+
+--------------------------------------------------
+4. NAVIGATION + ROUTING
+--------------------------------------------------
+
+- Update header menu links:
+  Home → /
+  Services → /services
+  Products → /product-lobby
+  Contact → /contact (if exists)
+
+- Ensure all links are clickable and routed properly
+- Add smooth scrolling for anchor links
+
+--------------------------------------------------
+5. REUSE EXISTING BLOCKS (VERY IMPORTANT)
+--------------------------------------------------
+
+- If homepage already has:
+  - hero
+  - cards
+  - CTA sections
+  - grids
+→ REUSE them as components
+
+DO NOT duplicate styles manually.
+
+--------------------------------------------------
+6. UX DETAILS
+--------------------------------------------------
+
+- Add hover states on cards
+- Add subtle animations (fade, slide)
+- Ensure clean spacing and hierarchy
+- Keep it modern and minimal
+
+--------------------------------------------------
+
+Final result:
+A multi-page website with working navigation, consistent design, reusable components, and fully structured Services and Product pages.
