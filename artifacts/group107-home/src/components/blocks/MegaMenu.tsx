@@ -31,7 +31,9 @@ export default function MegaMenu({ item }: MegaMenuProps) {
               className="mega-menu__panel"
               data-element="item"
               data-active={activePanel === pi ? "true" : "false"}
+              data-linked={panel.url ? "true" : "false"}
               onMouseEnter={() => setActivePanel(pi)}
+              onClick={() => { if (panel.url) window.location.href = panel.url; }}
             >
               <span data-field="label">{panel.heading}</span>
               <ChevronDown className="mega-menu__chevron" />

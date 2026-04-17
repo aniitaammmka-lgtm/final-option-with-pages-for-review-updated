@@ -497,6 +497,10 @@
     color: rgba(0,0,0,0.3);
   }
   .mega-menu__panel[data-active="true"] .mega-menu__chevron { color: hsl(var(--foreground)); }
+  .mega-menu__panel[data-linked="true"][data-active="true"] [data-field="label"] {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
   .mega-menu__links {
     border-right: 1px solid hsl(var(--border));
     padding: var(--sp-8);

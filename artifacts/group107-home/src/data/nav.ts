@@ -1,5 +1,6 @@
 export interface NavPanel {
   heading: string;
+  url?: string;
   links: { label: string; url: string }[];
 }
 
@@ -20,7 +21,7 @@ export const navItems: NavItem[] = [
     url: "/services",
     panels: [
       { heading: "Talents", links: [{ label: "Team Expertise", url: "/services#talents" }, { label: "Recruitment as a Service", url: "/services#talents" }] },
-      { heading: "Development Services", links: [{ label: "Development Overview", url: "/development-services" }, { label: "Web Development", url: "/development-services#web" }, { label: "Software Development", url: "/development-services#software" }, { label: "Mobile Development", url: "/development-services#mobile" }, { label: "Product Discovery", url: "/development-services#discovery" }] },
+      { heading: "Development Services", url: "/development-services", links: [{ label: "Web Development", url: "/development-services#web" }, { label: "Software Development", url: "/development-services#software" }, { label: "Mobile Development", url: "/development-services#mobile" }, { label: "Product Discovery", url: "/development-services#discovery" }] },
       { heading: "Group 107 Digital", links: [{ label: "Marketing", url: "/services#digital" }, { label: "SDR", url: "/services#digital" }, { label: "Growth Systems", url: "/services#digital" }] },
       { heading: "Infrastructure & DevOps", links: [{ label: "DevOps", url: "/services#devops" }, { label: "Cloud Solutions", url: "/services#devops" }, { label: "IT and Infrastructure", url: "/services#devops" }] },
       { heading: "Accessibility", links: [{ label: "WCAG Compliance", url: "/services#accessibility" }, { label: "Accessible Design", url: "/services#accessibility" }, { label: "Audit & Remediation", url: "/services#accessibility" }] },
