@@ -220,14 +220,7 @@ export default function DevelopmentServicesPage() {
 
           <div className="ds-hero__inner">
             <AnimateIn delay={0} direction="up">
-              <div className="ds-hero__breadcrumb">
-                <a href="/services" className="ds-hero__breadcrumb-link">Services / Solutions</a>
-                <span className="ds-hero__breadcrumb-sep">/</span>
-                <span>Development Services</span>
-              </div>
-            </AnimateIn>
-            <AnimateIn delay={0} direction="up">
-              <div className="ds-hero__label">Development Services</div>
+              <div className="ds-hero__label">Services / Development Services</div>
             </AnimateIn>
             <AnimateIn delay={0.08} direction="up">
               <h1 className="ds-hero__title">
@@ -252,9 +245,9 @@ export default function DevelopmentServicesPage() {
             <AnimateIn delay={0.3} direction="up" className="ds-hero__stats">
               {[
                 { val: "4", label: "Dev Service Areas" },
-                { val: "Modern", label: "Tech Stack" },
-                { val: "AI-Augmented", label: "Delivery" },
-                { val: "End-to-End", label: "Partnership" },
+                { val: "150+", label: "Projects Delivered" },
+                { val: "12+", label: "Tech Stacks" },
+                { val: "700+", label: "Global Clients" },
               ].map((s, i) => (
                 <div key={i} className="ds-hero__stat">
                   <span className="ds-hero__stat-val">{s.val}</span>
