@@ -4114,16 +4114,17 @@
   .ds-why__card {
     display: flex;
     flex-direction: column;
-    gap: var(--sp-4);
-    padding: var(--sp-7) var(--sp-6);
+    gap: var(--sp-6);
+    padding: var(--sp-10) var(--sp-8);
     background: hsl(var(--foreground));
     transition: background 0.2s ease;
   }
+  @media (min-width: 1024px) { .ds-why__card:nth-child(5) { grid-column: span 2; } }
   .ds-why__card:hover { background: rgba(255,255,255,0.06); }
   .ds-why__card:hover .ds-why__card-icon { border-color: rgba(255,255,255,0.5); background: rgba(255,255,255,0.1); }
   .ds-why__card-icon {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2.75rem;
+    height: 2.75rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -4133,9 +4134,9 @@
     transition: all 0.2s ease;
   }
   .ds-why__card-icon svg { width: 100%; height: 100%; }
-  .ds-why__card-body { display: flex; flex-direction: column; gap: var(--sp-2); flex: 1; }
-  .ds-why__card-title { font-size: 0.95rem; font-weight: 800; letter-spacing: -0.01em; }
-  .ds-why__card-desc { font-size: 0.82rem; color: rgba(255,255,255,0.55); line-height: 1.6; }
+  .ds-why__card-body { display: flex; flex-direction: column; gap: var(--sp-3); flex: 1; }
+  .ds-why__card-title { font-size: 1rem; font-weight: 800; letter-spacing: -0.01em; }
+  .ds-why__card-desc { font-size: 0.875rem; color: rgba(255,255,255,0.55); line-height: 1.65; }
 
   /* ── Individual Service Sections ────────── */
   .ds-service {
@@ -4704,8 +4705,8 @@
   .ds-engage__card {
     display: flex;
     flex-direction: column;
-    gap: var(--sp-4);
-    padding: var(--sp-8) var(--sp-7);
+    gap: var(--sp-6);
+    padding: var(--sp-10) var(--sp-8);
     border: 1px solid hsl(var(--border));
     background: hsl(var(--card));
     position: relative;
@@ -4786,7 +4787,7 @@
     letter-spacing: 0.08em;
     text-decoration: none;
     color: hsl(var(--foreground));
-    padding-top: var(--sp-4);
+    padding-top: var(--sp-6);
     border-top: 1px solid hsl(var(--border));
     position: relative;
     z-index: 1;
