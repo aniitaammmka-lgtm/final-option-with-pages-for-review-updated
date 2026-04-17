@@ -1,0 +1,107 @@
+#	Block	Purpose	Content	UX / Messaging Notes	Comments
+1	Hero Section	Immediately explain what Development Services means in Group 107’s structure	"Headline: Development That Moves Your Business Forward
+
+Subheadline: From websites and platforms to mobile apps and product discovery, Group 107 helps companies design, build, and scale digital products with the right technology, team structure, and delivery approach. 
+
+CTA 1: Let’s Talk About Your Project 
+CTA 2: View Case Studies"	Keep this page clearly business-oriented, not too technical at the top. It should connect strategy + execution.	"need to mention that using all mpdern technologies and AI based solution. Quick and quality results.
+
+It shouldn't be main point but it has to be mentioned on all types of development"
+2	Intro / What We Do	Frame the department before diving into sub-services	"Section title: End-to-End Development, Not Just Execution 
+
+Text: Group 107 provides development services for companies that need more than coding resources. We combine product thinking, UX awareness, architecture, development, QA, and delivery management to turn ideas into reliable digital products. Whether the need is a WordPress website, custom software platform, mobile app, or early-stage product definition, our team builds solutions around real business goals."		
+3	Services Overview Grid	Present the four sitemap-level development service categories	"Section title: Our Development Services 
+
+Cards: 
+1. Web Development  - Marketing websites, corporate websites, portals, and custom WordPress solutions 
+2. Software Development - Custom platforms, internal systems, enterprise tools, integrations, and tailored business software 
+3. Mobile Development - iOS, Android, and cross-platform mobile applications for customer and internal use 
+4. Product Discovery - Structured planning phase to define features, architecture, priorities, and delivery roadmap"		
+4	Why Group 107 for Development	Build trust and positioning	"Section title: Why Companies Choose Group 107 
+
+Points: 
+Business-first approach - we build around goals, users, and operations, not only requirements lists 
+Cross-functional delivery - strategy, design, development, DevOps, QA, and accessibility can work together under one partner 
+Flexible engagement - project-based delivery, dedicated teams, or mixed models depending on the client’s need 
+Scalable expertise - from websites and mobile apps to enterprise systems and AI-connected solutions 
+Quality and transparency - structured execution, clear communication, and reliable delivery process"		
+5	Web Development	Dedicated section for first sub-service	"Section title: Web Development 
+
+Text: Group 107 delivers customized web development solutions for companies that need high-quality, responsive, and user-friendly digital experiences. Our expertise includes custom WordPress development, front-end and back-end implementation, and business-oriented website builds designed to support growth, performance, and maintainability. 
+
+Key Capabilities:
+• Custom WordPress websites 
+• Corporate and marketing websites 
+• Responsive front-end implementation 
+• Back-end functionality and integrations 
+• Performance-focused builds 
+• Accessibility-aware delivery"		
+6	Software Development	Dedicated section for second sub-service	"Section title: Software Development 
+
+Text: We build custom software solutions tailored to each client’s operations, workflows, and business objectives. From internal systems and operational tools to enterprise-grade platforms, Group 107 helps companies streamline processes, improve efficiency, and create scalable digital products that fit their exact requirements. 
+Key Capabilities:
+• Custom platform development 
+• Enterprise software solutions 
+• Internal business systems 
+• API and third-party integrations 
+• Scalable architecture thinking 
+• Tailored feature development"		
+7	Mobile Development	Dedicated section for third sub-service	"Section title: Mobile Development 
+
+Text: Group 107 develops mobile applications tailored to the specific goals of each product and business. Our team supports mobile solutions for iOS, Android, and cross-platform environments, helping clients launch user-friendly, high-quality apps ranging from focused business tools to more complex product ecosystems. 
+
+Key Capabilities:
+• iOS and Android app development 
+• Cross-platform solutions 
+• Customer-facing mobile products 
+• Internal operational apps 
+• UX-driven mobile interfaces 
+• Ongoing product evolution support"		
+8	Product Discovery	Explain the strategic part of development services	"Section title: Product Discovery 
+
+Text: Before building, we help clients clarify what should be built and why. Our product discovery process helps define goals, user needs, feature priorities, technical direction, and delivery scope. This stage reduces risk, improves alignment, and creates a stronger foundation for design and development. 
+
+What We Define During Discovery:
+• Business and product goals alignment 
+• Feature scoping and prioritization 
+• User flow and product logic definition 
+• Technical direction and architecture input 
+• Delivery planning and roadmap creation"		
+9	Development Process	Show how work happens	"Section title: How We Deliver Development Projects 
+
+Steps: 
+1. Discovery - understanding business goals, users, and technical needs 
+2. Planning - defining scope, priorities, and delivery approach 
+3. Design & Architecture Alignment - shaping UX and technical direction 
+4. Development - iterative implementation with ongoing communication 
+5. QA & Refinement - testing, validation, and issue resolution 
+6. Launch & Next Phase - deployment and future improvements"	This can visually connect Product Discovery with execution.	
+10	Cross-Service Collaboration	Show development as part of bigger ecosystem	"Section title: More Than Development Alone 
+
+Text: When needed, Development Services can be combined with other Group 107 capabilities such as DevOps, accessibility, AI integrations, digital growth support, recruitment, and technical consultancy. This allows clients to work with one partner across multiple stages of product delivery and scale."	Very important for Group 107 positioning as “one partner” across functions.	
+11	Selected Case Studies	Add proof and movement deeper into site	"Section title: Selected Development Work 
+
+Examples: MP Check, RoutePerfect, IMTC, Accessible Docs, Grip AI, Priority website, Nova, Ahoy, Ryze, Evergent 
+
+Microcopy: Explore selected projects delivered by Group 107 across websites, digital platforms, and product development initiatives. 
+
+CTA: View All Case Studies"	"Card grid / slider
+
+Use projects from current presentations, not random additions."	?
+12	How You Can Work With Us	Explain engagement clearly	"Title: How You Can Work With Us 
+
+Intro: Choose how to work with Group 107 - from scaling your team to building AI-powered products and systems tailored to your business.
+
+Options: 
+
+Dedicated Teams (Talents) - Scale your team with top-tier developers, AI specialists, and data experts. We help you integrate AI capabilities into your workflows, products, and operations while managing recruitment and team performance.
+Project-Based Delivery - End-to-end development of digital products enhanced with AI - from planning and architecture to implementation and deployment. We build systems that automate processes, improve efficiency, and support smarter decision-making.
+Discovery & Planning Phase - Start with a structured phase to identify where AI can deliver the highest impact across your business. We define use cases, evaluate the right technologies, and build a clear roadmap for implementation."	3 cards	
+13	CTA Section	Convert	"Headline: Need a Development Partner That Can Actually Deliver? 
+
+Text: Whether you’re launching a new product, rebuilding an existing platform, or defining the next phase of growth, Group 107 can help you move from idea to execution with the right team and structure. 
+
+CTA 1: Book a Consultation"	Keep confident and direct.	
+14	Related Pages / Internal Navigation	Help users move through sitemap	"Section title: Related Services 
+
+Links: Web Development / Software Development / Mobile Development / Product Discovery / Infrastructure & DevOps Solutions / Next AI / Case Studies / Contact Us"	Good for UX and sitemap continuity	

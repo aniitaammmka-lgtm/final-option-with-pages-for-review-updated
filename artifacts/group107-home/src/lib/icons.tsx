@@ -60,6 +60,7 @@ import {
   FileCode2,
   UserCheck,
   Lightbulb,
+  Rocket,
 } from "lucide-react";
 import type { LucideProps } from "lucide-react";
 
@@ -125,6 +126,7 @@ export const Icons: Record<string, React.FC<LucideProps>> = {
   FileCode2,
   UserCheck,
   Lightbulb,
+  Rocket,
 };
 
 export const iconSVG: Record<string, string> = {

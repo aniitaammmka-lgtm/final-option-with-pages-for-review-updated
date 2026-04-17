@@ -5,6 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 import ServicesPage from "@/pages/ServicesPage";
 import ProductLobbyPage from "@/pages/ProductLobbyPage";
+import DevelopmentServicesPage from "@/pages/DevelopmentServicesPage";
 import Nav from "@/components/blocks/Nav";
 import Hero from "@/components/blocks/Hero";
 import Marquee from "@/components/blocks/Marquee";
@@ -51,6 +52,7 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/services" component={ServicesPage} />
       <Route path="/product-lobby" component={ProductLobbyPage} />
+      <Route path="/development-services" component={DevelopmentServicesPage} />
       <Route component={NotFound} />
     </Switch>
   );
