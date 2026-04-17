@@ -47,6 +47,7 @@ export default function Nav() {
               data-element="item"
               data-active={openMenu === item.id ? "true" : "false"}
               onMouseEnter={() => setOpenMenu(item.id)}
+              onClick={() => { window.location.href = item.url; }}
             >
               <span data-field="label">{item.label}</span>
               <ChevronDown
@@ -96,7 +97,7 @@ export default function Nav() {
           {navItems.map((item) => (
             <a
               key={item.id}
-              href={`#${item.id}`}
+              href={item.url}
               className="nav__mobile-link"
               data-element="item"
               data-field="label"

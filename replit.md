@@ -100,6 +100,8 @@ React + Vite + Tailwind landing page for Group 107. Follows a strict PHP-portabl
 - **`src/components/AnimateIn.tsx`** — only file allowed to use framer-motion; wraps elements with scroll-triggered entrance animations (`direction: up|fade|left|right`, explicit `delay` from data)
 - **`src/components/SectionHeader.tsx`** — shared subtitle + h2 heading pattern
 - **`src/components/blocks/`** — one file per page section (Nav, MegaMenu, Hero, Marquee, Positioning, Talents, Services, Products, AiSection, SocialProof, Advantages, CaseStudies, Insights, CTA, Footer)
+- **`src/pages/`** — full page components: `ServicesPage.tsx` (`/services`), `ProductLobbyPage.tsx` (`/product-lobby`), `not-found.tsx`
+- **Routing**: wouter with routes `/`, `/services`, `/product-lobby`; nav items now carry a `url` field linking to real pages; mega-menu sub-links use `{ label, url }` objects pointing to page anchors
 - **`src/index.css`** — all visual styles as `@layer components` BEM classes; spacing via `--sp-*` custom properties; fonts via `--font-display/body/mono` vars; no `@import` for fonts (loaded via `<link>` in `index.html`)
 - **`src/App.tsx`** — slim orchestrator only (no framer-motion, no lucide, no inline data)
 

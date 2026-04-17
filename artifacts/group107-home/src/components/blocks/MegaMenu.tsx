@@ -51,13 +51,13 @@ export default function MegaMenu({ item }: MegaMenuProps) {
               {(current ? current.links : []).map((link, li) => (
                 <a
                   key={li}
-                  href="#"
+                  href={link.url}
                   className="mega-menu__link"
                   data-element="item"
                   data-field="label"
                 >
                   <span className="mega-menu__link-dash" />
-                  {link}
+                  {link.label}
                 </a>
               ))}
             </div>
