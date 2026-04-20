@@ -1,0 +1,76 @@
+#	Block	Purpose	Content	Suggested Layout
+1	Hero	Immediately explain what this page is about and position Group 107 as a business-focused web development partner	"Headline: Web Development That Moves Business Forward 
+
+Subheadline: Group 107 builds custom websites, platforms, and web experiences designed around your goals - from tailored WordPress solutions to broader FrontEnd and BackEnd development. We focus on performance, usability, scalability, and long-term business value. 
+
+CTA 1: Let’s Talk About Your Project "	
+2	Intro / What We Do	Clarify the actual scope of Web Development within Group 107	"Section title: What We Deliver 
+
+Text: Group 107 provides web development services for companies that need more than a basic website. We create responsive, user-friendly, and high-performance digital products that support real business goals - whether that means a marketing website, a complex WordPress build, a customer-facing platform, or a tailored web system."	
+3	Capabilities Overview	Show the main web development capabilities in a scannable way	"Section title: Core Web Development Capabilities 
+
+Items: 
+1. Custom WordPress Development 
+2. FrontEnd Development 
+3. BackEnd Development 
+4. Responsive & User-Friendly Websites
+5. Business-Oriented Web Solutions
+6. Performance-Focused Development"	Grid of 6–8 cards
+4	WordPress Focus		"Section title: Strong in WordPress, Flexible Beyond It 
+
+Text: Group 107 specializes in customized WordPress solutions built around each client’s needs. From branded marketing websites to content-driven business platforms, we develop WordPress solutions that are tailored, scalable, and easier to manage over time. When a project requires it, we also support broader FrontEnd and BackEnd development to match the product scope."	
+5	Business Value Block	Reframe the service around outcomes, not just code	"Section title: Built Around Business Goals 
+
+Text: Our web development work is designed to do more than launch a site. We help companies create web experiences that support brand credibility, improve usability, enable growth, and provide a better foundation for future evolution. Every build is shaped around user needs, business priorities, and practical delivery. 
+
+Supporting points: 
+• User-friendly experiences 
+• High-performance delivery 
+• Scalable foundations 
+• Alignment with business goals"	Text + 4 value icons/cards
+6	Types of Projects	Help visitors quickly see where they fit	"Section title: Types of Web Projects We Support 
+
+Items: 
+• Corporate websites 
+• Marketing websites and landing pages 
+• Content-driven WordPress websites 
+• Customer-facing portals 
+• Business platforms and tailored systems 
+• Redesign and rebuild projects 
+• Ongoing website improvement and evolution"	
+7	Delivery Approach	Show how Group 107 works on projects	"Section title: How We Approach Web Development 
+
+Steps: 
+1. Understand the business goals and requirements 
+2. Define the right structure and technical direction 
+3. Design and develop around user and business needs 
+4. Test, refine, and prepare for launch 
+5. Support future improvements and growth"	Horizontal 5-step process
+8	Why Group 107	Add clear differentiators using the materials	"Section title: Why Companies Work With Group 107 
+
+Points: 
+• Full-service technology partner 
+• Strong WordPress and development expertise 
+• Business-focused approach 
+• High-performance, user-friendly builds 
+• Flexible collaboration models 
+• Cross-functional support when projects require design, DevOps, accessibility, or AI integration"	
+9	Related Services Cross-Sell	Connect this page to nearby sitemap sections	"Section title: Need More Than Web Development?
+
+Cards: 
+• Product Discovery 
+• Mobile Development 
+• Software Development 
+• DevOps Solutions 
+• Accessibility
+• AI Integrations"	
+10	Case Studies / Proof	Show relevant project credibility	"Section title: Our Work 
+
+Suggested cases from materials: Priority, RoutePerfect, Nova, Ahoy, Createlist, Dynamo, Accessible Docs, IMTC 
+
+Optional intro text: We support a wide range of digital projects across websites, platforms, and business-focused web experiences for companies in different industries."	Logo wall or case-study teaser cards
+11	Final CTA	Convert the visitor	"Headline: Planning a New Website or Rebuilding an Existing One? 
+
+Text: Let’s discuss what you’re building, what needs to improve, and what kind of web solution makes the most sense for your goals. 
+
+CTA: Talk to Group 107"	Centered CTA banner
