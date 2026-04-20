@@ -7,46 +7,39 @@ const ArrowRight = Icons.ArrowRight;
 const ArrowUpRight = Icons.ArrowUpRight;
 
 const capabilities = [
-  { icon: "Globe", num: "01", title: "Custom WordPress Development", desc: "Tailored WordPress solutions built around your brand, content needs, and business goals." },
-  { icon: "Monitor", num: "02", title: "Frontend Development", desc: "Responsive, user-friendly interfaces built for performance across all devices and browsers." },
-  { icon: "Database", num: "03", title: "Backend Development", desc: "Robust server-side systems, APIs, and data logic that power your digital product." },
-  { icon: "Smartphone", num: "04", title: "Responsive Websites", desc: "Designs and builds that work seamlessly on any screen, prioritising usability." },
-  { icon: "Target", num: "05", title: "Business-Oriented Solutions", desc: "Every decision shaped by your goals — not just technical requirements or design trends." },
-  { icon: "Zap", num: "06", title: "Performance-Focused Delivery", desc: "Fast load times, clean code, and optimised delivery pipelines from day one." },
-];
-
-const businessValues = [
-  { icon: "Users", title: "User-Friendly Experiences", desc: "Interfaces designed for the people who actually use them — clear, accessible, and effective." },
-  { icon: "Zap", title: "High-Performance Delivery", desc: "Optimised code and infrastructure that keeps your web product fast and reliable." },
-  { icon: "Layers", title: "Scalable Foundations", desc: "Architecture and systems built to grow alongside your business without friction." },
-  { icon: "Target", title: "Alignment with Business Goals", desc: "Every decision shaped by your priorities — not by technical preferences or trends." },
-];
-
-const projectTypes = [
-  "Corporate websites",
-  "Marketing websites and landing pages",
-  "Content-driven WordPress websites",
-  "Customer-facing portals",
-  "Business platforms and tailored systems",
-  "Redesign and rebuild projects",
-  "Ongoing website improvement and evolution",
+  { num: "01", title: "Custom WordPress Development", desc: "Tailored themes, plugins, and architecture built around your brand and business logic." },
+  { num: "02", title: "Frontend Development", desc: "Responsive, fast, and accessible interfaces across every device and browser." },
+  { num: "03", title: "Backend Development", desc: "Robust APIs, server-side logic, and data systems that power your digital product." },
+  { num: "04", title: "Responsive & User-Friendly Websites", desc: "Builds that prioritise usability and clarity on any screen size." },
+  { num: "05", title: "Business-Oriented Web Solutions", desc: "Every decision shaped by your goals — not by tech trends or agency defaults." },
+  { num: "06", title: "Performance-Focused Delivery", desc: "Fast load times, clean code, and optimised delivery pipelines from day one." },
 ];
 
 const deliverySteps = [
-  { icon: "Lightbulb", num: "01", title: "Understand Goals", desc: "We start with your business objectives, user needs, and existing constraints." },
-  { icon: "Code2", num: "02", title: "Define Direction", desc: "Agree on the right structure, tech stack, and technical approach for your project." },
-  { icon: "Monitor", num: "03", title: "Design & Build", desc: "Develop around user and business needs with iterative feedback loops." },
-  { icon: "Shield", num: "04", title: "Test & Refine", desc: "QA, performance testing, and pre-launch refinement to ensure quality." },
-  { icon: "Rocket", num: "05", title: "Launch & Evolve", desc: "Support future improvements and ongoing growth after delivery." },
+  { num: "01", title: "Understand Goals", desc: "Business objectives, user needs, and existing constraints." },
+  { num: "02", title: "Define Direction", desc: "Structure, tech stack, and technical approach for your project." },
+  { num: "03", title: "Design & Build", desc: "Iterative development shaped by user and business priorities." },
+  { num: "04", title: "Test & Refine", desc: "QA, performance testing, and pre-launch quality assurance." },
+  { num: "05", title: "Launch & Evolve", desc: "Ongoing support, improvements, and growth after delivery." },
 ];
 
 const whyPoints = [
-  { icon: "Layers", title: "Full-Service Technology Partner", desc: "Development is just one part of what we offer — access design, DevOps, AI, and more." },
-  { icon: "Globe", title: "Strong WordPress & Dev Expertise", desc: "Deep experience with WordPress builds and broader frontend and backend development." },
-  { icon: "Target", title: "Business-Focused Approach", desc: "We build around goals, users, and operations — not just requirements lists." },
-  { icon: "Zap", title: "High-Performance Builds", desc: "Fast, reliable, and optimised web products delivered with quality standards." },
-  { icon: "Users", title: "Flexible Collaboration Models", desc: "Project-based delivery, dedicated teams, or mixed models to match your need." },
-  { icon: "BrainCircuit", title: "Cross-Functional Support", desc: "Design, DevOps, accessibility, and AI integration available within one partner." },
+  "Full-service technology partner",
+  "Strong WordPress & development expertise",
+  "Business-focused approach to every build",
+  "High-performance, user-friendly delivery",
+  "Flexible collaboration models",
+  "Cross-functional support: design, DevOps, AI, accessibility",
+];
+
+const projectTypes = [
+  { num: "01", label: "Corporate websites" },
+  { num: "02", label: "Marketing websites and landing pages" },
+  { num: "03", label: "Content-driven WordPress websites" },
+  { num: "04", label: "Customer-facing portals" },
+  { num: "05", label: "Business platforms and tailored systems" },
+  { num: "06", label: "Redesign and rebuild projects" },
+  { num: "07", label: "Ongoing website improvement and evolution" },
 ];
 
 const cases = [
@@ -59,12 +52,12 @@ const cases = [
 ];
 
 const relatedLinks = [
-  { label: "Product Discovery", url: "/development-services#discovery", icon: "Lightbulb" },
-  { label: "Mobile Development", url: "/development-services#mobile", icon: "Smartphone" },
-  { label: "Software Development", url: "/development-services#software", icon: "Code2" },
-  { label: "DevOps Solutions", url: "/services#devops", icon: "Server" },
-  { label: "Accessibility", url: "/services#accessibility", icon: "Shield" },
-  { label: "AI Integrations", url: "/services#nextai", icon: "BrainCircuit" },
+  { label: "Product Discovery", url: "/development-services#discovery" },
+  { label: "Mobile Development", url: "/development-services#mobile" },
+  { label: "Software Development", url: "/development-services#software" },
+  { label: "DevOps Solutions", url: "/services#devops" },
+  { label: "Accessibility", url: "/services#accessibility" },
+  { label: "AI Integrations", url: "/services#nextai" },
 ];
 
 export default function WebDevelopmentPage() {
@@ -73,349 +66,254 @@ export default function WebDevelopmentPage() {
       <Nav />
       <main>
 
-        {/* ── Hero ─────────────────────────── */}
-        <section className="ds-hero">
-          <div className="ds-hero__bg-grid" aria-hidden="true" />
-          <div className="ds-hero__orb ds-hero__orb--1" aria-hidden="true" />
-          <div className="ds-hero__orb ds-hero__orb--2" aria-hidden="true" />
-          <div className="ds-hero__floating-icons" aria-hidden="true">
-            {["Globe", "Monitor", "Server", "Smartphone", "Zap", "Code2", "Database", "Layers"].map((ic, i) => {
-              const Icon = Icons[ic];
-              return Icon ? (
-                <div key={i} className={`ds-hero__float-icon ds-hero__float-icon--${i + 1}`}>
-                  <Icon strokeWidth={1} />
-                </div>
-              ) : null;
-            })}
-          </div>
-          <div className="ds-hero__inner">
+        {/* ── Split Hero ───────────────────────── */}
+        <section className="wd-hero">
+          <div className="wd-hero__left">
             <AnimateIn delay={0} direction="up">
-              <div className="ds-hero__label">Services / Web Development</div>
+              <div className="wd-hero__label">Services / Web Development</div>
             </AnimateIn>
             <AnimateIn delay={0.08} direction="up">
-              <h1 className="ds-hero__title">
-                Web Development That Moves Business Forward
+              <h1 className="wd-hero__title">
+                Web<br />Development<br />That Moves<br />Business<br />Forward
               </h1>
             </AnimateIn>
-            <AnimateIn delay={0.16} direction="up">
-              <p className="ds-hero__sub">
-                Group 107 builds custom websites, platforms, and web experiences designed around your goals — from tailored WordPress solutions to broader frontend and backend development. We focus on performance, usability, scalability, and long-term business value.
+            <AnimateIn delay={0.18} direction="up">
+              <p className="wd-hero__sub">
+                Custom websites, platforms, and web experiences designed around your goals — from tailored WordPress solutions to broader frontend and backend development.
               </p>
             </AnimateIn>
-            <AnimateIn delay={0.22} direction="up">
-              <div className="ds-hero__actions">
-                <a href="#cta" className="ds-hero__cta ds-hero__cta--primary">
-                  Let's Talk About Your Project <ArrowRight className="ds-hero__cta-icon" />
+            <AnimateIn delay={0.24} direction="up">
+              <div className="wd-hero__actions">
+                <a href="#cta" className="wd-hero__cta wd-hero__cta--primary">
+                  Let's Talk About Your Project <ArrowRight className="wd-hero__cta-icon" />
                 </a>
-                <a href="/#casestudies" className="ds-hero__cta ds-hero__cta--secondary">
-                  View Case Studies <ArrowUpRight className="ds-hero__cta-icon" />
+                <a href="/#casestudies" className="wd-hero__cta wd-hero__cta--secondary">
+                  View Case Studies <ArrowUpRight className="wd-hero__cta-icon" />
                 </a>
               </div>
             </AnimateIn>
-            <AnimateIn delay={0.3} direction="up" className="ds-hero__stats">
-              {[
-                { val: "150+", label: "Web Projects" },
-                { val: "100+", label: "WordPress Builds" },
-                { val: "12+", label: "Tech Stacks" },
-                { val: "700+", label: "Global Clients" },
-              ].map((s, i) => (
-                <div key={i} className="ds-hero__stat">
-                  <span className="ds-hero__stat-val">{s.val}</span>
-                  <span className="ds-hero__stat-label">{s.label}</span>
-                </div>
+          </div>
+          <div className="wd-hero__right" aria-hidden="true">
+            <img src="/project-1.png" alt="" className="wd-hero__right-img" />
+            <div className="wd-hero__right-overlay" />
+            <div className="wd-hero__right-stats">
+              <div className="wd-hero__right-stat">
+                <span className="wd-hero__right-stat-val">150+</span>
+                <span className="wd-hero__right-stat-label">Web Projects</span>
+              </div>
+              <div className="wd-hero__right-stat">
+                <span className="wd-hero__right-stat-val">100+</span>
+                <span className="wd-hero__right-stat-label">WordPress Builds</span>
+              </div>
+              <div className="wd-hero__right-stat">
+                <span className="wd-hero__right-stat-val">700+</span>
+                <span className="wd-hero__right-stat-label">Global Clients</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── Full-width Stats Band ─────────────── */}
+        <div className="wd-band">
+          <div className="wd-band__inner">
+            {[
+              { val: "150+", label: "Web Projects" },
+              { val: "100+", label: "WordPress Builds" },
+              { val: "12+", label: "Tech Stacks" },
+              { val: "700+", label: "Global Clients" },
+            ].map((s, i) => (
+              <div key={i} className="wd-band__item">
+                <span className="wd-band__val">{s.val}</span>
+                <span className="wd-band__label">{s.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* ── What We Deliver ───────────────────── */}
+        <section className="wd-scope">
+          <div className="wd-scope__inner">
+            <AnimateIn delay={0} direction="up" className="wd-scope__heading">
+              <span className="wd-scope__tag">What We Do</span>
+              <h2 className="wd-scope__title">What We Deliver</h2>
+            </AnimateIn>
+            <div className="wd-scope__body">
+              <AnimateIn delay={0.1} direction="up" className="wd-scope__text">
+                <p>
+                  Group 107 provides web development services for companies that need more than a basic website. We create responsive, user-friendly, and high-performance digital products that support real business goals.
+                </p>
+                <p>
+                  Whether that means a marketing website, a complex WordPress build, a customer-facing platform, or a tailored web system — we build solutions around real business priorities using modern technologies.
+                </p>
+              </AnimateIn>
+              <AnimateIn delay={0.16} direction="up" className="wd-scope__chips">
+                {["WordPress Experts", "Performance-First", "Business-Oriented", "Scalable Builds", "Custom Solutions"].map((c, i) => (
+                  <span key={i} className="wd-scope__chip">{c}</span>
+                ))}
+              </AnimateIn>
+            </div>
+          </div>
+        </section>
+
+        {/* ── Capabilities Table ────────────────── */}
+        <section className="wd-table">
+          <div className="wd-table__inner">
+            <AnimateIn delay={0} direction="up" className="wd-table__head">
+              <span className="wd-table__tag">Core Areas</span>
+              <h2 className="wd-table__title">Core Web Development Capabilities</h2>
+            </AnimateIn>
+            <div className="wd-table__rows">
+              {capabilities.map((c, i) => (
+                <AnimateIn key={i} delay={0.06 * i} direction="up">
+                  <div className="wd-table__row">
+                    <span className="wd-table__row-num">{c.num}</span>
+                    <span className="wd-table__row-title">{c.title}</span>
+                    <span className="wd-table__row-desc">{c.desc}</span>
+                    <span className="wd-table__row-arrow">
+                      <ArrowRight />
+                    </span>
+                  </div>
+                </AnimateIn>
               ))}
-            </AnimateIn>
-          </div>
-        </section>
-
-        {/* ── What We Deliver ───────────────── */}
-        <section className="ds-intro">
-          <div className="ds-intro__inner">
-            <AnimateIn delay={0} direction="left" className="ds-intro__graphic">
-              <div className="ds-intro__graphic-grid">
-                {[
-                  { icon: "Globe", label: "WordPress" },
-                  { icon: "Monitor", label: "Frontend" },
-                  { icon: "Database", label: "Backend" },
-                  { icon: "Smartphone", label: "Responsive" },
-                ].map((s, i) => {
-                  const Icon = Icons[s.icon];
-                  return (
-                    <div key={i} className="ds-intro__graphic-tile">
-                      {Icon && <Icon strokeWidth={1.5} className="ds-intro__graphic-tile-icon" />}
-                      <span>{s.label}</span>
-                    </div>
-                  );
-                })}
-              </div>
-            </AnimateIn>
-            <AnimateIn delay={0.12} direction="up" className="ds-intro__text">
-              <div className="ds-intro__label">What We Do</div>
-              <h2 className="ds-intro__title">What We Deliver</h2>
-              <p className="ds-intro__body">
-                Group 107 provides web development services for companies that need more than a basic website. We create responsive, user-friendly, and high-performance digital products that support real business goals.
-              </p>
-              <p className="ds-intro__body">
-                Whether that means a marketing website, a complex WordPress build, a customer-facing platform, or a tailored web system — we build solutions around real business priorities using modern technologies.
-              </p>
-              <div className="ds-intro__badges">
-                {["WordPress Experts", "Performance-First", "Business-Oriented", "Scalable Builds"].map((b, i) => {
-                  const Icon = Icons["CheckCircle2"];
-                  return (
-                    <div key={i} className="ds-intro__badge">
-                      {Icon && <Icon strokeWidth={1.5} className="ds-intro__badge-icon" />}
-                      {b}
-                    </div>
-                  );
-                })}
-              </div>
-            </AnimateIn>
-          </div>
-        </section>
-
-        {/* ── Core Capabilities ─────────────── */}
-        <section className="ds-services">
-          <div className="ds-services__inner">
-            <div className="ds-services__head">
-              <AnimateIn delay={0} direction="up">
-                <div className="ds-services__label">Core Areas</div>
-              </AnimateIn>
-              <AnimateIn delay={0.06} direction="up">
-                <h2 className="ds-services__title">Core Web Development Capabilities</h2>
-              </AnimateIn>
-            </div>
-            <div className="ds-services__grid wd-caps-grid">
-              {capabilities.map((c, i) => {
-                const Icon = Icons[c.icon];
-                return (
-                  <AnimateIn key={i} delay={0.07 * i} direction="up">
-                    <div className="ds-services__card">
-                      <div className="ds-services__card-num">{c.num}</div>
-                      <div className="ds-services__card-icon-wrap">
-                        {Icon && <Icon strokeWidth={1.25} className="ds-services__card-icon" />}
-                      </div>
-                      <h3 className="ds-services__card-title">{c.title}</h3>
-                      <p className="ds-services__card-desc">{c.desc}</p>
-                    </div>
-                  </AnimateIn>
-                );
-              })}
             </div>
           </div>
         </section>
 
-        {/* ── WordPress Focus ───────────────── */}
-        <section className="ds-service ds-service--muted">
-          <div className="ds-service__inner">
-            <AnimateIn delay={0} direction="left" className="ds-service__visual">
-              <div className="ds-service__img-wrap">
-                <img src="/project-1.png" alt="WordPress Development" className="ds-service__img" />
-                <div className="ds-service__img-overlay" />
-                <div className="ds-service__img-badge">
-                  {(() => { const Icon = Icons["Globe"]; return Icon ? <Icon strokeWidth={1.5} className="ds-service__img-badge-icon" /> : null; })()}
-                  <span>WordPress</span>
-                </div>
-              </div>
-              <div className="ds-service__tech-badge">
-                {(() => { const Icon = Icons["Code2"]; return Icon ? <Icon strokeWidth={1.5} className="ds-service__tech-icon" /> : null; })()}
-                WordPress · Custom Themes · WooCommerce · Headless
-              </div>
+        {/* ── WordPress Deep Dive ───────────────── */}
+        <section className="wd-wp">
+          <div className="wd-wp__watermark" aria-hidden="true">WORDPRESS</div>
+          <div className="wd-wp__inner">
+            <AnimateIn delay={0} direction="left" className="wd-wp__left">
+              <span className="wd-wp__tag">WordPress Focus</span>
+              <h2 className="wd-wp__title">Strong in WordPress, Flexible Beyond It</h2>
             </AnimateIn>
-            <AnimateIn delay={0.12} direction="up" className="ds-service__content">
-              <div className="ds-service__content-num">
-                <span>WordPress Focus</span>
-              </div>
-              <h2 className="ds-service__title">Strong in WordPress, Flexible Beyond It</h2>
-              <p className="ds-service__body">
+            <AnimateIn delay={0.12} direction="up" className="wd-wp__right">
+              <p className="wd-wp__body">
                 Group 107 specialises in customised WordPress solutions built around each client's needs. From branded marketing websites to content-driven business platforms, we develop WordPress solutions that are tailored, scalable, and easier to manage over time.
               </p>
-              <p className="ds-service__body">
-                When a project requires it, we also support broader frontend and backend development to match the product scope — without being limited to any single framework or approach.
+              <p className="wd-wp__body">
+                When a project requires it, we also support broader frontend and backend development — without being limited to any single framework.
               </p>
-              <div className="ds-service__caps-label">Capabilities Include</div>
-              <div className="ds-service__caps">
-                {["Custom theme development", "WordPress plugin integration", "WooCommerce stores", "Headless WordPress setups", "Content migration & restructure"].map((f, i) => {
-                  const Icon = Icons["CheckCircle2"];
-                  return (
-                    <div key={i} className="ds-service__cap">
-                      <div className="ds-service__cap-icon">
-                        {Icon && <Icon strokeWidth={1.5} />}
-                      </div>
-                      <span className="ds-service__cap-label">{f}</span>
-                    </div>
-                  );
-                })}
+              <div className="wd-wp__tags">
+                {["Custom Themes", "Plugin Development", "WooCommerce", "Headless WordPress", "Content Migration"].map((t, i) => (
+                  <span key={i} className="wd-wp__tag-pill">{t}</span>
+                ))}
               </div>
-              <a href="#cta" className="ds-service__cta">
-                Discuss Your WordPress Project <ArrowRight className="ds-service__cta-icon" />
+              <a href="#cta" className="wd-wp__cta">
+                Discuss Your WordPress Project <ArrowRight className="wd-wp__cta-icon" />
               </a>
             </AnimateIn>
           </div>
         </section>
 
-        {/* ── Business Value Block ──────────── */}
-        <section className="wd-values">
-          <div className="wd-values__inner">
-            <div className="wd-values__head">
-              <AnimateIn delay={0} direction="up">
-                <div className="wd-values__label">Why It Matters</div>
-              </AnimateIn>
-              <AnimateIn delay={0.06} direction="up">
-                <h2 className="wd-values__title">Built Around Business Goals</h2>
-              </AnimateIn>
-              <AnimateIn delay={0.1} direction="up">
-                <p className="wd-values__sub">
-                  Our web development work is designed to do more than launch a site. We help companies create web experiences that support brand credibility, improve usability, enable growth, and provide a better foundation for future evolution.
-                </p>
-              </AnimateIn>
-            </div>
-            <div className="wd-values__grid">
-              {businessValues.map((v, i) => {
-                const Icon = Icons[v.icon];
-                return (
-                  <AnimateIn key={i} delay={0.08 * i} direction="up">
-                    <div className="wd-values__card">
-                      <div className="wd-values__card-icon">
-                        {Icon && <Icon strokeWidth={1.5} />}
-                      </div>
-                      <div className="wd-values__card-title">{v.title}</div>
-                      <div className="wd-values__card-desc">{v.desc}</div>
-                    </div>
-                  </AnimateIn>
-                );
-              })}
+        {/* ── Project Types — Editorial List ───── */}
+        <section className="wd-types">
+          <div className="wd-types__inner">
+            <AnimateIn delay={0} direction="up" className="wd-types__head">
+              <span className="wd-types__tag">Project Types</span>
+              <h2 className="wd-types__title">Types of Web Projects We Support</h2>
+            </AnimateIn>
+            <div className="wd-types__list">
+              {projectTypes.map((pt, i) => (
+                <AnimateIn key={i} delay={0.05 * i} direction="up">
+                  <div className="wd-types__item">
+                    <span className="wd-types__item-num">{pt.num}</span>
+                    <span className="wd-types__item-label">{pt.label}</span>
+                    <span className="wd-types__item-line" aria-hidden="true" />
+                  </div>
+                </AnimateIn>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* ── Types of Projects ─────────────── */}
-        <section className="wd-projects">
-          <div className="wd-projects__inner">
-            <AnimateIn delay={0} direction="left" className="wd-projects__head">
-              <div className="wd-projects__label">Project Types</div>
-              <h2 className="wd-projects__title">Types of Web Projects We Support</h2>
-              <p className="wd-projects__sub">
-                From marketing websites to complex business platforms — we've worked across a wide range of web project types and scales.
+        {/* ── Business Goals ───────────────────── */}
+        <section className="wd-goals">
+          <div className="wd-goals__inner">
+            <AnimateIn delay={0} direction="left" className="wd-goals__left">
+              <span className="wd-goals__tag">Why It Matters</span>
+              <h2 className="wd-goals__title">Built Around Business Goals</h2>
+              <p className="wd-goals__sub">
+                Our web development work is designed to do more than launch a site — we create web experiences that support brand credibility, usability, and long-term growth.
               </p>
             </AnimateIn>
-            <div className="wd-projects__list">
-              {projectTypes.map((pt, i) => {
-                const Icon = Icons["CheckCircle2"];
-                return (
-                  <AnimateIn key={i} delay={0.06 * i} direction="up">
-                    <div className="wd-projects__item">
-                      {Icon && <Icon strokeWidth={1.5} className="wd-projects__item-icon" />}
-                      <span>{pt}</span>
-                    </div>
-                  </AnimateIn>
-                );
-              })}
+            <div className="wd-goals__grid">
+              {[
+                { num: "01", title: "User-Friendly Experiences", desc: "Interfaces designed for the people who actually use them — clear, accessible, effective." },
+                { num: "02", title: "High-Performance Delivery", desc: "Optimised code and infrastructure that keeps your product fast and reliable." },
+                { num: "03", title: "Scalable Foundations", desc: "Architecture built to grow alongside your business without friction." },
+                { num: "04", title: "Alignment with Business Goals", desc: "Every decision shaped by your priorities — not by technical preferences." },
+              ].map((v, i) => (
+                <AnimateIn key={i} delay={0.08 * i} direction="up">
+                  <div className="wd-goals__card">
+                    <span className="wd-goals__card-num">{v.num}</span>
+                    <span className="wd-goals__card-title">{v.title}</span>
+                    <span className="wd-goals__card-desc">{v.desc}</span>
+                  </div>
+                </AnimateIn>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* ── Delivery Approach ─────────────── */}
-        <section className="ds-process">
-          <div className="ds-process__grain" aria-hidden="true" />
-          <div className="ds-process__inner">
-            <div className="ds-process__head">
-              <AnimateIn delay={0} direction="up">
-                <div className="ds-process__label">Our Workflow</div>
-              </AnimateIn>
-              <AnimateIn delay={0.06} direction="up">
-                <h2 className="ds-process__title">How We Approach Web Development</h2>
-              </AnimateIn>
-              <AnimateIn delay={0.1} direction="up">
-                <p className="ds-process__sub">
-                  A structured, business-first process that keeps delivery on track and aligned with your goals at every stage.
-                </p>
-              </AnimateIn>
-            </div>
-            <div className="ds-process__steps">
-              {deliverySteps.map((step, i) => {
-                const Icon = Icons[step.icon];
-                return (
-                  <AnimateIn key={i} delay={0.08 * i} direction="up">
-                    <div className="ds-process__step">
-                      <div className="ds-process__step-track">
-                        <div className="ds-process__step-dot">
-                          {Icon && <Icon strokeWidth={1.5} className="ds-process__step-dot-icon" />}
-                        </div>
-                        {i < deliverySteps.length - 1 && <div className="ds-process__step-line" />}
-                      </div>
-                      <div className="ds-process__step-body">
-                        <div className="ds-process__step-num">{step.num}</div>
-                        <div className="ds-process__step-title">{step.title}</div>
-                        <div className="ds-process__step-desc">{step.desc}</div>
-                      </div>
-                    </div>
-                  </AnimateIn>
-                );
-              })}
+        {/* ── Delivery Process — Giant Numbers ─── */}
+        <section className="wd-flow">
+          <div className="wd-flow__inner">
+            <AnimateIn delay={0} direction="up" className="wd-flow__head">
+              <span className="wd-flow__tag">Our Workflow</span>
+              <h2 className="wd-flow__title">How We Approach Web Development</h2>
+            </AnimateIn>
+            <div className="wd-flow__steps">
+              {deliverySteps.map((step, i) => (
+                <AnimateIn key={i} delay={0.08 * i} direction="up">
+                  <div className="wd-flow__step">
+                    <span className="wd-flow__step-num">{step.num}</span>
+                    <span className="wd-flow__step-title">{step.title}</span>
+                    <span className="wd-flow__step-desc">{step.desc}</span>
+                  </div>
+                </AnimateIn>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* ── Why Group 107 ─────────────────── */}
-        <section className="ds-why">
-          <div className="ds-why__pattern" aria-hidden="true" />
-          <div className="ds-why__inner">
-            <div className="ds-why__head">
-              <AnimateIn delay={0} direction="up">
-                <div className="ds-why__label">Our Positioning</div>
-              </AnimateIn>
-              <AnimateIn delay={0.06} direction="up">
-                <h2 className="ds-why__title">Why Companies Work With Group 107</h2>
-              </AnimateIn>
-            </div>
-            <div className="ds-why__grid">
-              {whyPoints.map((pt, i) => {
-                const Icon = Icons[pt.icon];
-                return (
-                  <AnimateIn key={i} delay={0.07 * i} direction="up">
-                    <div className="ds-why__card">
-                      <div className="ds-why__card-icon">
-                        {Icon && <Icon strokeWidth={1.5} />}
-                      </div>
-                      <div className="ds-why__card-body">
-                        <div className="ds-why__card-title">{pt.title}</div>
-                        <div className="ds-why__card-desc">{pt.desc}</div>
-                      </div>
-                    </div>
-                  </AnimateIn>
-                );
-              })}
+        {/* ── Why Group 107 — Compact Statements ─ */}
+        <section className="wd-why">
+          <div className="wd-why__inner">
+            <AnimateIn delay={0} direction="up" className="wd-why__head">
+              <span className="wd-why__tag">Our Positioning</span>
+              <h2 className="wd-why__title">Why Companies Work With Group 107</h2>
+            </AnimateIn>
+            <div className="wd-why__list">
+              {whyPoints.map((pt, i) => (
+                <AnimateIn key={i} delay={0.06 * i} direction="up">
+                  <div className="wd-why__item">
+                    <span className="wd-why__item-dot" aria-hidden="true" />
+                    <span className="wd-why__item-text">{pt}</span>
+                  </div>
+                </AnimateIn>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* ── Case Studies ──────────────────── */}
-        <section className="ds-cases">
-          <div className="ds-cases__inner">
-            <div className="ds-cases__head">
-              <AnimateIn delay={0} direction="up">
-                <div className="ds-cases__label">Our Work</div>
-              </AnimateIn>
-              <AnimateIn delay={0.06} direction="up">
-                <h2 className="ds-cases__title">Selected Projects</h2>
-              </AnimateIn>
-              <AnimateIn delay={0.1} direction="up">
-                <p className="ds-cases__sub">
-                  We support a wide range of digital projects across websites, platforms, and business-focused web experiences for companies in different industries.
-                </p>
-              </AnimateIn>
-            </div>
-            <div className="ds-cases__grid">
+        {/* ── Selected Work ─────────────────────── */}
+        <section className="wd-work">
+          <div className="wd-work__inner">
+            <AnimateIn delay={0} direction="up" className="wd-work__head">
+              <span className="wd-work__tag">Our Work</span>
+              <h2 className="wd-work__title">Selected Projects</h2>
+            </AnimateIn>
+            <div className="wd-work__list">
               {cases.map((c, i) => (
-                <AnimateIn key={i} delay={0.07 * i} direction="up">
-                  <div className="ds-cases__card">
-                    <div className="ds-cases__card-img-wrap">
-                      <img src={c.img} alt={c.name} className="ds-cases__card-img" />
-                      <div className="ds-cases__card-tag">{c.tag}</div>
-                    </div>
-                    <div className="ds-cases__card-body">
-                      <div className="ds-cases__card-title">{c.name}</div>
-                      <div className="ds-cases__card-industry">{c.industry}</div>
+                <AnimateIn key={i} delay={0.06 * i} direction="up">
+                  <div className="wd-work__item">
+                    <span className="wd-work__item-num">0{i + 1}</span>
+                    <span className="wd-work__item-name">{c.name}</span>
+                    <span className="wd-work__item-tag">{c.tag}</span>
+                    <span className="wd-work__item-industry">{c.industry}</span>
+                    <div className="wd-work__item-img-wrap">
+                      <img src={c.img} alt={c.name} className="wd-work__item-img" />
                     </div>
                   </div>
                 </AnimateIn>
@@ -424,32 +322,31 @@ export default function WebDevelopmentPage() {
           </div>
         </section>
 
-        {/* ── Final CTA ─────────────────────── */}
-        <section className="ds-cta" id="cta">
-          <div className="ds-cta__grain" aria-hidden="true" />
-          <div className="ds-cta__inner">
+        {/* ── Final CTA ─────────────────────────── */}
+        <section className="wd-cta" id="cta">
+          <div className="wd-cta__inner">
             <AnimateIn delay={0} direction="up">
-              <div className="ds-cta__label">Get Started</div>
+              <span className="wd-cta__tag">Get Started</span>
             </AnimateIn>
             <AnimateIn delay={0.08} direction="up">
-              <h2 className="ds-cta__title">
-                Planning a New Website or Rebuilding an Existing One?
+              <h2 className="wd-cta__title">
+                Planning a New Website<br />or Rebuilding an Existing One?
               </h2>
             </AnimateIn>
             <AnimateIn delay={0.14} direction="up">
-              <p className="ds-cta__sub">
+              <p className="wd-cta__sub">
                 Let's discuss what you're building, what needs to improve, and what kind of web solution makes the most sense for your goals.
               </p>
             </AnimateIn>
             <AnimateIn delay={0.2} direction="up">
-              <a href="mailto:info@group107.com" className="ds-cta__btn">
-                Talk to Group 107 <ArrowRight className="ds-cta__btn-icon" />
+              <a href="mailto:info@group107.com" className="wd-cta__btn">
+                Talk to Group 107 <ArrowRight className="wd-cta__btn-icon" />
               </a>
             </AnimateIn>
           </div>
         </section>
 
-        {/* ── Related Services ──────────────── */}
+        {/* ── Related Services ──────────────────── */}
         <section className="ds-related">
           <div className="ds-related__inner">
             <div className="ds-related__head">
