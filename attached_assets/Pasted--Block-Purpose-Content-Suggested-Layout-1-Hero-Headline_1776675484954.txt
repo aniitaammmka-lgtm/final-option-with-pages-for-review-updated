@@ -1,0 +1,64 @@
+#	Block	Purpose	Content	Suggested Layout	
+1	Hero		"Headline: Custom Software, Built Around Your Business 
+
+Subheadline: Group 107 builds custom software solutions for companies that need reliable delivery, strong technical thinking, and the flexibility to scale. From web and mobile products to enterprise systems, we help turn ideas into usable, high-quality digital products. 
+
+CTA: Start a Project / Talk to Us"		
+2	Intro / Positioning	Clarify what “Software Development” means at Group 107 level	"Title: Software That Fits How Your Business Works 
+
+Text: We design and build software tailored to real business workflows - not generic systems. Our focus is on creating solutions that integrate smoothly into your operations, support growth, and remain adaptable as your needs evolve."	Text + supporting visual	
+3	What We Actually Build		"Title: What We Build 
+
+Items: 
+• Business platforms and internal systems 
+• Customer-facing web and mobile products 
+• Enterprise-grade software solutions 
+• Data-driven and AI-supported systems 
+• Integrations with third-party tools and APIs"		?
+4	Development Areas (Structured)		"Title: Development Areas 
+
+Items: 
+• Web Development 
+• Mobile Applications 
+• Enterprise Systems 
+• Product & System Architecture 
+• AI & Automation Components 
+• Infrastructure & DevOps Support"		
+5	Enterprise & System Thinking	Elevate beyond typical dev agencies	"Title: Built for Real-World Complexity 
+
+Text: Our work goes beyond building features. We design systems that support real operational logic - from internal workflows and integrations to performance, scalability, and long-term maintainability. This approach is especially critical for enterprise-level solutions and complex products."		
+6	How We Approach Development	Show methodology without repeating process fluff	"Title: How We Approach Development 
+
+Steps: 
+1. Understand business logic and constraints 
+2. Define architecture and key flows 
+3. Build in structured iterations 
+4. Validate with real usage scenarios 
+5. Improve and scale continuously"	Horizontal steps	
+7	Tech & Delivery Strength	Show depth without listing technologies excessively	"Title: Technical Depth, Flexible Delivery 
+
+Points: 
+• Frontend, backend, and full-stack development 
+• Modern frameworks and scalable architectures 
+• API-first and integration-ready systems 
+• Ability to extend or build teams as needed 
+• Experience across multiple industries and product types"		
+8	Beyond Development	Introduce supporting services without repeating sections	"Title: Beyond Development 
+
+Text: Many projects require more than development alone. We support areas such as AI integrations, DevOps processes, infrastructure setup, and system optimization - helping ensure your product works reliably in production."		
+9	Engagement Models	Explain how clients can work with you	"Title: Ways to Work With Us 
+
+Options: 
+• Project-based delivery for defined scopes 
+• Dedicated team extension for ongoing work 
+• Hybrid collaboration combining planning and execution"	3 cards	
+10	Selected Work / Proof	Add credibility	"Title: Our Work 
+
+Text: Group 107 has delivered software solutions across industries including fintech, enterprise platforms, digital products, and accessibility-focused systems. 
+
+Projects include IMTC, RoutePerfect, Nova, Ahoy, Evergent, and more."	Logo wall or case-study teaser cards	
+11	CTA	Conversion	"Headline: Let’s Build the Right Software - Not Just Any Software 
+
+Text: Whether you're starting from scratch or improving an existing system, we can help define, build, and scale your solution. 
+
+CTA: Talk to Us"	Clean CTA section	
