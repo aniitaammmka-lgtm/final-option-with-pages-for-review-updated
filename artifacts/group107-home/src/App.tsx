@@ -8,6 +8,7 @@ import ProductLobbyPage from "@/pages/ProductLobbyPage";
 import DevelopmentServicesPage from "@/pages/DevelopmentServicesPage";
 import WebDevelopmentPage from "@/pages/WebDevelopmentPage";
 import SoftwareDevelopmentPage from "@/pages/SoftwareDevelopmentPage";
+import MobileDevelopmentPage from "@/pages/MobileDevelopmentPage";
 import Nav from "@/components/blocks/Nav";
 import Hero from "@/components/blocks/Hero";
 import Marquee from "@/components/blocks/Marquee";
@@ -57,6 +58,7 @@ function Router() {
       <Route path="/development-services" component={DevelopmentServicesPage} />
       <Route path="/web-development" component={WebDevelopmentPage} />
       <Route path="/software-development" component={SoftwareDevelopmentPage} />
+      <Route path="/mobile-development" component={MobileDevelopmentPage} />
       <Route component={NotFound} />
     </Switch>
   );

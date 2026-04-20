@@ -1,0 +1,68 @@
+#	Block	Purpose	Content	Suggested Layout
+1	Hero		"Headline: Mobile Development for Products That Need to Perform 
+
+Subheadline: Group 107 builds high-quality mobile solutions tailored to each client’s goals - from focused business apps to more complex product and enterprise systems. We support iOS, Android, and cross-platform development with a strong delivery mindset and business-first thinking. 
+
+CTA: Let’s Build Your Mobile Product / Talk to Our Team"	
+2	Intro / What We Do	Give a concise explanation of the service	"Section title: Mobile Development Services 
+
+Text: Our mobile development services are designed around the specific needs of each project. Group 107 helps businesses launch and evolve mobile products that are user-friendly, reliable, and aligned with real operational or market goals. Whether the need is a customer-facing app, an internal business tool, or part of a wider digital ecosystem, we provide the strategy, design collaboration, and development support required to move from concept to delivery."	
+3	Core Capabilities	Break down what is included in the service	"Section title: Core Mobile Development Capabilities 
+
+Items: 
+1. iOS application development 
+2. Android application development 
+3. Cross-platform mobile development 
+4. Business application development 
+5. Enterprise mobile systems 
+6. UX-driven mobile interfaces 
+7. React-based front-end app development 
+8. Scalable mobile product delivery"	Grid of 4x2 capability cards
+4	Platforms & Technologies	Add credibility and make the service feel tangible	"Section title: Platforms & Technologies 
+
+Text: Group 107 supports mobile projects across native and modern front-end environments. Our team brings hands-on experience in iOS and Android development, along with web technologies such as React and Angular where relevant to product architecture and cross-platform delivery."	Simple icon/content strip or 3-column cards
+5	Types of Mobile Products We Build	Help visitors self-identify	"Section title: What We Can Build 
+
+Examples: 
+• Business mobile applications
+• Enterprise-level mobile systems
+• Custom mobile solutions tailored to client needs
+• iOS and Android applications
+• Cross-platform mobile applications
+"	Card grid with short descriptions
+6	Why Group 107 for Mobile Development		"Section title: Why Group 107 
+
+Points: 
+• Development tailored to your specific business goals 
+• Strong balance of user experience and technical execution 
+• Ability to support both focused apps and complex systems 
+• Access to a broader multidisciplinary team when needed 
+• Transparent collaboration and scalable delivery approach"	5 benefit cards or checklist with short descriptions
+7	From Idea to Delivery	Show process and reduce uncertainty	"Section title: How We Work 
+
+Steps: 
+1. Understand the product goals and user needs 
+2. Define scope, priorities, and technical direction 
+3. Align on UX and feature structure 
+4. Develop and iterate in delivery phases 
+5. Test, refine, and prepare for launch 
+6. Continue with improvements as the product evolves"	Horizontal process/timeline
+8	Flexible Engagement Options	Support different buyer types	"Section title: Flexible Ways to Work With Us 
+
+Options: 
+
+Project-Based Delivery - for clearly defined mobile scopes and milestone-based execution 
+Dedicated Team / Dedicated Developers - for ongoing product development and long-term support 
+Discovery First - for teams that need help shaping product scope before development begins 
+Hybrid Model - strategic planning plus execution support"	4 cards
+9	Cross-Service Support	Show that mobile doesn’t sit alone	"Section title: More Than Mobile Code 
+
+Text: Because Group 107 operates as a broader tech partner, mobile projects can also be supported by adjacent expertise when needed - including product thinking, UI/UX collaboration, DevOps, AI integrations, accessibility-related support, and additional development resources."	
+10	Case Studies / Relevant Experience	Add trust and proof	"Section title: Selected Experience 
+
+Intro text: Group 107 supports a wide range of digital and product initiatives across industries. Our broader portfolio includes product, platform, and development work for companies such as RoutePerfect, IMTC, Ahoy, Evergent, Priority, and others."	Logo strip or selected case cards
+11	Final CTA		"Headline: Need a Mobile Team That Can Actually Deliver? 
+
+Text: Whether you’re planning a new product, improving an existing app, or expanding internal mobile capabilities, Group 107 can help you move faster with the right technical and delivery support. 
+
+CTA: Talk to Us About Your Mobile Project"	Clean CTA banner
