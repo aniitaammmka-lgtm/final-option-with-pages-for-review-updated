@@ -1,0 +1,122 @@
+#	Block	Purpose	Content	Layout	
+1	Hero Section		"Headline:
+Build the Right Product - Before You Build It
+
+Subheadline:
+Turn ideas into clear, validated product direction with structured discovery led by experienced product and technology teams.
+
+Text:
+At Group 107, Product Discovery helps you define what to build, why it matters, and how to execute it - reducing risks, saving time, and aligning business and technology from day one.
+
+CTA:
+Start Discovery
+Talk to an Expert"		
+2	What is Product Discovery	Explain the service in simple business terms	"Headline:
+What is Product Discovery?
+
+Text:
+Product Discovery is a structured process that transforms ideas into validated product plans. It combines business goals, user needs, and technical feasibility into a clear roadmap.
+
+It helps companies avoid costly mistakes by ensuring the product is well-defined before development begins."	Text + simple visual diagram	
+3	Why It Matters (Business Value)		"Headline: 
+Why Product Discovery Matters
+
+Points:
+• Reduce development risks and rework
+• Align stakeholders on product vision
+• Define clear scope and priorities
+• Accelerate time-to-market
+• Make informed technical decisions
+
+Supporting Text:
+Group 107 brings together product thinking, technical expertise, and real delivery experience to ensure every product starts on the right foundation."	Icons + short bullets	
+4	What We Do in Discovery	Clearly define deliverables	"Headline: 
+What We Do During Discovery
+
+Key Activities:
+• Business & product goals alignment
+• User flows and product logic definition
+• Feature scoping and prioritization
+• Technical architecture planning
+• UX direction and structure
+• Delivery roadmap creation
+
+Text:
+We combine product strategy with hands-on technical expertise to create a plan that is ready for execution."		
+5	Discovery Process (Step-by-Step)	Show structured approach (important for trust)	"Headline: 
+Our Discovery Process
+
+Steps:
+
+Understanding the Business - goals, users, and constraints
+Product Definition - features, flows, and logic
+Technical Planning - architecture and integrations
+Validation & Alignment - stakeholder approval
+Roadmap Creation - clear next steps for development
+
+Text:
+This structured approach ensures transparency and clarity at every stage"		?
+6	Deliverables	Output Clarity. Show tangible results	"Headline: Deliverables
+
+Text:
+At the end of the discovery phase, you receive everything needed to move into development with clarity.
+
+Deliverables:
+• Clear product scope and feature definition
+• User flows and product logic
+• Technical direction and architecture approach
+• UX structure (wireframes if required)
+• Prioritized roadmap for development
+• Estimated plan for execution"		?
+7	Who It’s For	Help users self-identify	"Headline:  Who This Is For
+
+• Startups building MVPs
+• Companies launching new products
+• Businesses scaling existing systems
+• Teams needing technical clarity before development
+• Organizations aligning business & tech teams"		
+8	How It Connects to Development	Connect discovery to next steps 	"Headline: From Discovery to Development
+
+Text:
+Product Discovery is the foundation for successful execution.
+
+Once completed, Group 107 can seamlessly continue into development - ensuring continuity, speed, and alignment across teams.
+
+Next Steps:
+• Web Development
+• Software Development
+• Mobile Development
+• DevOps & Infrastructure
+
+"		
+9	Why Group 107	Reinforce trust and expertise	"Headline:
+Why Group 107
+
+Text:
+We don’t just plan products - we build and scale them.
+
+Key Points:
+• Full-service tech partner - from idea to scale
+• Strong expertise across web, mobile, and enterprise systems
+• Combined product and engineering mindset
+• Transparent and structured delivery process
+• Ability to seamlessly transition into development and scaling"		
+10	Engagement Model		"Headline:
+How We Work
+
+Text:
+We adapt the discovery process based on your product complexity and goals.
+
+Options:
+• Discovery Sprint - fixed scope and timeline
+• Extended Discovery - for complex or large-scale products
+• Discovery + Development - end-to-end partnership"		?
+11	Final CTA Section		"Headline:
+Let’s Define Your Product -The Right Way
+
+Text:
+Start with clarity. Build with confidence.
+
+CTA:
+Start Product Discovery
+Book a Call"		
