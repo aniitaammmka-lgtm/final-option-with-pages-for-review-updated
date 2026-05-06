@@ -18,6 +18,7 @@ import NextAIPage from "@/pages/NextAIPage";
 import AccessibleDocsPage from "@/pages/AccessibleDocsPage";
 import LeadershipPage from "@/pages/LeadershipPage";
 import CareersPage from "@/pages/CareersPage";
+import PartnershipPage from "@/pages/PartnershipPage";
 import Nav from "@/components/blocks/Nav";
 import Hero from "@/components/blocks/Hero";
 import Marquee from "@/components/blocks/Marquee";
@@ -77,6 +78,7 @@ function Router() {
       <Route path="/accessible-docs" component={AccessibleDocsPage} />
       <Route path="/leadership" component={LeadershipPage} />
       <Route path="/careers" component={CareersPage} />
+      <Route path="/partnership" component={PartnershipPage} />
       <Route component={NotFound} />
     </Switch>
   );

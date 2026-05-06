@@ -129,6 +129,7 @@ export const Icons: Record<string, React.FC<LucideProps>> = {
   Lightbulb,
   Rocket,
   MapPin,
+  TrendingUp,
 };
 
 export const iconSVG: Record<string, string> = {

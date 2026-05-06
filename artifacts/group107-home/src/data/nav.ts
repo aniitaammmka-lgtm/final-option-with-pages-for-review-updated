@@ -59,7 +59,7 @@ export const navItems: NavItem[] = [
     id: "company",
     url: "#",
     panels: [
-      { heading: "About", links: [{ label: "About Us", url: "#" }, { label: "Leadership", url: "/leadership" }, { label: "Careers", url: "/careers" }, { label: "Partnership", url: "#" }, { label: "Contact Us", url: "#" }] },
+      { heading: "About", links: [{ label: "About Us", url: "#" }, { label: "Leadership", url: "/leadership" }, { label: "Careers", url: "/careers" }, { label: "Partnership", url: "/partnership" }, { label: "Contact Us", url: "#" }] },
     ],
     image: { src: "/project-3.png", alt: "Group 107" },
     imageLabel: "Group 107",
