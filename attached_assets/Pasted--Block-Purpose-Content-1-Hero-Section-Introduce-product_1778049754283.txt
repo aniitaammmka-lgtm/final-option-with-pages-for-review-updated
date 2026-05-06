@@ -1,0 +1,85 @@
+#	Block	Purpose	Content
+1	Hero Section	Introduce product and value clearly	"Headline: 
+Translate Documents Faster - Without Manual Work 
+
+Subheadline: 
+AI-powered document translation platform for businesses, teams, and public organizations. 
+
+Text: 
+Global Docs helps you translate documents into multiple languages quickly and efficiently. Upload your file, let the system process it, and receive a translated version ready for use. 
+
+CTA: Start Translating / Request Demo"
+2	What is Global Docs	Explain product simply	"Headline: What is Global Docs? 
+
+Text: 
+Global Docs is an AI-based platform that translates documents while keeping their structure, format, and layout. It is built for companies that need fast and scalable translation workflows. Instead of manual processes, it combines automation and optional review to deliver better results in less time."
+3	How It Works	Show clear process for trust & conversion	"Headline: How It Works 
+
+Steps: 
+1. Upload your document 
+2. AI translates the content 
+3. Structure and layout are preserved 
+4. Optional review and improvements 
+5. Download the final file 
+
+Text: 
+The process is simple and built to save time while keeping quality under control."
+4	Key Features	Highlight core capabilities	"Headline: Key Features 
+
+Items: 
+• Multi-language document translation 
+• Supports PDF, Word, and more 
+• Keeps original layout and structure 
+• Fast AI processing 
+• Easy file management and download 
+• API integration for automation 
+
+Text: 
+Everything is designed to make translation simple, scalable, and ready for real business use."
+5	Who It’s For	Define target audience	"Headline: 
+Built for Teams That Work With Documents 
+
+Items: 
+• Public companies 
+• Government institutions 
+• Legal teams 
+• Financial organizations 
+• Enterprises with global operations 
+
+Text: 
+If your business works with documents across languages, Global Docs helps you move faster without increasing workload."
+6	Use Cases	Show real-life applications	"Headline: Common Use Cases 
+
+Items: 
+• Translating official documents 
+• Preparing reports for international markets 
+• Multi-language communication 
+• Internal document standardization 
+• Supporting global operations 
+
+Text: 
+Global Docs fits into existing workflows and helps teams scale document handling across regions."
+7	Automation & API	Show technical/business value	"Headline: Built for Automation 
+
+Text: 
+Global Docs connects directly to your systems using API and webhooks. You can upload documents automatically, receive status updates, and download translated files without manual steps. It is built for companies that want full control and automation."
+8	Why Global Docs	Differentiate product	"Headline: Why Choose Global Docs 
+
+Items: 
+• Faster than manual translation 
+• Keeps document structure 
+• Scalable for large volumes 
+• Easy for any team to use 
+• Built for real business workflows 
+
+Text: 
+Global Docs is not just a translation tool - it is a system designed to handle documents at scale."
+9	Powered by Group 107	Position within ecosystem	"Headline: Powered by Group 107 
+
+Text: 
+Global Docs is part of the Group 107 ecosystem, combining AI technology with real business workflows. We help companies build, integrate, and scale systems that work in production."
+10	Final CTA Section	Drive conversion	"Headline: Start Translating Today 
+
+Subheadline: See how Global Docs can simplify your document workflows 
+
+CTA: Request Demo / Contact Us"
