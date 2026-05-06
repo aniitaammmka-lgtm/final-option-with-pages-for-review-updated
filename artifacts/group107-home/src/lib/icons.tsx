@@ -61,6 +61,7 @@ import {
   UserCheck,
   Lightbulb,
   Rocket,
+  MapPin,
 } from "lucide-react";
 import type { LucideProps } from "lucide-react";
 
@@ -127,6 +128,7 @@ export const Icons: Record<string, React.FC<LucideProps>> = {
   UserCheck,
   Lightbulb,
   Rocket,
+  MapPin,
 };
 
 export const iconSVG: Record<string, string> = {
