@@ -10543,3 +10543,85 @@
   .ad-cta__trust { display: flex; gap: var(--sp-6); flex-wrap: wrap; justify-content: center; }
   .ad-cta__trust-item { display: flex; align-items: center; gap: var(--sp-2); font-family: var(--font-mono); font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.08em; color: hsl(var(--muted-foreground)); }
   .ad-cta__trust-icon { width: 0.85rem; height: 0.85rem; flex-shrink: 0; }
+
+  /* ═══════════════════════════════════════════════════════
+     LEADERSHIP PAGE  (lp-)
+  ═══════════════════════════════════════════════════════ */
+
+  /* ── Hero ─────────────────────────────────────────── */
+  .lp-hero { position: relative; padding: var(--sp-32) 0 var(--sp-20); background: hsl(var(--background)); overflow: hidden; border-bottom: 1px solid hsl(var(--border)); }
+  .lp-hero__bg-grid { position: absolute; inset: 0; background-image: linear-gradient(hsl(var(--border)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--border)) 1px, transparent 1px); background-size: 48px 48px; opacity: 0.35; pointer-events: none; }
+  .lp-hero__inner { position: relative; max-width: 1440px; margin: 0 auto; padding: 0 var(--sp-12); display: flex; flex-direction: column; gap: var(--sp-5); }
+  .lp-hero__eyebrow { font-family: var(--font-mono); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.14em; color: hsl(var(--muted-foreground)); }
+  .lp-hero__title { font-size: clamp(3rem, 7vw, 6rem); font-weight: 900; letter-spacing: -0.05em; line-height: 1; text-transform: uppercase; color: hsl(var(--foreground)); }
+  .lp-hero__sub { font-size: 1rem; line-height: 1.75; color: hsl(var(--muted-foreground)); max-width: 56ch; }
+  @media (max-width: 767px) { .lp-hero__inner { padding: 0 var(--sp-6); } .lp-hero { padding: var(--sp-24) 0 var(--sp-12); } }
+
+  /* ── Body / Tabs ─────────────────────────────────── */
+  .lp-body { padding: var(--sp-16) 0 var(--sp-24); background: hsl(var(--background)); }
+  .lp-body__inner { max-width: 1440px; margin: 0 auto; padding: 0 var(--sp-12); display: flex; flex-direction: column; gap: var(--sp-12); }
+  @media (max-width: 767px) { .lp-body__inner { padding: 0 var(--sp-6); gap: var(--sp-8); } }
+
+  /* anchor targets — invisible scroll markers */
+  .lp-tabs__anchor-target { display: block; height: 0; overflow: hidden; }
+  .lp-tabs__anchors { position: absolute; }
+
+  /* ── Tab nav ─────────────────────────────────────── */
+  .lp-tabs__nav { display: flex; align-items: stretch; border-bottom: 1px solid hsl(var(--border)); gap: 0; }
+  .lp-tabs__tab { flex: none; padding: var(--sp-4) var(--sp-8); font-family: var(--font-mono); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; text-decoration: none; color: hsl(var(--muted-foreground)); border-bottom: 2px solid transparent; margin-bottom: -1px; transition: color 0.18s, border-color 0.18s; }
+  .lp-tabs__tab:hover { color: hsl(var(--foreground)); }
+
+  /* Default active: founders tab */
+  .lp-tabs__tab--founders { color: hsl(var(--foreground)); border-bottom-color: hsl(var(--foreground)); }
+
+  /* When management is targeted */
+  :root:has(#management:target) .lp-tabs__tab--founders { color: hsl(var(--muted-foreground)); border-bottom-color: transparent; }
+  :root:has(#management:target) .lp-tabs__tab--management { color: hsl(var(--foreground)); border-bottom-color: hsl(var(--foreground)); }
+
+  /* When directors is targeted */
+  :root:has(#directors:target) .lp-tabs__tab--founders { color: hsl(var(--muted-foreground)); border-bottom-color: transparent; }
+  :root:has(#directors:target) .lp-tabs__tab--directors { color: hsl(var(--foreground)); border-bottom-color: hsl(var(--foreground)); }
+
+  /* When founders is explicitly targeted */
+  :root:has(#founders:target) .lp-tabs__tab--management,
+  :root:has(#founders:target) .lp-tabs__tab--directors { color: hsl(var(--muted-foreground)); border-bottom-color: transparent; }
+  :root:has(#founders:target) .lp-tabs__tab--founders { color: hsl(var(--foreground)); border-bottom-color: hsl(var(--foreground)); }
+
+  /* ── Tab panels ──────────────────────────────────── */
+  .lp-tabs__panel { display: none; }
+
+  /* Default: show founders */
+  .lp-tabs__panel--founders { display: block; }
+
+  :root:has(#management:target) .lp-tabs__panel--founders { display: none; }
+  :root:has(#management:target) .lp-tabs__panel--management { display: block; }
+
+  :root:has(#directors:target) .lp-tabs__panel--founders { display: none; }
+  :root:has(#directors:target) .lp-tabs__panel--directors { display: block; }
+
+  :root:has(#founders:target) .lp-tabs__panel--management,
+  :root:has(#founders:target) .lp-tabs__panel--directors { display: none; }
+  :root:has(#founders:target) .lp-tabs__panel--founders { display: block; }
+
+  /* ── Members grid ─────────────────────────────────── */
+  .lp-members__grid { display: grid; gap: var(--sp-8); }
+  .lp-members__grid--pair { grid-template-columns: repeat(2, 1fr); max-width: 900px; }
+  .lp-members__grid--multi { grid-template-columns: repeat(3, 1fr); }
+
+  @media (max-width: 1023px) { .lp-members__grid--multi { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 767px) { .lp-members__grid--pair, .lp-members__grid--multi { grid-template-columns: 1fr; max-width: 100%; } }
+
+  /* ── Member card ─────────────────────────────────── */
+  .lp-card { display: flex; flex-direction: column; background: hsl(var(--card)); border: 1px solid hsl(var(--border)); overflow: hidden; transition: box-shadow 0.22s ease; }
+  .lp-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.08); }
+
+  .lp-card__photo-wrap { position: relative; aspect-ratio: 4/3; overflow: hidden; background: hsl(var(--muted)); }
+  .lp-card__photo { width: 100%; height: 100%; object-fit: cover; object-position: center top; filter: grayscale(100%); transition: filter 0.3s ease, transform 0.4s ease; display: block; }
+  .lp-card:hover .lp-card__photo { filter: grayscale(40%); transform: scale(1.03); }
+  .lp-card__overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.35) 0%, transparent 55%); pointer-events: none; }
+
+  .lp-card__info { display: flex; flex-direction: column; gap: var(--sp-2); padding: var(--sp-6) var(--sp-6) var(--sp-7); }
+  .lp-card__name { font-size: 1.25rem; font-weight: 800; letter-spacing: -0.03em; color: hsl(var(--foreground)); line-height: 1.1; }
+  .lp-card__role { font-family: var(--font-mono); font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.1em; color: hsl(var(--muted-foreground)); margin-bottom: var(--sp-1); }
+  .lp-card__bio { font-size: 0.875rem; line-height: 1.72; color: hsl(var(--muted-foreground)); }
+

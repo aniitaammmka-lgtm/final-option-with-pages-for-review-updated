@@ -16,6 +16,7 @@ import LeventPage from "@/pages/LeventPage";
 import Group107DigitalPage from "@/pages/Group107DigitalPage";
 import NextAIPage from "@/pages/NextAIPage";
 import AccessibleDocsPage from "@/pages/AccessibleDocsPage";
+import LeadershipPage from "@/pages/LeadershipPage";
 import Nav from "@/components/blocks/Nav";
 import Hero from "@/components/blocks/Hero";
 import Marquee from "@/components/blocks/Marquee";
@@ -73,6 +74,7 @@ function Router() {
       <Route path="/group107-digital" component={Group107DigitalPage} />
       <Route path="/next-ai" component={NextAIPage} />
       <Route path="/accessible-docs" component={AccessibleDocsPage} />
+      <Route path="/leadership" component={LeadershipPage} />
       <Route component={NotFound} />
     </Switch>
   );
