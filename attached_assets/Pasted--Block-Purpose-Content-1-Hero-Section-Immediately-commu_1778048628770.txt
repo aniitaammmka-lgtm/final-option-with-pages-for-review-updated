@@ -1,0 +1,99 @@
+#	Block	Purpose	Content
+1	Hero Section	Immediately communicate what Summa does and for whom	"Headline: 
+Turn Financial Documents Into Simple Insights
+
+Subheadline: 
+Summa reads complex financial texts and turns them into clear, structured information you can use.
+
+Text: 
+Instead of spending hours reading reports, filings, and documents, Summa helps you quickly understand the key points and data that matter.
+
+CTA: 
+Request Demo / Try Summa AI"
+2	What is Summa	Clear product explanation	"Headline: 
+What is Summa? 
+
+Text: 
+Summa is a tool that helps companies understand financial documents faster. It reads large texts, finds important information, and organizes it into clear summaries and data points."
+3	Problem → Solution	Show strong value proposition	"Headline: 
+Too Much Data. Not Enough Time.
+
+Columns:
+
+Problem: Financial documents are long, complex, and take a lot of time to review
+Solution: Summa AI reads and summarizes them automatically
+Result: You get the key insights faster and can make decisions quicker"
+4	Key Capabilities	Present actual platform features	"Headline: What Summa Can Do
+
+• Read and understand financial documents
+• Extract key data and figures
+• Create short, clear summaries
+• Process many documents at once
+• Deliver structured data for easy use
+• Connect to your systems with API"
+5	How It Works	Build clarity and trust	"Headline: How It Works
+
+1. Upload your documents or connect your system
+2. Summa reads and analyzes the content
+3. Important data is extracted
+4. You receive simple summaries and structured results"
+6	Use Cases	Show real applications	"Headline: Where You Can Use It
+
+• Financial analysis
+• Investment research
+• Checking reports and filings
+• Compliance reviews
+• Internal data processing"
+7	Business Value	Translate into outcomes	"Headline: Why It Matters
+
+• Save time on manual reading
+• Reduce human errors
+• Understand documents faster
+• Handle more data without growing your team
+• Make better decisions with clear information"
+8	Technology (Simple)	Build trust without complexity	"Headline: 
+Built with Advanced AI
+
+Text: 
+Summa AI uses modern AI technology to understand language, numbers, and financial context. It is trained to work with financial data and deliver accurate results."
+9	Integration Block	Show flexibility	"Headline: 
+Works With Your Systems
+
+Text: 
+Summa AI can be connected to your existing tools and workflows. You can automate document processing and get results directly where you need them.
+
+Items:
+• API access
+• Scalable for large volumes
+• Flexible setup"
+10	Why Group 107	Position you as the partner	"Headline: 
+Implement Summa With Group 107 
+
+Text: Group 107 helps companies integrate AI platforms like Summa into their operations - from initial discovery to full-scale deployment and optimization. 
+
+Points: 
+• AI integration expertise 
+• Custom workflow development 
+• Data engineering & system integration 
+• Ongoing support and scaling"
+11	Engagement Models	Show how to start	"Headline: How to Get Started
+
+• Book a demo
+• Start a pilot project
+• Integrate into your system
+• Scale across your organization"
+12	CTA Section	Conversion	"Headline: 
+Unlock Insights From Your Financial Data 
+
+Text: 
+Start transforming complex financial documents into structured, actionable intelligence with Summa and Group 107. 
+
+CTA: Book a Demo / Contact Us"
+13	Related Solutions	Cross-sell	"Headline: 
+Explore More AI Solutions 
+
+Items: 
+• AI Integrations 
+• Data Engineering 
+• Product Discovery 
+• Custom Development"
