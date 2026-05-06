@@ -1,0 +1,332 @@
+You are working on an existing website where multiple sections and components are already built (homepage, services, product lobby, etc.).
+
+Your task is to EXTEND the website by converting EXISTING PROJECTS into FULL DEDICATED PAGES and connecting them via routing.
+
+---
+
+## 🔥 MAIN GOAL
+
+Take the following existing items (currently shown as projects/cards/sections):
+
+* Group 107 Digital
+* Next AI
+* Accessible Docs
+
+And transform each of them into FULL, DETAILED, SEPARATE PAGES:
+
+* /group107-digital
+* /next-ai
+* /accessible-docs
+
+---
+
+## ❗ CRITICAL REQUIREMENTS
+
+1. DO NOT build from scratch
+   → Reuse existing components (hero, cards, CTA, grids, sections)
+
+2. If similar sections already exist on:
+
+* homepage
+* services page
+* product lobby
+
+→ REUSE THEM
+
+3. Maintain:
+
+* same design system
+* same spacing
+* same typography
+* same animation style
+
+4. Ensure:
+
+* navigation works
+* all links are clickable
+* project cards now link to these pages
+
+---
+
+## 🔥 VISUAL REQUIREMENT (VERY IMPORTANT)
+
+Each section MUST include visuals:
+
+* product mockups
+* dashboards
+* icons
+* illustrations
+* background graphics
+* subtle animations
+
+NO text-only sections allowed.
+
+---
+
+1. GROUP 107 DIGITAL PAGE
+
+---
+
+Route:
+→ /group107-digital
+
+HERO:
+
+* Add marketing/dashboard visual (charts, analytics UI)
+
+Headline:
+Digital Growth Built on Data, Automation, and Performance
+
+CTA:
+Talk to Our Digital Team
+
+---
+
+INTRO SECTION:
+Title:
+Digital That Connects Marketing, Sales, and Technology
+
+* Add ecosystem visual (marketing + sales + tech)
+
+---
+
+KEY SERVICES:
+
+* Use icon grid
+
+Services:
+SEO, PPC, Social Ads, Native Ads, Email, SDR
+
+---
+
+OUR APPROACH:
+
+* Add connected flow diagram
+
+---
+
+WHY GROUP 107 DIGITAL:
+
+* Use icon-based benefits
+
+---
+
+HOW WE WORK:
+
+* Timeline UI with steps
+
+---
+
+RESULT:
+
+* Add performance dashboard visual
+
+---
+
+INTEGRATION SECTION:
+
+* Show connection to:
+  dev / design / AI
+
+---
+
+USE CASES:
+
+* Cards with icons
+
+---
+
+FINAL CTA:
+
+* Strong visual background
+
+---
+
+2. NEXT AI PAGE
+
+---
+
+Route:
+→ /next-ai
+
+HERO:
+
+* Add AI visual (nodes, automation, neural style)
+
+Headline:
+AI Solutions That Create Real Business Impact
+
+---
+
+INTRO:
+
+* Add workflow automation visual
+
+---
+
+VALUE SECTION:
+
+* Icons per benefit
+
+---
+
+AI SERVICES:
+
+* Cards with icons + hover effects
+
+---
+
+DISCOVERY:
+
+* Add decision flow visual
+
+---
+
+USE CASES:
+
+* Cards with icons
+
+---
+
+CASE STUDIES:
+
+* Highlight blocks
+
+---
+
+WHY GROUP 107:
+
+* Icon list
+
+---
+
+TECHNOLOGIES:
+
+* Logos (OpenAI, Google, etc.)
+
+---
+
+PROCESS:
+
+* Step-by-step timeline
+
+---
+
+FINAL CTA
+
+---
+
+3. ACCESSIBLE DOCS PAGE
+
+---
+
+Route:
+→ /accessible-docs
+
+HERO:
+
+* Add document → accessible transformation visual
+
+---
+
+PRODUCT INTRO:
+
+* Platform UI mockup
+
+---
+
+HOW IT WORKS:
+
+* Step flow diagram
+
+---
+
+BENEFITS:
+
+* Icon grid
+
+---
+
+WAYS TO USE:
+
+* Cards (Platform / Plugin / API)
+
+---
+
+WHO IT’S FOR:
+
+* Cards with icons
+
+---
+
+TRUST BLOCK:
+
+* Accessibility-focused visual
+
+---
+
+INTEGRATION:
+
+* Workflow diagram
+
+---
+
+PRICING / TRIAL:
+
+* Highlight card
+
+---
+
+GROUP 107 CONNECTION:
+
+* ecosystem visual
+
+---
+
+FINAL CTA
+
+---
+
+4. LINK EVERYTHING
+
+---
+
+* Update ALL existing project cards → link to new pages
+
+* Ensure routing works:
+  /group107-digital
+  /next-ai
+  /accessible-docs
+
+* Add cross-links between:
+  services ↔ products ↔ pages
+
+---
+
+5. REUSE BLOCKS (CRITICAL)
+
+---
+
+If similar blocks already exist:
+
+* hero
+* CTA
+* grids
+* cards
+* timelines
+
+→ reuse them as components
+
+DO NOT duplicate styles manually.
+
+---
+
+## FINAL RESULT
+
+A fully connected multi-page website where:
+
+* projects become full pages
+* navigation works
+* visuals are strong
+* components are reused
+* UX is consistent and modern

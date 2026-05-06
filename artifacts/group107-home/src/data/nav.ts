@@ -22,11 +22,11 @@ export const navItems: NavItem[] = [
     panels: [
       { heading: "Talents", links: [{ label: "Team Expertise", url: "/services#talents" }, { label: "Recruitment as a Service", url: "/services#talents" }] },
       { heading: "Development Services", url: "/development-services", links: [{ label: "Web Development", url: "/web-development" }, { label: "Software Development", url: "/software-development" }, { label: "Mobile Development", url: "/mobile-development" }, { label: "Product Discovery", url: "/product-discovery" }] },
-      { heading: "Group 107 Digital", links: [{ label: "Marketing", url: "/services#digital" }, { label: "SDR", url: "/services#digital" }, { label: "Growth Systems", url: "/services#digital" }] },
+      { heading: "Group 107 Digital", url: "/group107-digital", links: [{ label: "Performance Marketing", url: "/group107-digital" }, { label: "SDR & Outreach", url: "/group107-digital" }, { label: "Growth Systems", url: "/group107-digital" }] },
       { heading: "Infrastructure & DevOps", links: [{ label: "DevOps", url: "/services#devops" }, { label: "Cloud Solutions", url: "/services#devops" }, { label: "IT and Infrastructure", url: "/services#devops" }] },
       { heading: "Accessibility", links: [{ label: "WCAG Compliance", url: "/services#accessibility" }, { label: "Accessible Design", url: "/services#accessibility" }, { label: "Audit & Remediation", url: "/services#accessibility" }] },
       { heading: "Fintech", links: [{ label: "Bank Integrations", url: "/services#fintech" }, { label: "Financial Systems", url: "/services#fintech" }] },
-      { heading: "Next AI", links: [{ label: "AI-Driven Solutions", url: "/services#nextai" }, { label: "Automation", url: "/services#nextai" }] },
+      { heading: "Next AI", url: "/next-ai", links: [{ label: "Custom AI Development", url: "/next-ai" }, { label: "Intelligent Automation", url: "/next-ai" }, { label: "AI Consulting", url: "/next-ai" }] },
     ],
     image: { src: "/hero.png", alt: "Build. Scale. Grow." },
     imageLabel: "Build. Scale. Grow.",
@@ -37,7 +37,7 @@ export const navItems: NavItem[] = [
     id: "products",
     url: "/product-lobby",
     panels: [
-      { heading: "Our Products", links: [{ label: "Accessible Docs", url: "/product-lobby#accessible-docs" }, { label: "Global Docs", url: "/global-docs" }, { label: "Summa", url: "/summa" }, { label: "Levent", url: "/levent" }] },
+      { heading: "Our Products", links: [{ label: "Accessible Docs", url: "/accessible-docs" }, { label: "Global Docs", url: "/global-docs" }, { label: "Summa", url: "/summa" }, { label: "Levent", url: "/levent" }] },
     ],
     image: { src: "/project-1.png", alt: "Our Product Suite" },
     imageLabel: "Our Product Suite",

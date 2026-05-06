@@ -13,6 +13,9 @@ import ProductDiscoveryPage from "@/pages/ProductDiscoveryPage";
 import SummaPage from "@/pages/SummaPage";
 import GlobalDocsPage from "@/pages/GlobalDocsPage";
 import LeventPage from "@/pages/LeventPage";
+import Group107DigitalPage from "@/pages/Group107DigitalPage";
+import NextAIPage from "@/pages/NextAIPage";
+import AccessibleDocsPage from "@/pages/AccessibleDocsPage";
 import Nav from "@/components/blocks/Nav";
 import Hero from "@/components/blocks/Hero";
 import Marquee from "@/components/blocks/Marquee";
@@ -67,6 +70,9 @@ function Router() {
       <Route path="/summa" component={SummaPage} />
       <Route path="/global-docs" component={GlobalDocsPage} />
       <Route path="/levent" component={LeventPage} />
+      <Route path="/group107-digital" component={Group107DigitalPage} />
+      <Route path="/next-ai" component={NextAIPage} />
+      <Route path="/accessible-docs" component={AccessibleDocsPage} />
       <Route component={NotFound} />
     </Switch>
   );
