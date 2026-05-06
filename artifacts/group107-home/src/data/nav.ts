@@ -37,7 +37,7 @@ export const navItems: NavItem[] = [
     id: "products",
     url: "/product-lobby",
     panels: [
-      { heading: "Our Products", links: [{ label: "Accessible Docs", url: "/product-lobby#accessible-docs" }, { label: "Global Docs", url: "/global-docs" }, { label: "Summa", url: "/summa" }, { label: "Levent", url: "/product-lobby#levent" }] },
+      { heading: "Our Products", links: [{ label: "Accessible Docs", url: "/product-lobby#accessible-docs" }, { label: "Global Docs", url: "/global-docs" }, { label: "Summa", url: "/summa" }, { label: "Levent", url: "/levent" }] },
     ],
     image: { src: "/project-1.png", alt: "Our Product Suite" },
     imageLabel: "Our Product Suite",

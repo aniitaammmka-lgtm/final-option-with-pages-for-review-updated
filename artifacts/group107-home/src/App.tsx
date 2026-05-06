@@ -12,6 +12,7 @@ import MobileDevelopmentPage from "@/pages/MobileDevelopmentPage";
 import ProductDiscoveryPage from "@/pages/ProductDiscoveryPage";
 import SummaPage from "@/pages/SummaPage";
 import GlobalDocsPage from "@/pages/GlobalDocsPage";
+import LeventPage from "@/pages/LeventPage";
 import Nav from "@/components/blocks/Nav";
 import Hero from "@/components/blocks/Hero";
 import Marquee from "@/components/blocks/Marquee";
@@ -65,6 +66,7 @@ function Router() {
       <Route path="/product-discovery" component={ProductDiscoveryPage} />
       <Route path="/summa" component={SummaPage} />
       <Route path="/global-docs" component={GlobalDocsPage} />
+      <Route path="/levent" component={LeventPage} />
       <Route component={NotFound} />
     </Switch>
   );

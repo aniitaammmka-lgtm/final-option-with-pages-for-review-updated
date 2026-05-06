@@ -1,0 +1,76 @@
+#	Block	Purpose	Content
+1	Hero Section	Introduce Levent as a fintech product and position Group 107 as the partner behind it	"Headline: 
+Build Advanced Financial Products - Faster and Smarter 
+
+Subheadline: 
+Levent by Group 107 delivers end-to-end fintech product development for banks, brokers, and insurance companies. 
+
+Text: From concept to live product, Levent combines financial expertise, engineering excellence, and real-world integrations to create scalable, secure, and user-focused financial solutions. 
+
+CTA: Talk to Us / Request Demo"
+2	About Levent	Explain what Levent is and its role	"Headline: What is Levent 
+
+Text: 
+Levent is an R&D-focused fintech solution designed to build complete financial products for institutions such as banks, brokers, and insurance companies. It combines product thinking, engineering, and financial domain expertise to deliver end-to-end solutions tailored to each business."
+3	What We Build	Show practical product capabilities	"Headline: Fintech Products We Deliver 
+
+Items: 
+• Trading platforms and investment tools 
+• Banking and financial management systems 
+• Digital wallets and payment solutions 
+• Data-driven financial analytics platforms 
+• Custom financial applications for internal and customer use 
+
+Text: Each product is built around real operational needs, ensuring performance, compliance, and usability."
+4	Core Capabilities	Present key strengths of Levent	"Headline: Core Capabilities 
+
+Items: 
+System Development - scalable, user-focused financial systems 
+Banking Integrations - secure connections with financial platforms 
+Trading Systems - optimization, market data integration, UI improvements 
+Client-Centric Approach - solutions aligned with business needs and growth"
+5	How It Works	Explain process (similar to other product pages)	"Headline: From Idea to Live Product 
+
+Steps: 
+1. Understanding your business and financial workflows 
+2. Defining product architecture and features 
+3. Development and integrations 
+4. Testing with real financial data 
+5. Deployment and continuous improvement 
+
+Text: We ensure every step is aligned with compliance, scalability, and real market needs."
+6	Real Use Cases	Show credibility with real examples	"Headline: Proven Fintech Experience 
+
+Examples: 
+• IMTC - fixed income management system 
+• PrePay - financial management platform 
+• FIBI - banking system enhancements 
+• Trade.com - trading and investment platform 
+
+Text: Our experience across fintech products allows us to build reliable and scalable systems."
+7	Levent + Buffer (Optional Cross Product)	Strengthen product ecosystem	"Headline: Built Together With Smart Investment Tools 
+
+Text: Alongside Levent, Group 107 developed solutions like Buffer - an AI-powered investment tool designed to analyze market data and create personalized strategies for users."
+8	Why Group 107	Position company strength	"Headline: 
+Built by Group 107 - Your Fintech Technology Partner 
+
+Text: Group 107 combines financial expertise with deep technical capabilities to deliver solutions that are secure, scalable, and ready for real-world use. 
+
+Points: 
+• Experience with banks, brokers, and financial institutions 
+• End-to-end product development 
+• Strong integration capabilities 
+• Agile and responsive delivery"
+9	Value Proposition Section	Conversion-focused summary	"Headline: 
+Not Just Development - A Complete Fintech Partner 
+
+Columns: 
+Understand - your financial business and workflows 
+Build - secure, scalable financial products 
+Integrate - with banking systems and market data 
+Scale - your product with confidence"
+10	CTA Section	Drive conversion	"Headline: Ready to Build Your Fintech Product? 
+
+Text: Let’s discuss how Levent and Group 107 can help you design, develop, and scale your next financial solution. 
+
+CTA: Contact Us / Book a Call"
