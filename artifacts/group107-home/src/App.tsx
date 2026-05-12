@@ -19,6 +19,7 @@ import AccessibleDocsPage from "@/pages/AccessibleDocsPage";
 import LeadershipPage from "@/pages/LeadershipPage";
 import CareersPage from "@/pages/CareersPage";
 import PartnershipPage from "@/pages/PartnershipPage";
+import BlogPage from "@/pages/BlogPage";
 import Nav from "@/components/blocks/Nav";
 import Hero from "@/components/blocks/Hero";
 import Marquee from "@/components/blocks/Marquee";
@@ -79,6 +80,7 @@ function Router() {
       <Route path="/leadership" component={LeadershipPage} />
       <Route path="/careers" component={CareersPage} />
       <Route path="/partnership" component={PartnershipPage} />
+      <Route path="/blog" component={BlogPage} />
       <Route component={NotFound} />
     </Switch>
   );

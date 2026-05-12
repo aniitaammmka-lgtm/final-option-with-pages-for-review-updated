@@ -70,7 +70,7 @@ export const navItems: NavItem[] = [
     id: "resources",
     url: "#",
     panels: [
-      { heading: "Content", links: [{ label: "Blogs", url: "#" }, { label: "Articles", url: "#" }, { label: "Media Room", url: "#" }, { label: "Glossary", url: "#" }] },
+      { heading: "Content", links: [{ label: "Blog", url: "/blog" }, { label: "Articles", url: "#" }, { label: "Media Room", url: "#" }, { label: "Glossary", url: "#" }] },
     ],
     image: { src: "/project-1.png", alt: "Knowledge Hub" },
     imageLabel: "Knowledge Hub",
