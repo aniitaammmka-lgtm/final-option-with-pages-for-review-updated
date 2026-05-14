@@ -11457,3 +11457,143 @@
   .bl-cta__btn:hover { background: rgba(255,255,255,.85); }
   .bl-cta__btn-icon { width: .875rem; height: .875rem; }
 }
+
+/* ═══════════════════════════════════════════════════
+   GLOBAL BUTTON HOVER ENHANCEMENTS
+   Overrides flat transitions site-wide for all CTAs
+   ═══════════════════════════════════════════════════ */
+@layer components {
+
+  /* ── Shared snappy spring transition ─────────────
+     Applies to every button-like element. The
+     cubic-bezier gives a subtle deceleration pop   */
+  .nav__cta,
+  .hero__cta,
+  .cta-section__cta,
+  .talents__cta,
+  .cr-hero__cta,
+  .cr-vacancies__cta,
+  .cr-cta__btn,
+  .prt-hero__scroll-cta,
+  .prt-affiliate__cta,
+  .prt-logo-card,
+  .bl-cta__btn,
+  .sp-hero__cta,
+  .sp-cta__btn,
+  .sp-detail__cta,
+  .pl-hero__cta,
+  .pl-cta__btn,
+  .pl-bridge__cta,
+  .pl-product__cta,
+  .ds-hero__cta,
+  .ds-cta__btn,
+  .smm-hero__cta,
+  .smm-cta__btn,
+  .gd-hero__cta,
+  .gd-cta__btn,
+  .lp-cta__btn,
+  .lv-hero__cta,
+  .lv-cta__btn,
+  .na-hero__cta,
+  .na-cta__btn,
+  .ad-hero__cta,
+  .ad-cta__btn {
+    transition:
+      background-color 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+      color            0.25s cubic-bezier(0.16, 1, 0.3, 1),
+      border-color     0.25s cubic-bezier(0.16, 1, 0.3, 1),
+      transform        0.28s cubic-bezier(0.34, 1.45, 0.64, 1),
+      box-shadow       0.28s cubic-bezier(0.16, 1, 0.3, 1),
+      opacity          0.2s ease !important;
+  }
+
+  /* ── Primary dark buttons — lift + deep shadow ── */
+  .nav__cta:hover,
+  .hero__cta--primary:hover,
+  .cr-hero__cta--primary:hover,
+  .sp-hero__cta--primary:hover,
+  .sp-cta__btn--primary:hover,
+  .pl-hero__cta--primary:hover,
+  .ds-hero__cta--primary:hover,
+  .smm-hero__cta--primary:hover,
+  .gd-hero__cta--primary:hover,
+  .lp-cta__btn:hover,
+  .lv-hero__cta--primary:hover,
+  .na-hero__cta--primary:hover,
+  .ad-hero__cta--primary:hover,
+  .cr-cta__btn:hover,
+  .prt-affiliate__cta--primary:hover,
+  .bl-cta__btn:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28) !important;
+  }
+
+  /* ── White buttons on dark bg — lift + white glow */
+  .cta-section__cta:hover,
+  .talents__cta:hover,
+  .sp-cta__btn--secondary:hover,
+  .pl-cta__btn:hover,
+  .pl-bridge__cta:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 8px 28px rgba(255, 255, 255, 0.18) !important;
+  }
+
+  /* ── Outlined / ghost buttons — lift only ─────── */
+  .hero__cta--secondary:hover,
+  .cr-hero__cta--secondary:hover,
+  .sp-hero__cta--secondary:hover,
+  .pl-hero__cta--secondary:hover,
+  .ds-hero__cta--secondary:hover,
+  .lv-hero__cta--secondary:hover,
+  .na-hero__cta--secondary:hover,
+  .ad-hero__cta--secondary:hover,
+  .prt-hero__scroll-cta:hover,
+  .prt-affiliate__cta--secondary:hover {
+    transform: translateY(-2px) !important;
+  }
+
+  /* ── Active press-down (all buttons) ─────────── */
+  .nav__cta:active,
+  .hero__cta:active,
+  .cta-section__cta:active,
+  .talents__cta:active,
+  .cr-hero__cta:active,
+  .cr-cta__btn:active,
+  .prt-affiliate__cta:active,
+  .bl-cta__btn:active,
+  .sp-hero__cta:active,
+  .sp-cta__btn:active,
+  .pl-hero__cta:active,
+  .pl-cta__btn:active {
+    transform: translateY(0px) scale(0.97) !important;
+    box-shadow: none !important;
+    transition-duration: 0.1s !important;
+  }
+
+  /* ── Arrow / icon animation inside buttons ───── */
+  .nav__cta:hover .nav__cta-icon,
+  .hero__cta:hover .hero__cta-icon,
+  .cta-section__cta:hover .cta-section__cta-icon,
+  .talents__cta:hover .talents__cta-icon,
+  .cr-cta__btn:hover .cr-cta__btn-icon,
+  .prt-affiliate__cta:hover .prt-affiliate__cta-icon,
+  .prt-hero__scroll-cta:hover .prt-hero__scroll-icon,
+  .bl-cta__btn:hover .bl-cta__btn-icon,
+  .sp-cta__btn:hover .sp-cta__btn-icon,
+  .pl-cta__btn:hover .pl-cta__btn-icon {
+    transform: translate(3px, -2px) !important;
+  }
+
+  .nav__cta .nav__cta-icon,
+  .hero__cta .hero__cta-icon,
+  .cta-section__cta .cta-section__cta-icon,
+  .talents__cta .talents__cta-icon,
+  .cr-cta__btn .cr-cta__btn-icon,
+  .prt-affiliate__cta .prt-affiliate__cta-icon,
+  .prt-hero__scroll-cta .prt-hero__scroll-icon,
+  .bl-cta__btn .bl-cta__btn-icon,
+  .sp-cta__btn .sp-cta__btn-icon,
+  .pl-cta__btn .pl-cta__btn-icon {
+    transition: transform 0.3s cubic-bezier(0.34, 1.45, 0.64, 1);
+  }
+}
