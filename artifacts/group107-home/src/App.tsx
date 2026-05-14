@@ -21,6 +21,7 @@ import CareersPage from "@/pages/CareersPage";
 import PartnershipPage from "@/pages/PartnershipPage";
 import BlogPage from "@/pages/BlogPage";
 import OurWorkPage from "@/pages/OurWorkPage";
+import CaseStudyPage from "@/pages/CaseStudyPage";
 import Nav from "@/components/blocks/Nav";
 import Hero from "@/components/blocks/Hero";
 import Marquee from "@/components/blocks/Marquee";
@@ -83,6 +84,7 @@ function Router() {
       <Route path="/partnership" component={PartnershipPage} />
       <Route path="/blog" component={BlogPage} />
       <Route path="/our-work" component={OurWorkPage} />
+      <Route path="/our-work/:slug" component={CaseStudyPage} />
       <Route component={NotFound} />
     </Switch>
   );

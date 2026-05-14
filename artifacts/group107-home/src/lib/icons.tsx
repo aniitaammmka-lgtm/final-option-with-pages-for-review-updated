@@ -62,6 +62,7 @@ import {
   Lightbulb,
   Rocket,
   MapPin,
+  ExternalLink,
 } from "lucide-react";
 import type { LucideProps } from "lucide-react";
 
@@ -129,7 +130,7 @@ export const Icons: Record<string, React.FC<LucideProps>> = {
   Lightbulb,
   Rocket,
   MapPin,
-  TrendingUp,
+  ExternalLink,
 };
 
 export const iconSVG: Record<string, string> = {
