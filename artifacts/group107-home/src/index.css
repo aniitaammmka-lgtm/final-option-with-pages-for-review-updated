@@ -1643,6 +1643,23 @@
   }
   .case-studies__item:hover .case-studies__item-cta { color: white; }
   .case-studies__item-cta-icon { width: 0.875rem; height: 0.875rem; }
+  .case-studies__view-all {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--sp-2);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,0.25);
+    padding-bottom: 2px;
+    white-space: nowrap;
+    transition: color 0.2s ease, border-color 0.2s ease, gap 0.3s cubic-bezier(0.34,1.45,0.64,1);
+  }
+  .case-studies__view-all:hover { color: white; border-color: white; gap: var(--sp-3); }
+  .case-studies__view-all-icon { width: 0.875rem; height: 0.875rem; }
 
   /* ══════════════════════════════════════════════
      INSIGHTS

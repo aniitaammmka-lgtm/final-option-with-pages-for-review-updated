@@ -6,6 +6,7 @@
  * @cta per-item
  * @static-compatible yes
  */
+import { Link } from "wouter";
 import AnimateIn from "@/components/AnimateIn";
 import { casesData } from "@/data/cases";
 import { Icons } from "@/lib/icons";
@@ -30,6 +31,11 @@ export default function CaseStudies() {
               </h2>
             </AnimateIn>
           </div>
+          <AnimateIn delay={0.12} direction="up">
+            <Link href="/our-work" className="case-studies__view-all" data-element="cta">
+              View All Work <ArrowRight className="case-studies__view-all-icon" />
+            </Link>
+          </AnimateIn>
         </div>
 
         <AnimateIn delay={0.15} direction="up">
@@ -51,7 +57,7 @@ export default function CaseStudies() {
         <div className="case-studies__grid">
           {casesData.items.map((c, i) => (
             <AnimateIn key={i} delay={c.animDelay} direction="up">
-              <div className="case-studies__item" data-element="item">
+              <Link href={c.link} className="case-studies__item" data-element="item">
                 <div className="case-studies__item-img-wrap">
                   <img
                     src={c.image.src}
@@ -69,7 +75,7 @@ export default function CaseStudies() {
                     View Case Study <ArrowRight className="case-studies__item-cta-icon" />
                   </div>
                 </div>
-              </div>
+              </Link>
             </AnimateIn>
           ))}
         </div>
