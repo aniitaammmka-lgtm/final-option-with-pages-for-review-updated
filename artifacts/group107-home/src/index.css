@@ -11652,7 +11652,8 @@
   position: relative;
   z-index: 10;
 }
-@media (min-width: 768px) { .ow-hero__inner { padding: 0 var(--sp-12); } }
+@media (min-width: 768px)  { .ow-hero__inner { padding: 0 var(--sp-12); } }
+@media (min-width: 1280px) { .ow-hero__inner { padding: 0 var(--sp-20); } }
 .ow-hero__eyebrow {
   font-family: var(--font-mono);
   font-size: 0.75rem;
@@ -11723,7 +11724,8 @@
   overflow-x: auto;
   scrollbar-width: none;
 }
-@media (min-width: 768px) { .ow-filter__inner { padding: 0 var(--sp-12); } }
+@media (min-width: 768px)  { .ow-filter__inner { padding: 0 var(--sp-12); } }
+@media (min-width: 1280px) { .ow-filter__inner { padding: 0 var(--sp-20); } }
 .ow-filter__btn {
   font-family: var(--font-mono);
   font-size: 0.7rem;
@@ -11753,9 +11755,10 @@
 .ow-grid__inner {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 var(--sp-8);
+  padding: 0 var(--sp-6);
 }
-@media (min-width: 768px) { .ow-grid__inner { padding: 0 var(--sp-16); } }
+@media (min-width: 768px)  { .ow-grid__inner { padding: 0 var(--sp-12); } }
+@media (min-width: 1280px) { .ow-grid__inner { padding: 0 var(--sp-20); } }
 .ow-grid__items {
   display: grid;
   grid-template-columns: 1fr;
