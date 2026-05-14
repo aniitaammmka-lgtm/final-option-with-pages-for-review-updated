@@ -330,8 +330,8 @@
     z-index: 10;
   }
   .nav__logo-img {
-    height: 2.5rem;
-    width: 2.5rem;
+    height: 3.25rem;
+    width: 3.25rem;
     object-fit: contain;
   }
   .nav__links {
