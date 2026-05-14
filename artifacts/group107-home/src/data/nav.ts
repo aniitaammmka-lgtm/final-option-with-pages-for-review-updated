@@ -46,13 +46,13 @@ export const navItems: NavItem[] = [
   {
     label: "Case Studies",
     id: "casestudies",
-    url: "/#casestudies",
+    url: "/our-work",
     panels: [
-      { heading: "Work", links: [{ label: "View Case Studies", url: "/#casestudies" }, { label: "Fintech Projects", url: "/#casestudies" }, { label: "SaaS Projects", url: "/#casestudies" }, { label: "Enterprise Projects", url: "/#casestudies" }] },
+      { heading: "Work", links: [{ label: "View All Case Studies", url: "/our-work" }, { label: "Web Development", url: "/our-work" }, { label: "Custom Software", url: "/our-work" }, { label: "Enterprise Solutions", url: "/our-work" }, { label: "Accessibility", url: "/our-work" }] },
     ],
     image: { src: "/project-2.png", alt: "Real Projects. Real Results." },
     imageLabel: "Real Projects. Real Results.",
-    imageCta: { url: "/#casestudies", label: "View Case Studies" },
+    imageCta: { url: "/our-work", label: "View Case Studies" },
   },
   {
     label: "Company",
