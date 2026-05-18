@@ -1,0 +1,191 @@
+CRITICAL FIXES — APPLY GLOBAL DESIGN SYSTEM CONSISTENCY (BASED ON HOMEPAGE)
+
+These are NON-NEGOTIABLE architectural and UI fixes that must be applied across the entire Replit project.
+
+The homepage is the MASTER REFERENCE. Everything else must be normalized to it.
+
+---
+
+1. GLOBAL HERO + GRAY BANNER STANDARDIZATION
+
+---
+
+ALL pages MUST use the SAME layout pattern as the homepage:
+
+LEFT SIDE:
+
+* text content (headline, subheadline, paragraph, CTA)
+
+RIGHT SIDE:
+
+* visual block (illustration / image / gradient / UI mock)
+
+This applies to:
+
+* Hero sections
+* Gray feature banners
+* Key highlight sections
+
+IMPORTANT:
+
+* Do NOT use dark backgrounds anywhere
+* Keep ALL sections light (white + soft gray system only)
+* Gray banners must match homepage exactly (same tone, same spacing, same radius)
+
+---
+
+2. HEADER CONSISTENCY (CRITICAL)
+
+---
+
+The header MUST be identical across ALL pages:
+
+* Always visible (no hidden / alternate versions)
+* Same styling as homepage header
+* Light theme ONLY (white / light gray background)
+* NO dark headers on any page
+* Same height, spacing, typography, and hover states
+* Same sticky behavior (if used on homepage)
+
+If header differs on any page → it is a bug.
+
+---
+
+3. SPACING & CONTAINER RULES (CRITICAL)
+
+---
+
+ALL containers MUST include proper padding rules:
+
+* No text touching container edges
+* No icons/arrow/text collision
+* Consistent inner padding for ALL blocks
+* Equal left/right padding inside cards
+* Equal spacing between:
+
+  * text ↔ border
+  * text ↔ icons
+  * text ↔ buttons
+
+Golden rule:
+"If it touches the edge — it is wrong."
+
+---
+
+4. CASE STUDIES SECTION RULE
+
+---
+
+Case Studies must ALWAYS behave like:
+
+* Show ONLY 6 items initially
+* After 6 items → show button:
+
+"Load More"
+
+On click:
+
+* dynamically load or expand additional case studies
+* maintain same grid layout
+
+No infinite long grid by default.
+
+---
+
+5. HEADER VISIBILITY RULE
+
+---
+
+Header must:
+
+* always be visible
+* never switch to dark theme
+* never disappear on scroll (unless homepage already does so consistently)
+* always match homepage styling exactly
+
+Homepage header = SINGLE SOURCE OF TRUTH.
+
+---
+
+6. BLOG ARTICLE BEHAVIOR (CRITICAL)
+
+---
+
+All blog articles MUST:
+
+* open inside the Replit application
+* NOT redirect to external websites
+* use internal routing system (SPA behavior)
+* preserve header + footer layout
+* maintain breadcrumbs + navigation context
+
+External linking is forbidden for blog reading flow.
+
+---
+
+7. BREADCRUMBS SYSTEM
+
+---
+
+Add breadcrumbs on ALL pages EXCEPT:
+
+* homepage (landing page only)
+
+Breadcrumb rules:
+
+* placed below header
+* consistent styling across all pages
+* lightweight, minimal UI
+* always reflect navigation hierarchy
+
+Example:
+Home → Services → Recruitment → Recruitment as a Service
+
+---
+
+8. NEW PAGE REQUIREMENT
+
+---
+
+ADD NEW PAGE:
+
+INVESTORS
+
+Route:
+/consulting/investors (or /investors depending on routing structure)
+
+This page must follow ALL global rules above:
+
+* homepage layout system
+* left text / right visual structure
+* gray banners consistency
+* breadcrumbs enabled
+* light theme only
+* proper spacing system
+
+Content should include:
+
+* investor overview
+* company positioning
+* financial/strategic highlights (if available)
+* global presence
+* trust & stability messaging
+* CTA for investor contact
+
+---
+
+## FINAL SYSTEM RULE
+
+If any page:
+
+* has dark header
+* breaks spacing system
+* changes layout structure
+* deviates from homepage design language
+* removes padding consistency
+* opens blog externally
+
+→ IT IS CONSIDERED BROKEN AND MUST BE FIXED.
+
+Homepage = DESIGN SOURCE OF TRUTH.
+Everything else must be derived from it with zero deviation.

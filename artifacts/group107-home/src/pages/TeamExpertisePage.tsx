@@ -1,5 +1,6 @@
 import Nav from "@/components/blocks/Nav";
 import Footer from "@/components/blocks/Footer";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import AnimateIn from "@/components/AnimateIn";
 import { Icons } from "@/lib/icons";
 
@@ -52,48 +53,63 @@ const whyBullets = [
   "Public company reliability and accountability",
 ];
 
+const heroIcons = ["Code2", "BrainCircuit", "Shield", "Server", "Database", "BarChart"];
+
 export default function TeamExpertisePage() {
   return (
     <div className="page">
       <Nav />
+      <Breadcrumbs items={[{ label: "Home", url: "/" }, { label: "Team Expertise" }]} />
       <main>
 
         {/* ── Hero ─────────────────────────── */}
         <section className="te-hero" data-block="hero">
-          <div className="te-hero__grid" aria-hidden="true" />
-          <div className="te-hero__noise" aria-hidden="true" />
-          <div className="te-hero__floats" aria-hidden="true">
-            {["Code2", "BrainCircuit", "Shield", "Server", "Database", "BarChart"].map((ic, i) => {
-              const Icon = Icons[ic];
-              return Icon ? (
-                <div key={i} className={`te-hero__float te-hero__float--${i + 1}`}>
-                  <Icon strokeWidth={0.75} />
-                </div>
-              ) : null;
-            })}
-          </div>
           <div className="te-hero__inner" data-element="inner">
-            <AnimateIn delay={0} direction="up">
-              <div className="te-hero__eyebrow" data-field="eyebrow">Expertise</div>
-            </AnimateIn>
-            <AnimateIn delay={0.08} direction="up">
-              <h1 className="te-hero__title" data-field="title">
-                Team Expertise That<br />Moves Products Forward
-              </h1>
-            </AnimateIn>
-            <AnimateIn delay={0.14} direction="up">
-              <p className="te-hero__sub" data-field="sub">
-                From software development and AI to DevOps, cybersecurity, data, and digital growth.
-              </p>
-            </AnimateIn>
-            <AnimateIn delay={0.2} direction="up">
-              <div className="te-hero__actions" data-element="actions">
-                <a href="/contact-us" className="te-hero__btn te-hero__btn--primary" data-field="cta">
-                  Talk to Our Team <ArrowRight className="te-hero__btn-icon" />
-                </a>
-                <a href="/our-work" className="te-hero__btn te-hero__btn--secondary" data-field="cta-sec">
-                  See Our Work <ArrowUpRight className="te-hero__btn-icon" />
-                </a>
+            <div className="te-hero__content" data-element="content">
+              <AnimateIn delay={0} direction="up">
+                <div className="te-hero__eyebrow" data-field="eyebrow">Expertise</div>
+              </AnimateIn>
+              <AnimateIn delay={0.08} direction="up">
+                <h1 className="te-hero__title" data-field="title">
+                  Team Expertise That<br />Moves Products Forward
+                </h1>
+              </AnimateIn>
+              <AnimateIn delay={0.14} direction="up">
+                <p className="te-hero__sub" data-field="sub">
+                  From software development and AI to DevOps, cybersecurity, data, and digital growth.
+                </p>
+              </AnimateIn>
+              <AnimateIn delay={0.2} direction="up">
+                <div className="te-hero__actions" data-element="actions">
+                  <a href="/contact-us" className="te-hero__btn te-hero__btn--primary" data-field="cta">
+                    Talk to Our Team <ArrowRight className="te-hero__btn-icon" />
+                  </a>
+                  <a href="/our-work" className="te-hero__btn te-hero__btn--secondary" data-field="cta-sec">
+                    See Our Work <ArrowUpRight className="te-hero__btn-icon" />
+                  </a>
+                </div>
+              </AnimateIn>
+            </div>
+
+            <AnimateIn delay={0.1} direction="fade" className="te-hero__visual" data-element="visual">
+              <div className="te-hero__expertise-card" data-element="expertise-card">
+                <div className="te-hero__expertise-label" data-field="label">Areas of Expertise</div>
+                <div className="te-hero__expertise-icons" data-element="expertise-icons">
+                  {heroIcons.map((ic, i) => {
+                    const Icon = Icons[ic];
+                    return Icon ? (
+                      <div key={i} className="te-hero__expertise-icon-wrap" data-element="icon-wrap">
+                        <Icon className="te-hero__expertise-icon" strokeWidth={1.25} />
+                      </div>
+                    ) : null;
+                  })}
+                </div>
+                <div className="te-hero__expertise-divider" aria-hidden="true" />
+                <div className="te-hero__expertise-tags" data-element="tags">
+                  {["Software Dev", "AI / ML", "DevOps", "Security", "Data", "Growth"].map((t) => (
+                    <span key={t} className="te-hero__expertise-tag" data-field="tag">{t}</span>
+                  ))}
+                </div>
               </div>
             </AnimateIn>
           </div>

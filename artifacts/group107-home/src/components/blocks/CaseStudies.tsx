@@ -6,13 +6,18 @@
  * @cta per-item
  * @static-compatible yes
  */
+import { useState } from "react";
 import { Link } from "wouter";
 import AnimateIn from "@/components/AnimateIn";
 import { casesData } from "@/data/cases";
 import { Icons } from "@/lib/icons";
 
+const INITIAL_COUNT = 6;
+
 export default function CaseStudies() {
   const ArrowRight = Icons.ArrowRight;
+  const ChevronDown = Icons.ChevronDown;
+  const [showAll, setShowAll] = useState(false);
 
   return (
     <section id="work" className="case-studies" data-block="case-studies">
@@ -56,7 +61,12 @@ export default function CaseStudies() {
 
         <div className="case-studies__grid">
           {casesData.items.map((c, i) => (
-            <AnimateIn key={i} delay={c.animDelay} direction="up">
+            <AnimateIn
+              key={i}
+              delay={c.animDelay}
+              direction="up"
+              data-hidden={!showAll && i >= INITIAL_COUNT ? "true" : "false"}
+            >
               <Link href={c.link} className="case-studies__item" data-element="item">
                 <div className="case-studies__item-img-wrap">
                   <img
@@ -78,6 +88,17 @@ export default function CaseStudies() {
               </Link>
             </AnimateIn>
           ))}
+        </div>
+
+        <div className="case-studies__load-more-wrap" data-hidden={showAll ? "true" : "false"}>
+          <button
+            className="case-studies__load-more"
+            data-element="load-more"
+            onClick={() => setShowAll(true)}
+          >
+            Load More
+            {ChevronDown && <ChevronDown className="case-studies__load-more-icon" />}
+          </button>
         </div>
       </div>
     </section>

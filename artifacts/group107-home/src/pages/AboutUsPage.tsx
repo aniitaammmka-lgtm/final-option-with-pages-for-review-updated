@@ -1,10 +1,18 @@
 import Nav from "@/components/blocks/Nav";
 import Footer from "@/components/blocks/Footer";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import AnimateIn from "@/components/AnimateIn";
 import { Icons } from "@/lib/icons";
 
 const ArrowRight = Icons.ArrowRight;
 const ArrowUpRight = Icons.ArrowUpRight;
+
+const stats = [
+  { val: "700+",  label: "Global Clients" },
+  { val: "88K+",  label: "Talent Pool" },
+  { val: "10+",   label: "Years Delivering" },
+  { val: "4",     label: "Global Hubs" },
+];
 
 const services = [
   { icon: "Globe",        title: "Web Development",       desc: "Custom WordPress solutions, Frontend and Backend technologies." },
@@ -35,51 +43,48 @@ const clients = [
   { name: "IMTC",       desc: "International Money Transfer Company" },
 ];
 
-const stats = [
-  { val: "700+",  label: "Global Clients" },
-  { val: "88K+",  label: "Talent Pool" },
-  { val: "10+",   label: "Years Delivering" },
-  { val: "4",     label: "Global Hubs" },
-];
-
 export default function AboutUsPage() {
   return (
     <div className="page">
       <Nav />
+      <Breadcrumbs items={[{ label: "Home", url: "/" }, { label: "About Us" }]} />
       <main>
 
         {/* ── Hero ─────────────────────────── */}
         <section className="au-hero" data-block="hero">
-          <div className="au-hero__grid" aria-hidden="true" />
-          <div className="au-hero__noise" aria-hidden="true" />
           <div className="au-hero__inner" data-element="inner">
-            <AnimateIn delay={0} direction="up">
-              <div className="au-hero__eyebrow" data-field="eyebrow">About Group 107</div>
-            </AnimateIn>
-            <AnimateIn delay={0.08} direction="up">
-              <h1 className="au-hero__title" data-field="title">Who We Are</h1>
-            </AnimateIn>
-            <AnimateIn delay={0.16} direction="up">
-              <p className="au-hero__sub" data-field="sub">
-                Group 107 is a publicly listed company specialising in premium offshore software development, tech talent recruitment, and comprehensive IT solutions. We tailor solutions to meet business goals with full transparency and flexibility.
-              </p>
-            </AnimateIn>
-            <AnimateIn delay={0.24} direction="up">
-              <div className="au-hero__actions" data-element="actions">
-                <a href="/contact-us" className="au-hero__btn au-hero__btn--primary" data-field="cta-primary">
-                  Get in Touch <ArrowRight className="au-hero__btn-icon" />
-                </a>
-                <a href="/our-work" className="au-hero__btn au-hero__btn--secondary" data-field="cta-secondary">
-                  View Our Work <ArrowUpRight className="au-hero__btn-icon" />
-                </a>
-              </div>
-            </AnimateIn>
-            <AnimateIn delay={0.32} direction="up">
-              <div className="au-hero__stats" data-element="stats">
+            <div className="au-hero__content" data-element="content">
+              <AnimateIn delay={0} direction="up">
+                <div className="au-hero__eyebrow" data-field="eyebrow">About Group 107</div>
+              </AnimateIn>
+              <AnimateIn delay={0.08} direction="up">
+                <h1 className="au-hero__title" data-field="title">Who We Are</h1>
+              </AnimateIn>
+              <AnimateIn delay={0.16} direction="up">
+                <p className="au-hero__sub" data-field="sub">
+                  Group 107 is a publicly listed company specialising in premium offshore software
+                  development, tech talent recruitment, and comprehensive IT solutions. We tailor
+                  solutions to meet business goals with full transparency and flexibility.
+                </p>
+              </AnimateIn>
+              <AnimateIn delay={0.24} direction="up">
+                <div className="au-hero__actions" data-element="actions">
+                  <a href="/contact-us" className="au-hero__btn au-hero__btn--primary" data-field="cta-primary">
+                    Get in Touch <ArrowRight className="au-hero__btn-icon" />
+                  </a>
+                  <a href="/our-work" className="au-hero__btn au-hero__btn--secondary" data-field="cta-secondary">
+                    View Our Work <ArrowUpRight className="au-hero__btn-icon" />
+                  </a>
+                </div>
+              </AnimateIn>
+            </div>
+
+            <AnimateIn delay={0.1} direction="fade" className="au-hero__visual" data-element="visual">
+              <div className="au-hero__stats-card" data-element="stats-card">
                 {stats.map((s, i) => (
-                  <div key={i} className="au-hero__stat" data-element="stat">
-                    <span className="au-hero__stat-val" data-field="val">{s.val}</span>
-                    <span className="au-hero__stat-label" data-field="label">{s.label}</span>
+                  <div key={i} className="au-hero__stats-item" data-element="stats-item">
+                    <span className="au-hero__stats-val" data-field="val">{s.val}</span>
+                    <span className="au-hero__stats-label" data-field="label">{s.label}</span>
                   </div>
                 ))}
               </div>

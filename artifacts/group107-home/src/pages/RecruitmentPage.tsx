@@ -1,5 +1,6 @@
 import Nav from "@/components/blocks/Nav";
 import Footer from "@/components/blocks/Footer";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import AnimateIn from "@/components/AnimateIn";
 import { Icons } from "@/lib/icons";
 
@@ -65,43 +66,80 @@ const stats = [
   { val: "10+",   label: "Years Delivering" },
 ];
 
+const heroMetrics = [
+  { val: "88K+", label: "Talent Pool" },
+  { val: "700+", label: "Global Clients" },
+  { val: "4",    label: "Global Hubs" },
+  { val: "10+",  label: "Years" },
+];
+const heroProcess = ["Define", "Source", "Review", "Hire"];
+
 export default function RecruitmentPage() {
   return (
     <div className="page">
       <Nav />
+      <Breadcrumbs items={[
+        { label: "Home", url: "/" },
+        { label: "Services", url: "/services" },
+        { label: "Recruitment as a Service" },
+      ]} />
       <main>
 
         {/* ── Hero ─────────────────────────── */}
         <section className="rs-hero" data-block="hero">
-          <div className="rs-hero__grid" aria-hidden="true" />
-          <div className="rs-hero__noise" aria-hidden="true" />
           <div className="rs-hero__inner" data-element="inner">
-            <AnimateIn delay={0} direction="up">
-              <div className="rs-hero__eyebrow" data-field="eyebrow">Recruitment as a Service</div>
-            </AnimateIn>
-            <AnimateIn delay={0.08} direction="up">
-              <h1 className="rs-hero__title" data-field="title">
-                Find the Right<br />Tech Talent Faster
-              </h1>
-            </AnimateIn>
-            <AnimateIn delay={0.14} direction="up">
-              <p className="rs-hero__sub" data-field="sub">
-                Find the right tech talent faster with Group107.
-              </p>
-            </AnimateIn>
-            <AnimateIn delay={0.2} direction="up">
-              <p className="rs-hero__body" data-field="body">
-                We help companies source, evaluate, and hire qualified technology professionals based on their technical needs, timelines, and company culture.
-              </p>
-            </AnimateIn>
-            <AnimateIn delay={0.26} direction="up">
-              <div className="rs-hero__actions" data-element="actions">
-                <a href="/contact-us" className="rs-hero__btn rs-hero__btn--primary" data-field="cta">
-                  Contact Us <ArrowRight className="rs-hero__btn-icon" />
-                </a>
-                <a href="/contact-us" className="rs-hero__btn rs-hero__btn--secondary" data-field="cta-sec">
-                  Talk to a Recruiter <ArrowUpRight className="rs-hero__btn-icon" />
-                </a>
+            <div className="rs-hero__content" data-element="content">
+              <AnimateIn delay={0} direction="up">
+                <div className="rs-hero__eyebrow" data-field="eyebrow">Recruitment as a Service</div>
+              </AnimateIn>
+              <AnimateIn delay={0.08} direction="up">
+                <h1 className="rs-hero__title" data-field="title">
+                  Find the Right<br />Tech Talent Faster
+                </h1>
+              </AnimateIn>
+              <AnimateIn delay={0.14} direction="up">
+                <p className="rs-hero__sub" data-field="sub">
+                  Find the right tech talent faster with Group107.
+                </p>
+              </AnimateIn>
+              <AnimateIn delay={0.2} direction="up">
+                <p className="rs-hero__body" data-field="body">
+                  We help companies source, evaluate, and hire qualified technology professionals based on their technical needs, timelines, and company culture.
+                </p>
+              </AnimateIn>
+              <AnimateIn delay={0.26} direction="up">
+                <div className="rs-hero__actions" data-element="actions">
+                  <a href="/contact-us" className="rs-hero__btn rs-hero__btn--primary" data-field="cta">
+                    Contact Us <ArrowRight className="rs-hero__btn-icon" />
+                  </a>
+                  <a href="/contact-us" className="rs-hero__btn rs-hero__btn--secondary" data-field="cta-sec">
+                    Talk to a Recruiter <ArrowUpRight className="rs-hero__btn-icon" />
+                  </a>
+                </div>
+              </AnimateIn>
+            </div>
+            <AnimateIn delay={0.1} direction="fade" className="rs-hero__visual" data-element="visual">
+              <div className="rs-hero__metrics-card" data-element="metrics-card">
+                <div className="rs-hero__metrics-label" data-field="label">Recruitment at a Glance</div>
+                <div className="rs-hero__metrics-divider" aria-hidden="true" />
+                <div className="rs-hero__metrics-grid" data-element="metrics-grid">
+                  {heroMetrics.map((m, i) => (
+                    <div key={i} className="rs-hero__metric" data-element="metric">
+                      <span className="rs-hero__metric-val" data-field="val">{m.val}</span>
+                      <span className="rs-hero__metric-label" data-field="label">{m.label}</span>
+                    </div>
+                  ))}
+                </div>
+                <div className="rs-hero__metrics-divider" aria-hidden="true" />
+                <div className="rs-hero__process-preview" data-element="process-preview">
+                  <div className="rs-hero__process-title" data-field="title">Our Process</div>
+                  {heroProcess.map((step, i) => (
+                    <div key={i} className="rs-hero__process-step" data-element="step">
+                      <span className="rs-hero__process-num" data-field="num">0{i + 1}</span>
+                      <span className="rs-hero__process-name" data-field="name">{step}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </AnimateIn>
           </div>

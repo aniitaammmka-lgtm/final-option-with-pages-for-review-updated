@@ -1,5 +1,6 @@
 import Nav from "@/components/blocks/Nav";
 import Footer from "@/components/blocks/Footer";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import AnimateIn from "@/components/AnimateIn";
 import { Icons } from "@/lib/icons";
 
@@ -63,65 +64,56 @@ export default function TalentsPage() {
   return (
     <div className="page">
       <Nav />
+      <Breadcrumbs items={[{ label: "Home", url: "/" }, { label: "Talents" }]} />
       <main>
 
         {/* ── Hero ─────────────────────────── */}
         <section className="tp-hero" data-block="hero">
-          <div className="tp-hero__grid" aria-hidden="true" />
-          <div className="tp-hero__noise" aria-hidden="true" />
           <div className="tp-hero__inner" data-element="inner">
-            <AnimateIn delay={0} direction="up">
-              <div className="tp-hero__eyebrow" data-field="eyebrow">Talent Solutions</div>
-            </AnimateIn>
-            <AnimateIn delay={0.08} direction="up">
-              <h1 className="tp-hero__title" data-field="title">Premium Tech Talents for Growing Teams</h1>
-            </AnimateIn>
-            <AnimateIn delay={0.14} direction="up">
-              <p className="tp-hero__sub" data-field="sub">
-                Build your team faster with top-tier tech professionals matched to your needs, timeline, and business goals.
-              </p>
-            </AnimateIn>
-            <AnimateIn delay={0.2} direction="up">
-              <p className="tp-hero__body" data-field="body">
-                Group107 helps companies scale with dedicated software, data, creative, and digital specialists.
-              </p>
-            </AnimateIn>
-            <AnimateIn delay={0.26} direction="up">
-              <div className="tp-hero__actions" data-element="actions">
-                <a href="/contact-us" className="tp-hero__btn tp-hero__btn--primary" data-field="cta">
-                  Find Your Talent <ArrowRight className="tp-hero__btn-icon" />
-                </a>
-                <a href="/our-work" className="tp-hero__btn tp-hero__btn--secondary" data-field="cta-sec">
-                  View Case Studies <ArrowUpRight className="tp-hero__btn-icon" />
-                </a>
-              </div>
-            </AnimateIn>
-          </div>
-        </section>
-
-        {/* ── Trust Strip ───────────────────── */}
-        <section className="tp-trust" data-block="trust">
-          <div className="tp-trust__inner" data-element="inner">
-            <div className="tp-trust__head" data-element="head">
+            <div className="tp-hero__content" data-element="content">
               <AnimateIn delay={0} direction="up">
-                <h2 className="tp-trust__title" data-field="title">A Trusted Tech Partner for Global Companies</h2>
+                <div className="tp-hero__eyebrow" data-field="eyebrow">Talent Solutions</div>
               </AnimateIn>
-              <AnimateIn delay={0.06} direction="up">
-                <p className="tp-trust__sub" data-field="sub">
-                  Group107 serves clients worldwide through local hubs in Tel Aviv, Ukraine, Poland, and Argentina.
+              <AnimateIn delay={0.08} direction="up">
+                <h1 className="tp-hero__title" data-field="title">Premium Tech Talents for Growing Teams</h1>
+              </AnimateIn>
+              <AnimateIn delay={0.14} direction="up">
+                <p className="tp-hero__sub" data-field="sub">
+                  Build your team faster with top-tier tech professionals matched to your needs, timeline, and business goals.
                 </p>
               </AnimateIn>
+              <AnimateIn delay={0.2} direction="up">
+                <div className="tp-hero__actions" data-element="actions">
+                  <a href="/contact-us" className="tp-hero__btn tp-hero__btn--primary" data-field="cta">
+                    Find Your Talent <ArrowRight className="tp-hero__btn-icon" />
+                  </a>
+                  <a href="/our-work" className="tp-hero__btn tp-hero__btn--secondary" data-field="cta-sec">
+                    View Case Studies <ArrowUpRight className="tp-hero__btn-icon" />
+                  </a>
+                </div>
+              </AnimateIn>
             </div>
-            <div className="tp-trust__stats" data-element="stats">
-              {stats.map((s, i) => (
-                <AnimateIn key={i} delay={0.08 * i} direction="up">
-                  <div className="tp-trust__stat" data-element="stat">
-                    <span className="tp-trust__stat-val" data-field="val">{s.val}</span>
-                    <span className="tp-trust__stat-label" data-field="label">{s.label}</span>
-                  </div>
-                </AnimateIn>
-              ))}
-            </div>
+
+            <AnimateIn delay={0.1} direction="fade" className="tp-hero__visual" data-element="visual">
+              <div className="tp-hero__pool-card" data-element="pool-card">
+                <div className="tp-hero__pool-num" data-field="num">88,000+</div>
+                <div className="tp-hero__pool-label" data-field="label">Vetted Professionals</div>
+                <div className="tp-hero__pool-divider" aria-hidden="true" />
+                <div className="tp-hero__pool-stats" data-element="pool-stats">
+                  {stats.map((s, i) => (
+                    <div key={i} className="tp-hero__pool-stat" data-element="pool-stat">
+                      <span className="tp-hero__pool-stat-val" data-field="val">{s.val}</span>
+                      <span className="tp-hero__pool-stat-label" data-field="label">{s.label}</span>
+                    </div>
+                  ))}
+                </div>
+                <div className="tp-hero__pool-tags" data-element="pool-tags">
+                  {["React", "Node.js", "Python", "AWS", "AI/ML", "iOS", "DevOps", "QA"].map((t) => (
+                    <span key={t} className="tp-hero__pool-tag" data-field="tag">{t}</span>
+                  ))}
+                </div>
+              </div>
+            </AnimateIn>
           </div>
         </section>
 

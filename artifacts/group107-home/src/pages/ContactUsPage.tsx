@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Nav from "@/components/blocks/Nav";
 import Footer from "@/components/blocks/Footer";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import AnimateIn from "@/components/AnimateIn";
 import { Icons } from "@/lib/icons";
 
@@ -68,26 +69,63 @@ export default function ContactUsPage() {
   return (
     <div className="page">
       <Nav />
+      <Breadcrumbs items={[{ label: "Home", url: "/" }, { label: "Contact Us" }]} />
       <main>
 
         {/* ── Hero ─────────────────────────── */}
         <section className="cu-hero" data-block="hero">
-          <div className="cu-hero__grid" aria-hidden="true" />
-          <div className="cu-hero__noise" aria-hidden="true" />
           <div className="cu-hero__inner" data-element="inner">
-            <AnimateIn delay={0} direction="up">
-              <div className="cu-hero__eyebrow" data-field="eyebrow">Get in Touch</div>
-            </AnimateIn>
-            <AnimateIn delay={0.08} direction="up">
-              <h1 className="cu-hero__title" data-field="title">Contact Us</h1>
-            </AnimateIn>
-            <AnimateIn delay={0.14} direction="up">
-              <p className="cu-hero__sub" data-field="sub">Let's discuss how Group107 can support your business.</p>
-            </AnimateIn>
-            <AnimateIn delay={0.2} direction="up">
-              <p className="cu-hero__body" data-field="body">
-                Whether you need a development team, AI integration, DevOps support, web development, data engineering, recruitment services, or digital growth services — our team is here to help.
-              </p>
+            <div className="cu-hero__content" data-element="content">
+              <AnimateIn delay={0} direction="up">
+                <div className="cu-hero__eyebrow" data-field="eyebrow">Get in Touch</div>
+              </AnimateIn>
+              <AnimateIn delay={0.08} direction="up">
+                <h1 className="cu-hero__title" data-field="title">Contact Us</h1>
+              </AnimateIn>
+              <AnimateIn delay={0.14} direction="up">
+                <p className="cu-hero__sub" data-field="sub">
+                  Whether you need a development team, AI integration, DevOps support, web development,
+                  data engineering, recruitment services, or digital growth — our team is ready to help.
+                </p>
+              </AnimateIn>
+              <AnimateIn delay={0.2} direction="up">
+                <div className="cu-hero__actions" data-element="actions">
+                  <a href="mailto:sales@group107.com" className="cu-hero__btn cu-hero__btn--primary" data-field="cta-primary">
+                    Email Us <ArrowRight className="cu-hero__btn-icon" />
+                  </a>
+                  <a href="tel:+34614421011" className="cu-hero__btn cu-hero__btn--secondary" data-field="cta-secondary">
+                    Call Us <ArrowUpRight className="cu-hero__btn-icon" />
+                  </a>
+                </div>
+              </AnimateIn>
+            </div>
+
+            <AnimateIn delay={0.1} direction="fade" className="cu-hero__visual" data-element="visual">
+              <div className="cu-hero__info-card" data-element="info-card">
+                <div className="cu-hero__info-label" data-field="label">Reach Us</div>
+                <a href="mailto:sales@group107.com" className="cu-hero__info-row" data-element="info-row">
+                  {Mail && <Mail className="cu-hero__info-icon" strokeWidth={1.5} />}
+                  <span data-field="value">sales@group107.com</span>
+                </a>
+                <a href="tel:+34614421011" className="cu-hero__info-row" data-element="info-row">
+                  {Phone && <Phone className="cu-hero__info-icon" strokeWidth={1.5} />}
+                  <span data-field="value">+34 614 42 10 11</span>
+                </a>
+                <a href="https://www.group107.com" className="cu-hero__info-row" data-element="info-row">
+                  {Globe && <Globe className="cu-hero__info-icon" strokeWidth={1.5} />}
+                  <span data-field="value">www.group107.com</span>
+                </a>
+                <div className="cu-hero__info-divider" aria-hidden="true" />
+                <div className="cu-hero__info-hubs" data-element="hubs">
+                  {locations.map((loc, i) => (
+                    <div key={i} className="cu-hero__info-hub" data-element="hub">
+                      {MapPin && <MapPin className="cu-hero__info-hub-icon" strokeWidth={1.5} />}
+                      <span className="cu-hero__info-hub-city" data-field="city">{loc.city}</span>
+                      <span className="cu-hero__info-hub-country" data-field="country">{loc.country}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </AnimateIn>
           </div>
         </section>

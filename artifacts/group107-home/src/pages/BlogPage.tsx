@@ -1,10 +1,11 @@
 import Nav from "@/components/blocks/Nav";
 import Footer from "@/components/blocks/Footer";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import AnimateIn from "@/components/AnimateIn";
 import { Icons } from "@/lib/icons";
 import { blogHero, blogPosts, blogTags } from "@/data/blog";
+import { Link } from "wouter";
 
-const ArrowUpRight = Icons.ArrowUpRight;
 const ArrowRight = Icons.ArrowRight;
 
 function formatDate(iso: string) {
@@ -16,6 +17,7 @@ export default function BlogPage() {
   return (
     <div className="page" data-block="blog-page">
       <Nav />
+      <Breadcrumbs items={[{ label: "Home", url: "/" }, { label: "Blog" }]} />
 
       <main data-block="bl-main">
 
@@ -57,10 +59,8 @@ export default function BlogPage() {
         <section data-block="bl-featured" className="bl-featured">
           <div data-element="inner" className="bl-featured__inner">
             <AnimateIn delay={0} direction="up">
-              <a
-                href={blogPosts[0].link}
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href={`/blog/${blogPosts[0].slug}`}
                 data-block="bl-featured-card"
                 className="bl-featured-card"
               >
@@ -80,10 +80,10 @@ export default function BlogPage() {
                   <h2 data-element="title" className="bl-featured-card__title">{blogPosts[0].title}</h2>
                   <p data-element="excerpt" className="bl-featured-card__excerpt">{blogPosts[0].excerpt}</p>
                   <span data-element="cta" className="bl-featured-card__cta">
-                    Read Article <ArrowUpRight className="bl-featured-card__cta-icon" />
+                    Read Article <ArrowRight className="bl-featured-card__cta-icon" />
                   </span>
                 </div>
-              </a>
+              </Link>
             </AnimateIn>
           </div>
         </section>
@@ -94,10 +94,8 @@ export default function BlogPage() {
             <div data-element="posts" className="bl-grid__posts">
               {blogPosts.slice(1).map((post) => (
                 <AnimateIn key={post.slug} delay={post.animDelay} direction="up">
-                  <a
-                    href={post.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <Link
+                    href={`/blog/${post.slug}`}
                     data-block="bl-card"
                     data-field={post.slug}
                     className="bl-card"
@@ -118,10 +116,10 @@ export default function BlogPage() {
                       <h3 data-element="title" className="bl-card__title">{post.title}</h3>
                       <p data-element="excerpt" className="bl-card__excerpt">{post.excerpt}</p>
                       <span data-element="cta" className="bl-card__cta">
-                        Learn More <ArrowRight className="bl-card__cta-icon" />
+                        Read Article <ArrowRight className="bl-card__cta-icon" />
                       </span>
                     </div>
-                  </a>
+                  </Link>
                 </AnimateIn>
               ))}
             </div>
@@ -133,19 +131,17 @@ export default function BlogPage() {
           <div data-element="inner" className="bl-cta__inner">
             <AnimateIn delay={0} direction="up">
               <div data-element="tag" className="bl-cta__tag">Stay in the loop</div>
-              <h2 data-element="title" className="bl-cta__title">Read more on group107.com</h2>
+              <h2 data-element="title" className="bl-cta__title">New articles every week</h2>
               <p data-element="body" className="bl-cta__body">
-                New articles published weekly covering software development, AI, offshore talent, and business strategy.
+                Insights, guides, and expert perspectives on software development, AI, offshore talent, and business strategy.
               </p>
-              <a
-                href="https://group107.com/category/blog/"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/contact-us"
                 data-element="btn"
                 className="bl-cta__btn"
               >
-                View All Articles <ArrowUpRight className="bl-cta__btn-icon" />
-              </a>
+                Get in Touch <ArrowRight className="bl-cta__btn-icon" />
+              </Link>
             </AnimateIn>
           </div>
         </section>

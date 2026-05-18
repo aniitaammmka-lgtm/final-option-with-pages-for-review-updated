@@ -20,6 +20,7 @@ import LeadershipPage from "@/pages/LeadershipPage";
 import CareersPage from "@/pages/CareersPage";
 import PartnershipPage from "@/pages/PartnershipPage";
 import BlogPage from "@/pages/BlogPage";
+import BlogArticlePage from "@/pages/BlogArticlePage";
 import OurWorkPage from "@/pages/OurWorkPage";
 import CaseStudyPage from "@/pages/CaseStudyPage";
 import AboutUsPage from "@/pages/AboutUsPage";
@@ -27,6 +28,7 @@ import ContactUsPage from "@/pages/ContactUsPage";
 import TalentsPage from "@/pages/TalentsPage";
 import TeamExpertisePage from "@/pages/TeamExpertisePage";
 import RecruitmentPage from "@/pages/RecruitmentPage";
+import InvestorsPage from "@/pages/InvestorsPage";
 import Nav from "@/components/blocks/Nav";
 import Hero from "@/components/blocks/Hero";
 import Marquee from "@/components/blocks/Marquee";
@@ -88,6 +90,7 @@ function Router() {
       <Route path="/careers" component={CareersPage} />
       <Route path="/partnership" component={PartnershipPage} />
       <Route path="/blog" component={BlogPage} />
+      <Route path="/blog/:slug" component={BlogArticlePage} />
       <Route path="/our-work" component={OurWorkPage} />
       <Route path="/our-work/:slug" component={CaseStudyPage} />
       <Route path="/about-us" component={AboutUsPage} />
@@ -95,6 +98,7 @@ function Router() {
       <Route path="/talents" component={TalentsPage} />
       <Route path="/team-expertise" component={TeamExpertisePage} />
       <Route path="/recruitment-as-a-service" component={RecruitmentPage} />
+      <Route path="/investors" component={InvestorsPage} />
       <Route component={NotFound} />
     </Switch>
   );
