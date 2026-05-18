@@ -1,0 +1,177 @@
+CRITICAL DESIGN CONSISTENCY RULES
+
+The EXISTING HOMEPAGE is the MAIN and ONLY visual reference for the entire website.
+
+ALL new pages MUST inherit their structure, styling, spacing, typography, layout rhythm, and component behavior directly from the homepage.
+
+The homepage is the MASTER TEMPLATE.
+
+---
+
+## GLOBAL RULE
+
+Every new page must feel like:
+
+* the same designer created it
+* the same design system powers it
+* the same component library is reused
+* the same layout architecture is followed
+
+ONLY the content changes.
+
+The visual language stays identical.
+
+---
+
+## WHAT MUST ALWAYS STAY CONSISTENT
+
+USE THE SAME AS HOMEPAGE:
+
+* hero layout
+* section structure
+* heading hierarchy
+* font sizes
+* font weights
+* text widths
+* text opacity
+* button sizes
+* button padding
+* button border radius
+* button spacing
+* container widths
+* inner container padding
+* section spacing
+* card spacing
+* grid gaps
+* gray banner styling
+* shadows
+* hover effects
+* animations
+* responsive behavior
+* CTA block structure
+* navbar/footer structure
+
+DO NOT introduce new visual systems.
+
+---
+
+## HERO SECTION CONSISTENCY
+
+ALL pages MUST reuse the SAME hero structure from the homepage.
+
+This includes:
+
+* same top spacing
+* same bottom spacing
+* same content alignment
+* same max-width
+* same headline width
+* same text width
+* same button spacing
+* same gap between elements
+* same vertical rhythm
+* same responsive stacking behavior
+
+---
+
+## HEADLINES & TEXT
+
+Headlines across all pages MUST:
+
+* use the SAME typography scale
+* use the SAME font weight
+* use the SAME line-height
+* use the SAME spacing underneath
+
+Paragraphs MUST:
+
+* use the SAME width limits
+* use the SAME opacity
+* use the SAME line-height
+* use the SAME spacing from headings
+
+NO random typography changes between pages.
+
+---
+
+## BUTTON CONSISTENCY
+
+Buttons inside hero sections MUST always use:
+
+* identical height
+* identical horizontal padding
+* identical border radius
+* identical font size
+* identical hover effects
+* identical transitions
+* identical spacing between buttons
+
+Button positioning must match the homepage exactly.
+
+---
+
+## CONTAINER & SPACING SYSTEM
+
+ALL pages MUST use:
+
+* the SAME container width
+* the SAME horizontal padding
+* the SAME inner spacing
+* the SAME section padding top/bottom
+* the SAME gap system between blocks
+
+Spacing consistency is mandatory.
+
+No section should visually feel tighter or wider than the homepage.
+
+---
+
+## GRAY BANNER / FEATURE SECTION CONSISTENCY
+
+Every gray banner or highlighted section MUST:
+
+* match homepage background style
+* use the SAME border radius
+* use the SAME padding
+* use the SAME card alignment
+* use the SAME internal spacing
+* use the SAME typography structure
+
+ONLY replace content.
+
+---
+
+## STRUCTURE REUSE
+
+Before creating any new page:
+
+1. Analyze homepage structure
+2. Reuse existing homepage blocks
+3. Duplicate homepage layout rhythm
+4. Adapt sections instead of inventing new ones
+
+Think:
+"SAME STRUCTURE — DIFFERENT CONTENT"
+
+---
+
+## ANIMATION & INTERACTION SYSTEM
+
+All pages must use the SAME:
+
+* hover behavior
+* fade animations
+* scroll reveal timing
+* transition durations
+* motion style
+
+Animations should remain subtle and premium.
+
+---
+
+## FINAL RULE
+
+If a new page visually feels different from the homepage:
+IT IS WRONG.
+
+Every page should look like a direct extension of the homepage design system.
