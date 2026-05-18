@@ -63,6 +63,17 @@ import {
   Rocket,
   MapPin,
   ExternalLink,
+  Phone,
+  Mail,
+  MessageSquare,
+  Send,
+  Wifi,
+  Home,
+  GraduationCap,
+  Handshake,
+  ClipboardList,
+  BarChart,
+  HeartHandshake,
 } from "lucide-react";
 import type { LucideProps } from "lucide-react";
 
@@ -131,6 +142,17 @@ export const Icons: Record<string, React.FC<LucideProps>> = {
   Rocket,
   MapPin,
   ExternalLink,
+  Phone,
+  Mail,
+  MessageSquare,
+  Send,
+  Wifi,
+  Home,
+  GraduationCap,
+  Handshake,
+  ClipboardList,
+  BarChart,
+  HeartHandshake,
 };
 
 export const iconSVG: Record<string, string> = {

@@ -1,0 +1,525 @@
+You are an expert senior frontend developer and UI/UX designer working on an EXISTING company website for Group107.
+
+Your task is to ADD NEW PAGES to the current website while fully preserving the existing design system, branding, typography, spacing, animations, UI components, responsiveness, and overall visual identity.
+
+IMPORTANT:
+
+* Do NOT redesign the existing website.
+* Reuse existing layout structure, components, navbar, footer, buttons, cards, grids, forms, and animations.
+* Match the exact visual style of the current site.
+* Ensure all new pages feel native to the existing website.
+* Use modern, premium, enterprise-level UI/UX.
+* Fully responsive for desktop, tablet, and mobile.
+* Optimize spacing, hierarchy, readability, and CTA placement.
+* Add subtle modern animations and hover effects where appropriate.
+* Maintain clean semantic structure and SEO-friendly sections.
+* Use professional enterprise SaaS styling.
+* Every section should feel visually polished and conversion-focused.
+
+Create the following NEW pages:
+
+---
+
+1. ABOUT US PAGE
+
+---
+
+PAGE SLUG:
+about-us
+
+HERO SECTION:
+Headline:
+"Who We Are"
+
+Text:
+"Group 107 is a publicly listed company specializing in premium offshore software development, tech talent recruitment, and comprehensive IT solutions. We tailor solutions to meet business goals with full transparency and flexibility."
+
+SECTION: OUR SERVICES
+Headline:
+"Our Services"
+
+Text:
+"At Group 107, we focus on creating high-performing, dedicated teams of software developers, data scientists, AI specialists, and digital marketing experts."
+
+Create premium service cards for:
+
+* Web Development
+  Description:
+  "Custom WordPress solutions, Frontend and Backend technologies."
+
+* App Development
+  Description:
+  "Expertise in iOS, Android, React, and Angular."
+
+* AI Integrations
+  Description:
+  "Tailored AI solutions that improve productivity and enhance decision-making."
+
+* DevOps
+  Description:
+  "Streamlining software development and deployment with automation, CI/CD, and cloud migration."
+
+* Data Engineering
+  Description:
+  "Robust data integration and big data analytics for data-driven decisions."
+
+* Recruitment Services
+  Description:
+  "Sourcing and evaluating top talent to meet business and technical needs."
+
+SECTION: OUR EXPERTISE
+Headline:
+"Our Expertise"
+
+Create visually attractive industry cards for:
+
+* Tech & Digital
+* Finance & Consulting
+* Healthcare & Industry
+* Media & Entertainment
+
+Use supporting text:
+"We bring together a diverse range of skills across industries."
+
+SECTION: RECRUITMENT & OPERATIONS
+Text:
+"Our recruitment services are aligned with your technical needs and project timelines to scale your team effectively. We also ensure that every employee is fully integrated with comprehensive HR services, payroll support, wellness programs, and more."
+
+SECTION: KEY ADVANTAGES
+Headline:
+"Why Companies Choose Group107"
+
+Create premium icon cards for:
+
+* Global Client Reach & Local Hubs
+* 100% Process Transparency
+* Accelerated Recruitment
+* High Employee Loyalty
+
+SECTION: CLIENTS
+Headline:
+"Our Clients"
+
+Text:
+"We are proud to work with over 700 clients across various industries, including finance, healthcare, education, and more."
+
+Include client references:
+
+* FIBI
+* Trade.com
+* IMTC
+
+Use modern logo showcase / trust section styling.
+
+SECTION: FINAL CTA
+Headline:
+"Ready to Scale Your Team?"
+
+Text:
+"Let’s discuss how Group107 can support your business goals with technology, talent, and scalable solutions."
+
+CTA BUTTON:
+"Contact Us"
+
+---
+
+2. CONTACT US PAGE
+
+---
+
+PAGE SLUG:
+contact-us
+
+HERO SECTION:
+Headline:
+"Contact Us"
+
+Subheadline:
+"Let’s discuss how Group107 can support your business."
+
+Text:
+"Whether you need a development team, AI integration, DevOps support, web development, data engineering, recruitment services, or digital growth services — our team is here to help."
+
+SECTION: CONTACT FORM
+
+Fields:
+
+* First Name *
+* Last Name *
+* Email *
+* Company *
+* Country *
+* Phone *
+* Message
+
+Checkbox:
+"I agree that Group107 may use my information to contact me about its services or news. I can unsubscribe at any time. Privacy Policy."
+
+Button:
+"Send"
+
+Add:
+
+* proper validation states
+* success state
+* error state
+* loading state
+* accessibility improvements
+
+SECTION: CONTACT INFORMATION
+Headline:
+"Contact Information"
+
+Email:
+[sales@group107.com](mailto:sales@group107.com)
+
+Phone:
++34 614 42 10 11
+
+Website:
+[www.group107.com](http://www.group107.com)
+
+SECTION: GLOBAL LOCATIONS
+Headline:
+"Our Locations"
+
+Text:
+"Group107 serves clients worldwide through global innovation hubs."
+
+Locations:
+
+* Tel Aviv, Israel
+* Lviv, Ukraine
+
+Display as modern location cards.
+
+SECTION: HOW CAN WE HELP
+Headline:
+"How Can We Help?"
+
+Create service cards for:
+
+* Software Development
+* Recruitment Services
+* Web & WordPress Development
+* AI Integrations
+* DevOps Services
+* Data Engineering
+* Digital, Marketing & SDR
+* Tech Consultancy
+
+FINAL CTA:
+Headline:
+"Ready to Build, Scale, or Improve Your Product?"
+
+Text:
+"Tell us what you are looking for, and our team will get back to you with the right next steps."
+
+Button:
+"Contact Us"
+
+---
+
+3. TALENTS PAGE
+
+---
+
+PAGE SLUG:
+talents
+
+HERO SECTION:
+Headline:
+"Premium Tech Talents for Growing Teams"
+
+Subheadline:
+"Build your team faster with top-tier tech professionals matched to your needs, timeline, and business goals."
+
+Text:
+"Group107 helps companies scale with dedicated software, data, creative, and digital specialists."
+
+CTA:
+"Find Your Talent"
+
+SECTION: TRUST / COMPANY SNAPSHOT
+Headline:
+"A Trusted Tech Partner for Global Companies"
+
+Text:
+"Group107 serves clients worldwide through local hubs in Tel Aviv, Ukraine, Poland, and Argentina."
+
+Stats:
+
+* 700+ customers
+* 88,000+ tech talents
+* Publicly traded company in Israel
+
+SECTION: TALENT CATEGORIES
+Headline:
+"Talent Across Every Key Technology Area"
+
+Create premium category cards for:
+
+* Software Developers
+* AI & Data Experts
+* Cloud & DevOps
+* Cybersecurity Experts
+* Creative & Product
+* Delivery Teams
+
+SECTION: WHY GROUP107 TALENTS
+Headline:
+"Why Companies Choose Group107 Talents"
+
+Bullets:
+
+* 100% process transparency
+* Accelerated recruitment cycles
+* Access to top-tier talent
+* Strong employee engagement and loyalty
+* Dedicated onsite and remote IT team management
+* Flexible scaling model
+
+SECTION: HOW IT WORKS
+Headline:
+"Simple Process. Strong Talent Match."
+
+Create modern timeline/step UI:
+
+1. Define requirements
+2. Sourcing & screening
+3. Candidate approval
+4. Hiring decision
+5. Finalize conditions
+6. Sign agreement
+
+SECTION: MANAGEMENT & SUPPORT
+Headline:
+"More Than Recruitment — Full Talent Management"
+
+Text:
+"Our management fee covers the operational support needed to keep your remote team working smoothly."
+
+Include:
+
+* Recruitment A to Z
+* HR services
+* Payroll services
+* Healthcare benefits
+* Onboarding
+* Employee engagement
+* Remote employee management
+* Account management
+* Team activities
+* Professional development support
+
+SECTION: EQUIPMENT OPTIONS
+Headline:
+"Equipment Setup That Fits Your Needs"
+
+Text:
+"Clients can rent equipment through Group107 or purchase equipment through approved providers."
+
+SECTION: INDUSTRIES
+Headline:
+"Supporting Teams Across Industries"
+
+Industries:
+
+* Technology
+* Finance
+* Consulting
+* Government
+* Healthcare
+* Tourism
+* Logistics
+* Media
+* Gaming
+* E-learning
+
+FINAL CTA:
+Headline:
+"Ready to Expand Your Team?"
+
+Text:
+"Tell us what roles you need, and we’ll help you find the right talent."
+
+CTA:
+"Contact Us"
+
+---
+
+4. TEAM EXPERTISE PAGE
+
+---
+
+PAGE SLUG:
+team-expertise
+
+HERO SECTION:
+Headline:
+"Team Expertise That Moves Products Forward"
+
+Subheadline:
+"From software development and AI to DevOps, cybersecurity, data, and digital growth."
+
+CTA:
+"Talk to Our Team"
+
+SECTION: OVERVIEW
+Headline:
+"One Partner. Multiple Areas of Expertise."
+
+Text:
+"Group107 combines technical, product, creative, operational, and business expertise under one roof."
+
+SECTION: EXPERTISE AREAS
+Headline:
+"Our Areas of Expertise"
+
+Create premium grid cards for:
+
+* Software Development
+* AI Integrations & Automation
+* DevOps & Cloud Infrastructure
+* Cybersecurity & MDR
+* Data Engineering
+* Digital Growth & SDR
+* Tech Consultancy
+* Recruitment & Dedicated Teams
+
+Each card should contain:
+
+* icon
+* short description
+* hover interaction
+* CTA or learn more interaction
+
+SECTION: HOW WE SUPPORT COMPANIES
+Headline:
+"Built Around Real Business Needs"
+
+Highlights:
+
+* Flexible scaling models
+* Cross-functional expertise
+* Fast onboarding
+* Dedicated management
+* End-to-end delivery support
+
+SECTION: WORKFLOW
+Headline:
+"How We Work With Clients"
+
+Create elegant process/timeline UI:
+
+1. Discovery & Requirements
+2. Team Matching
+3. Execution & Delivery
+4. Scaling & Long-Term Support
+
+SECTION: INDUSTRIES
+Headline:
+"Experience Across Multiple Industries"
+
+Include:
+
+* Finance & Banking
+* Healthcare
+* Government
+* Media & Entertainment
+* Tourism & Hospitality
+* Logistics & Supply Chain
+* Technology & Digital Products
+
+Text:
+"Trusted by startups, enterprises, and publicly traded companies worldwide."
+
+SECTION: WHY GROUP107
+Headline:
+"Why Companies Work With Our Experts"
+
+Bullets:
+
+* Full transparency
+* Fast access to specialists
+* High employee engagement
+* Dedicated onsite and remote team management
+* Flexible scaling
+* Public company reliability
+
+FINAL CTA:
+Headline:
+"Need the Right Experts for Your Next Project?"
+
+Text:
+"Let’s discuss your goals and match the right Group107 expertise to your product, team, or business challenge."
+
+Button:
+"Contact Us"
+
+---
+
+5. INTERACTIVE 404 PAGE
+
+---
+
+PAGE SLUG:
+404
+
+Create a modern, interactive, visually engaging 404 page.
+
+Requirements:
+
+* Animated illustration or interactive visual
+* Friendly but premium enterprise tone
+* Clear navigation back to homepage
+* Smart CTA buttons
+* Microinteractions
+* Smooth animations
+* Optional floating elements/background motion
+* Funny but professional message
+* Fully responsive
+* Maintain existing Group107 design language
+
+Suggested copy:
+Headline:
+"Looks Like This Page Went Remote"
+
+Text:
+"The page you’re looking for may have been moved, renamed, or is temporarily unavailable."
+
+Buttons:
+
+* Back Home
+* Contact Us
+
+Optional extras:
+
+* Interactive floating code particles
+* Animated broken connection graphic
+* Small easter egg interaction
+* Search input for navigation
+
+---
+
+## GENERAL DEVELOPMENT REQUIREMENTS
+
+* Maintain consistency with existing design system
+* Reuse existing UI components whenever possible
+* Ensure pixel-perfect responsiveness
+* Optimize for SEO
+* Add smooth animations and transitions
+* Keep performance optimized
+* Use accessible semantic HTML
+* Preserve existing navbar/footer structure
+* Follow enterprise SaaS UI/UX standards
+* Ensure modern premium appearance
+* Keep spacing and typography consistent
+* Add hover states and interaction polish
+* Include loading skeletons where relevant
+* Use clean scalable component structure
+* Ensure all pages are production-ready
+* Make pages visually richer and more modern than standard corporate templates
+* Use subtle gradients, depth, shadows, and motion carefully without overdoing them
+
+Generate complete implementation-ready code and component structure for all pages while matching the current website architecture and framework.
