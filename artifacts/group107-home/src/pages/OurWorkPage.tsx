@@ -1,16 +1,24 @@
+import { useState } from "react";
 import Nav from "@/components/blocks/Nav";
 import Footer from "@/components/blocks/Footer";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import AnimateIn from "@/components/AnimateIn";
 import { Icons } from "@/lib/icons";
 import { ourWorkHero, ourWorkFilters, ourWorkItems, ourWorkCta } from "@/data/ourWork";
 
 const ArrowRight = Icons.ArrowRight;
 const ArrowUpRight = Icons.ArrowUpRight;
+const ChevronDown = Icons.ChevronDown;
+
+const INITIAL_COUNT = 6;
 
 export default function OurWorkPage() {
+  const [showAll, setShowAll] = useState(false);
+
   return (
     <div className="page" data-block="our-work-page">
       <Nav />
+      <Breadcrumbs items={[{ label: "Home", url: "/" }, { label: "Our Work" }]} />
 
       <main data-block="ow-main">
 
@@ -70,8 +78,13 @@ export default function OurWorkPage() {
         <section data-block="ow-grid" className="ow-grid">
           <div data-element="inner" className="ow-grid__inner">
             <div data-element="items" className="ow-grid__items">
-              {ourWorkItems.map((item) => (
-                <AnimateIn key={item.slug} delay={item.animDelay} direction="up">
+              {ourWorkItems.map((item, i) => (
+                <AnimateIn
+                  key={item.slug}
+                  delay={item.animDelay}
+                  direction="up"
+                  data-hidden={!showAll && i >= INITIAL_COUNT ? "true" : "false"}
+                >
                   <a
                     href={item.link}
                     target="_blank"
@@ -100,6 +113,18 @@ export default function OurWorkPage() {
                   </a>
                 </AnimateIn>
               ))}
+            </div>
+
+            {/* Load More */}
+            <div className="ow-load-more-wrap" data-hidden={showAll ? "true" : "false"}>
+              <button
+                className="ow-load-more"
+                data-element="load-more"
+                onClick={() => setShowAll(true)}
+              >
+                Load More
+                {ChevronDown && <ChevronDown className="ow-load-more-icon" />}
+              </button>
             </div>
           </div>
         </section>

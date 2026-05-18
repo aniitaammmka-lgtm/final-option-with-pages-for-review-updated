@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
+import type { HTMLMotionProps } from "framer-motion";
 
-interface AnimateInProps {
+interface AnimateInProps extends Omit<HTMLMotionProps<"div">, "initial" | "whileInView" | "viewport" | "transition"> {
   children: React.ReactNode;
   delay?: number;
   direction?: "up" | "fade" | "left" | "right";
@@ -31,6 +32,7 @@ export default function AnimateIn({
   delay = 0,
   direction = "up",
   className,
+  ...rest
 }: AnimateInProps) {
   const v = variants[direction];
   return (
@@ -40,6 +42,7 @@ export default function AnimateIn({
       whileInView={v.animate}
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.75, delay, ease: [0.16, 1, 0.3, 1] }}
+      {...rest}
     >
       {children}
     </motion.div>
