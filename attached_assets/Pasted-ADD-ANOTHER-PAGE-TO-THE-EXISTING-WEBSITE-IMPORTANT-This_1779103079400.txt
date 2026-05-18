@@ -1,0 +1,231 @@
+ADD ANOTHER PAGE TO THE EXISTING WEBSITE
+
+IMPORTANT:
+This page MUST follow the SAME structure, spacing, typography, gray banner styling, component system, animations, and layout rhythm as the EXISTING HOMEPAGE.
+
+Do NOT create a new visual style.
+
+This page should feel like it was built from the SAME reusable homepage design system and component architecture.
+
+Reuse:
+
+* homepage hero structure
+* homepage CTA sections
+* homepage card components
+* homepage grid layouts
+* homepage spacing system
+* homepage typography hierarchy
+* homepage gray sections
+* homepage hover effects
+* homepage animation behavior
+* homepage responsive structure
+
+Only the CONTENT changes.
+
+---
+
+## NEW PAGE: RECRUITMENT AS A SERVICE
+
+PAGE SLUG:
+recruitment-as-a-service
+
+---
+
+## HERO SECTION
+
+Headline:
+"Recruitment as a Service"
+
+Subheadline:
+"Find the right tech talent faster with Group107."
+
+Text:
+"We help companies source, evaluate, and hire qualified technology professionals based on their technical needs, timelines, and company culture."
+
+CTA BUTTON:
+"Contact Us"
+
+Optional secondary CTA:
+"Talk to a Recruiter"
+
+Use the SAME hero layout structure as the homepage.
+
+---
+
+## INTRO / VALUE PROPOSITION
+
+Headline:
+"Build Your Team with Confidence"
+
+Text:
+"Finding the right people is one of the most important parts of business growth. Group107 supports your recruitment process from sourcing to candidate evaluation, helping you access relevant, pre-vetted talent faster and with full process transparency."
+
+Use the SAME section layout and spacing as homepage information sections.
+
+---
+
+## WHO WE RECRUIT
+
+Headline:
+"Tech & Creative Talent We Can Help You Find"
+
+Create a visually rich responsive grid using the SAME homepage card style.
+
+Include:
+
+* Software Developers
+* Frontend Developers
+* Backend Developers
+* Full-Stack Developers
+* Mobile Developers
+* AI Specialists
+* Data Scientists
+* DevOps Engineers
+* Cloud Engineers
+* Cybersecurity Experts
+* UI/UX Designers
+* QA Engineers
+* Project Managers
+* Product Owners
+* Technical Support Specialists
+* Digital Marketing Specialists
+
+Cards should:
+
+* match homepage design
+* use consistent spacing
+* include hover interactions
+* feel premium and clean
+
+---
+
+## OUR SERVICES
+
+Headline:
+"Recruitment Services Tailored to Your Needs"
+
+Create premium service cards using EXISTING homepage card components.
+
+Cards:
+
+1. Candidate Sourcing
+   Description:
+   "Access to a large pool of qualified candidates."
+
+2. Candidate Evaluation
+   Description:
+   "Review of technical skills, social aptitudes, and role fit."
+
+3. Dedicated Recruiter
+   Description:
+   "A recruiter who understands your needs and company culture."
+
+4. Recruitment Consulting
+   Description:
+   "Guidance to improve your hiring process and recruitment strategy."
+
+---
+
+## PROCESS SECTION
+
+Headline:
+"How the Recruitment Process Works"
+
+Use the SAME process/timeline component style from the homepage.
+
+Steps:
+
+1. Define the job description and requirements
+2. Start sourcing and screening candidates
+3. Share selected candidates for your review
+4. Conduct interviews and approve candidates
+5. Finalize hiring conditions
+6. Sign the service agreement
+
+Add:
+
+* subtle animations
+* step connectors
+* responsive timeline behavior
+
+---
+
+## WHY GROUP107
+
+Headline:
+"Why Work With Group107"
+
+Create a gray banner / feature section using the SAME homepage gray section style.
+
+Bullets:
+
+* Full process transparency
+* Fast and effective recruitment cycles
+* Access to top-tier tech talent
+* High employee loyalty and engagement
+* Professional team management support
+* Flexible models that scale with your needs
+
+Use:
+
+* same background
+* same border radius
+* same spacing
+* same typography hierarchy
+* same CTA styling
+
+---
+
+## GLOBAL TALENT REACH
+
+Headline:
+"Global Reach, Local Support"
+
+Text:
+"Group107 serves clients worldwide through innovation hubs in Tel Aviv, Ukraine, Poland, and Argentina, helping companies access talent across different time zones and business cultures."
+
+Create a modern trust/international section consistent with homepage layout patterns.
+
+Optional:
+
+* location cards
+* world map visual
+* statistics
+* trust indicators
+
+---
+
+## FINAL CTA SECTION
+
+Headline:
+"Looking for the Right Talent?"
+
+Text:
+"Let’s discuss your hiring needs and help you find the right people for your team."
+
+Button:
+"Contact Us"
+
+This CTA section MUST visually match the homepage CTA banner exactly.
+
+---
+
+## IMPORTANT GLOBAL RULES
+
+* Homepage is the MASTER reference
+* Preserve visual consistency everywhere
+* Maintain identical spacing rhythm
+* Reuse existing components whenever possible
+* Keep typography identical to homepage
+* Use same animations and motion language
+* Maintain premium enterprise SaaS aesthetic
+* Ensure pixel-perfect responsiveness
+* Keep sections modular and reusable
+* Preserve existing navbar/footer
+* Use subtle gradients and polished shadows carefully
+* Follow modern scalable component architecture
+* Optimize for accessibility and SEO
+* Avoid creating new design patterns unless absolutely necessary
+
+FINAL GOAL:
+This page should look like it was designed together with the homepage from day one.

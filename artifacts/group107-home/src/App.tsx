@@ -26,6 +26,7 @@ import AboutUsPage from "@/pages/AboutUsPage";
 import ContactUsPage from "@/pages/ContactUsPage";
 import TalentsPage from "@/pages/TalentsPage";
 import TeamExpertisePage from "@/pages/TeamExpertisePage";
+import RecruitmentPage from "@/pages/RecruitmentPage";
 import Nav from "@/components/blocks/Nav";
 import Hero from "@/components/blocks/Hero";
 import Marquee from "@/components/blocks/Marquee";
@@ -93,6 +94,7 @@ function Router() {
       <Route path="/contact-us" component={ContactUsPage} />
       <Route path="/talents" component={TalentsPage} />
       <Route path="/team-expertise" component={TeamExpertisePage} />
+      <Route path="/recruitment-as-a-service" component={RecruitmentPage} />
       <Route component={NotFound} />
     </Switch>
   );
